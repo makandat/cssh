@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cssh.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c5d0006bbd4b28723c90ea340b3cc3f3c8ca077")]
 [assembly: System.Reflection.AssemblyProductAttribute("cssh.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cssh.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

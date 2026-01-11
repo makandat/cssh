@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\Cssh\\cssh.Core\\cssh.Core.csproj": {}
+    "C:\\Temp\\cssh\\cssh.Core\\cssh.Core.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\Cssh\\cssh.Core\\cssh.Core.csproj": {
+    "C:\\Temp\\cssh\\cssh.Core\\cssh.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\Cssh\\cssh.Core\\cssh.Core.csproj",
+        "projectUniqueName": "C:\\Temp\\cssh\\cssh.Core\\cssh.Core.csproj",
         "projectName": "cssh.Core",
-        "projectPath": "C:\\workspace\\Cssh\\cssh.Core\\cssh.Core.csproj",
+        "projectPath": "C:\\Temp\\cssh\\cssh.Core\\cssh.Core.csproj",
         "packagesPath": "C:\\Users\\tadna\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\Cssh\\cssh.Core\\obj\\",
+        "outputPath": "C:\\Temp\\cssh\\cssh.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
