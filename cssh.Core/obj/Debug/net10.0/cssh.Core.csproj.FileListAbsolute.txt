@@ -1,0 +1,11 @@
+C:\workspace\Cssh\cssh.Core\bin\Debug\net10.0\cssh.Core.deps.json
+C:\workspace\Cssh\cssh.Core\bin\Debug\net10.0\cssh.Core.dll
+C:\workspace\Cssh\cssh.Core\bin\Debug\net10.0\cssh.Core.pdb
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.AssemblyInfoInputs.cache
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.AssemblyInfo.cs
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.csproj.CoreCompileInputs.cache
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.dll
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\refint\cssh.Core.dll
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\cssh.Core.pdb
+C:\workspace\Cssh\cssh.Core\obj\Debug\net10.0\ref\cssh.Core.dll
