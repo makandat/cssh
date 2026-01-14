@@ -1,4 +1,4 @@
-﻿/* cssh.Tests.CsshConstantsTests.cs - A cross-platform C# shell ver.0.1.2 CsshConstantsTests class */
+/* cssh.Tests.CsshConstantsTests.cs - A cross-platform C# shell ver.0.2.0 CsshConstantsTests class */
 using cssh.Core.Constants;
 using Xunit;
 
@@ -11,12 +11,12 @@ namespace cssh.Tests;
 public class CsshConstantsTests
 {
   /// <summary>
-  /// Ensures that the shell version matches v0.1.5.
+  /// Ensures that the shell version matches v0.2.1.
   /// </summary>
   [Fact]
-  public void Version_ShouldBe_v015()
+  public void Version_ShouldBe_v021()
   {
-    Assert.Equal("v0.1.5", CsshConstants.Version);
+    Assert.Equal("v0.2.1", CsshConstants.Version);
   }
 
   /// <summary>

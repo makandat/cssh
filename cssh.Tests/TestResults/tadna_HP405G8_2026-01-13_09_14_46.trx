@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="dceaee7f-6416-4ec3-ac34-2874490b86f1" name="tadna@HP405G8 2026-01-13 09:14:46" runUser="HP405G8\tadna" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-13T09:14:46.5438534+09:00" queuing="2026-01-13T09:14:46.5438535+09:00" start="2026-01-13T09:14:45.8740254+09:00" finish="2026-01-13T09:14:46.7660374+09:00" />
+  <TestSettings name="default" id="f0d4c77e-be17-4944-bf50-cc5e277fcac9">
+    <Deployment runDeploymentRoot="tadna_HP405G8_2026-01-13_09_14_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="7406c49d-9a22-4cc9-ad3e-d1b4c39d204b" testId="7c126647-72d5-0d36-f774-8fecf1412d84" testName="cssh.Tests.CsshConstantsTests.ModeInteractive_ShouldBe_interactive" computerName="HP405G8" duration="00:00:00.0000675" startTime="2026-01-13T09:14:46.5119420+09:00" endTime="2026-01-13T09:14:46.5140745+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7406c49d-9a22-4cc9-ad3e-d1b4c39d204b" />
+    <UnitTestResult executionId="bf3827c6-b9cf-4628-860a-c6c4e74044b5" testId="043eeb3b-583d-2ec4-7ff7-952a06281d66" testName="CommandRunnerTests.Run_Semicolon_Commands_ShouldExecuteSequentially" computerName="HP405G8" duration="00:00:00.0007284" startTime="2026-01-13T09:14:46.5440360+09:00" endTime="2026-01-13T09:14:46.5441222+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf3827c6-b9cf-4628-860a-c6c4e74044b5" />
+    <UnitTestResult executionId="beed316f-6f3c-4a2a-b1df-4342efd2b4b6" testId="cc1d1cad-e8f7-c759-13d5-311c0c76fbb9" testName="cssh.Tests.CsshConstantsTests.ModeEdit_ShouldBe_edit" computerName="HP405G8" duration="00:00:00.0001436" startTime="2026-01-13T09:14:46.5113583+09:00" endTime="2026-01-13T09:14:46.5117855+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="beed316f-6f3c-4a2a-b1df-4342efd2b4b6" />
+    <UnitTestResult executionId="74653f63-92f6-4198-8dd0-8cacc3b32e4a" testId="e1b1855c-a03d-4419-9f44-039a50fb0a60" testName="CommandParserTests.ParseSequence_ShouldHandleWindowsPaths" computerName="HP405G8" duration="00:00:00.0001839" startTime="2026-01-13T09:14:46.5328866+09:00" endTime="2026-01-13T09:14:46.5329267+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74653f63-92f6-4198-8dd0-8cacc3b32e4a" />
+    <UnitTestResult executionId="eccc7006-0cb1-41b8-97aa-4f1e4224319e" testId="9a41acfd-9872-061f-c3fe-6d6cfcf427da" testName="PathAndQuotingTests.Path_MixedStyle_ShouldAcceptMixedSlashes" computerName="HP405G8" duration="00:00:00.0001020" startTime="2026-01-13T09:14:46.5175403+09:00" endTime="2026-01-13T09:14:46.5175675+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eccc7006-0cb1-41b8-97aa-4f1e4224319e" />
+    <UnitTestResult executionId="9638787e-fb53-4a74-a35b-97c0d8c9cded" testId="4676d085-e5be-1f59-e738-584e17997c14" testName="ShellOperatorsTests.Operator_Pipe_MultipleStages_ShouldChainAll" computerName="HP405G8" duration="00:00:00.0010598" startTime="2026-01-13T09:14:46.5175194+09:00" endTime="2026-01-13T09:14:46.5187844+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9638787e-fb53-4a74-a35b-97c0d8c9cded" />
+    <UnitTestResult executionId="797cc0b5-ccc1-4031-bda2-2eac1574b459" testId="98695dc8-c18a-8725-d0be-07a5fb1f3ba2" testName="ShellOperatorsTests.Parser_ShouldRecognizeInputRedirect" computerName="HP405G8" duration="00:00:00.0009152" startTime="2026-01-13T09:14:46.5382770+09:00" endTime="2026-01-13T09:14:46.5383913+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="797cc0b5-ccc1-4031-bda2-2eac1574b459" />
+    <UnitTestResult executionId="e9458ad8-8cd8-4595-8427-32de98cd358c" testId="a8d67a16-8795-8011-6c47-5b7fa2693d58" testName="PathAndQuotingTests.QuotedPath_SingleQuotes_ShouldPreserveSpaces" computerName="HP405G8" duration="00:00:00.0001043" startTime="2026-01-13T09:14:46.5173255+09:00" endTime="2026-01-13T09:14:46.5174504+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9458ad8-8cd8-4595-8427-32de98cd358c" />
+    <UnitTestResult executionId="e4bb9389-f873-4f14-9214-da5de52b4afb" testId="a8d3eeaf-66ea-fd56-170a-1a5682d3aa9f" testName="PathAndQuotingTests.Path_LongPath_WindowsStyle" computerName="HP405G8" duration="00:00:00.0001675" startTime="2026-01-13T09:14:46.5178261+09:00" endTime="2026-01-13T09:14:46.5178731+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4bb9389-f873-4f14-9214-da5de52b4afb" />
+    <UnitTestResult executionId="2987873f-7f71-4674-b6ca-20234e9092ba" testId="9041f042-888e-7a2c-d034-81262802f635" testName="CommandRunnerTests.Run_Cat_WithInputRedirect_ShouldReadFromFile" computerName="HP405G8" duration="00:00:00.0033048" startTime="2026-01-13T09:14:46.5304330+09:00" endTime="2026-01-13T09:14:46.5341999+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2987873f-7f71-4674-b6ca-20234e9092ba" />
+    <UnitTestResult executionId="6361d176-032f-4272-a018-40f82753c691" testId="87038aa1-05d1-066f-1980-b29053acc77c" testName="LsCommandTests.Ls_ShouldListFilesAndDirectories_InCurrentDirectory" computerName="HP405G8" duration="00:00:00.0163022" startTime="2026-01-13T09:14:46.4375661+09:00" endTime="2026-01-13T09:14:46.5203496+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6361d176-032f-4272-a018-40f82753c691" />
+    <UnitTestResult executionId="bf7d8809-657e-40e3-b9e0-81962e263e89" testId="6a7bac17-4410-0115-e6b2-52b66efc5eb6" testName="ShellOperatorsTests.Operator_Pipe_ShouldTransmitOutput" computerName="HP405G8" duration="00:00:00.0106123" startTime="2026-01-13T09:14:46.4394849+09:00" endTime="2026-01-13T09:14:46.4689944+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf7d8809-657e-40e3-b9e0-81962e263e89" />
+    <UnitTestResult executionId="86f2ca2e-0960-43b2-85ff-4dc71c7053bb" testId="02ebb9b1-60dd-2eba-f0a5-3425fce62c07" testName="CommandParserTests.Parse_ShouldReturnEmptyCommand_WhenInputIsEmpty" computerName="HP405G8" duration="00:00:00.0001231" startTime="2026-01-13T09:14:46.5361464+09:00" endTime="2026-01-13T09:14:46.5361960+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86f2ca2e-0960-43b2-85ff-4dc71c7053bb" />
+    <UnitTestResult executionId="5cc24095-4dd5-4c01-a121-3268347338b8" testId="56a0364e-e50a-9457-d7cd-85a2d0a1c888" testName="CommandParserTests.ParseSequence_ShouldParseMultipleCommandPipeline" computerName="HP405G8" duration="00:00:00.0003129" startTime="2026-01-13T09:14:46.5341341+09:00" endTime="2026-01-13T09:14:46.5343731+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cc24095-4dd5-4c01-a121-3268347338b8" />
+    <UnitTestResult executionId="e258ad61-86ac-4469-b033-9d0a8806bb45" testId="ce5c361a-c9fd-4ffe-e4e6-2d5a35b011bf" testName="EditModeTests.ReadCommand_LoadsFileIntoBuffer" computerName="HP405G8" duration="00:00:00.0155709" startTime="2026-01-13T09:14:46.5275532+09:00" endTime="2026-01-13T09:14:46.5390392+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e258ad61-86ac-4469-b033-9d0a8806bb45" />
+    <UnitTestResult executionId="855e4cfe-1fe4-416a-925b-a92e035eb29c" testId="933b69b5-17dc-c98f-40a6-ec9ee384b597" testName="CommandParserTests.ParseSequence_ShouldParsePipelineWithFinalRedirect" computerName="HP405G8" duration="00:00:00.0001744" startTime="2026-01-13T09:14:46.5348783+09:00" endTime="2026-01-13T09:14:46.5350659+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="855e4cfe-1fe4-416a-925b-a92e035eb29c" />
+    <UnitTestResult executionId="4a3d767a-e568-4e59-ace9-7dfdb7a2ad90" testId="0a3fcee8-f12e-1aeb-92c8-82a19704f8ac" testName="EditModeTests.WriteCommand_SavesBufferToFile" computerName="HP405G8" duration="00:00:00.0031577" startTime="2026-01-13T09:14:46.5408868+09:00" endTime="2026-01-13T09:14:46.5409739+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a3d767a-e568-4e59-ace9-7dfdb7a2ad90" />
+    <UnitTestResult executionId="ef6ebaca-a485-4c32-b010-a6e96f4febbe" testId="15510086-d034-7f02-9b3c-70ca6a663bc8" testName="CommandParserTests.ParseSequence_ShouldNotSplitSemicolonInsideQuotes" computerName="HP405G8" duration="00:00:00.0002655" startTime="2026-01-13T09:14:46.5337652+09:00" endTime="2026-01-13T09:14:46.5338341+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef6ebaca-a485-4c32-b010-a6e96f4febbe" />
+    <UnitTestResult executionId="ae21671e-8d08-4c67-a90f-934fb6683405" testId="b194bc36-f91a-a1f2-f907-7fffb62a71fd" testName="ShellOperatorsTests.Parser_ShouldRecognizeOutputRedirectAppend" computerName="HP405G8" duration="00:00:00.0008328" startTime="2026-01-13T09:14:46.6866084+09:00" endTime="2026-01-13T09:14:46.6873201+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae21671e-8d08-4c67-a90f-934fb6683405" />
+    <UnitTestResult executionId="abbfd097-a2d6-4caf-9d49-f9d750e209dd" testId="adda8d73-15f5-09ef-628e-b72119783843" testName="PathAndQuotingTests.Spec_QuoteMismatch_DoubleInside" computerName="HP405G8" duration="00:00:00.0002789" startTime="2026-01-13T09:14:46.5105052+09:00" endTime="2026-01-13T09:14:46.5115214+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abbfd097-a2d6-4caf-9d49-f9d750e209dd" />
+    <UnitTestResult executionId="deb1e8e6-e8ce-4b2f-9e5d-8d033b9b72e3" testId="74c9a553-b169-a189-b3d3-76ad3610165a" testName="ShellStateTests.Updating_CurrentDirectory_ShouldNotChange_PreviousDirectory" computerName="HP405G8" duration="00:00:00.0001855" startTime="2026-01-13T09:14:46.5104743+09:00" endTime="2026-01-13T09:14:46.5107675+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="deb1e8e6-e8ce-4b2f-9e5d-8d033b9b72e3" />
+    <UnitTestResult executionId="af994b35-3d19-435e-93ce-42cb66bbc345" testId="ef609a78-d027-2551-9452-0f95f902dc9b" testName="ShellStateTests.Initial_CurrentDirectory_ShouldBe_EnvironmentCurrentDirectory" computerName="HP405G8" duration="00:00:00.0043565" startTime="2026-01-13T09:14:46.4393675+09:00" endTime="2026-01-13T09:14:46.4589087+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af994b35-3d19-435e-93ce-42cb66bbc345" />
+    <UnitTestResult executionId="6c9410ad-5dc8-49ff-b1f5-11d5990e713d" testId="9ba399b0-cce4-a11d-55e9-0634e6d797dc" testName="PathAndQuotingTests.Path_UNCPath_Windows" computerName="HP405G8" duration="00:00:00.0000988" startTime="2026-01-13T09:14:46.5172271+09:00" endTime="2026-01-13T09:14:46.5172564+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c9410ad-5dc8-49ff-b1f5-11d5990e713d" />
+    <UnitTestResult executionId="140ecc97-7657-45b5-b593-06059acca61f" testId="19f5a540-1330-1b72-8924-34ce6599e694" testName="CommandRunnerTests.Run_CommandWithMultipleArgs_AndRedirect" computerName="HP405G8" duration="00:00:00.0012335" startTime="2026-01-13T09:14:46.5444472+09:00" endTime="2026-01-13T09:14:46.5445268+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="140ecc97-7657-45b5-b593-06059acca61f" />
+    <UnitTestResult executionId="e2e53b24-ab08-4c88-bea3-ec5c865b50c4" testId="9860960c-5bcf-35c2-3148-c559fb781d57" testName="CommandRunnerTests.Run_Echo_WithMultipleRedirects_ShouldUseLastRedirect" computerName="HP405G8" duration="00:00:00.0034567" startTime="2026-01-13T09:14:46.5448214+09:00" endTime="2026-01-13T09:14:46.5448900+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2e53b24-ab08-4c88-bea3-ec5c865b50c4" />
+    <UnitTestResult executionId="b146e838-b5fc-4af8-8035-abb10bb6e3bb" testId="17ad0023-bc12-9f24-12e0-9a4dea5ff970" testName="EditModeTests.WriteCommand_UsesExistingFileName_WhenNoArgProvided" computerName="HP405G8" duration="00:00:00.0026097" startTime="2026-01-13T09:14:46.5403944+09:00" endTime="2026-01-13T09:14:46.5406953+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b146e838-b5fc-4af8-8035-abb10bb6e3bb" />
+    <UnitTestResult executionId="be1b3edb-2fa1-40b9-807b-51e7ece8408c" testId="6a4a73b6-e8b9-fea2-63d9-47871d0cbc2b" testName="ShellOperatorsTests.Operator_InputRedirect_NonExistentFile_ShouldReturnError" computerName="HP405G8" duration="00:00:00.1961542" startTime="2026-01-13T09:14:46.5406150+09:00" endTime="2026-01-13T09:14:46.6831714+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be1b3edb-2fa1-40b9-807b-51e7ece8408c" />
+    <UnitTestResult executionId="7a44f2d4-54fa-4ab0-b7a4-46e300bf4be5" testId="4ecb264c-91ca-c30a-08b2-9153e31285fc" testName="CommandRunnerTests.Run_Echo_ShouldExpandInlineVariables" computerName="HP405G8" duration="00:00:00.0008772" startTime="2026-01-13T09:14:46.5343345+09:00" endTime="2026-01-13T09:14:46.5349490+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a44f2d4-54fa-4ab0-b7a4-46e300bf4be5" />
+    <UnitTestResult executionId="b13af8d8-ffe5-4a22-9544-843cef7b65ec" testId="4d8c2b76-a547-3002-489e-a1b22eb1170b" testName="cssh.Tests.CsshConstantsTests.DefaultPromptDirTrim_ShouldBe_2" computerName="HP405G8" duration="00:00:00.0001811" startTime="2026-01-13T09:14:46.5107191+09:00" endTime="2026-01-13T09:14:46.5108186+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b13af8d8-ffe5-4a22-9544-843cef7b65ec" />
+    <UnitTestResult executionId="d52fc6bf-9353-4ab4-92c8-91ea7917611a" testId="f0450f10-a75c-a929-c921-2606830580d2" testName="CommandParserTests.ParseSequence_ShouldParseRedirectWithQuotedPath" computerName="HP405G8" duration="00:00:00.0002843" startTime="2026-01-13T09:14:46.5297513+09:00" endTime="2026-01-13T09:14:46.5298188+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d52fc6bf-9353-4ab4-92c8-91ea7917611a" />
+    <UnitTestResult executionId="fc6aaa17-816c-4469-8f95-c70e93de49f9" testId="d1489da4-0f22-91ff-c7ba-b785a828f92c" testName="PathAndQuotingTests.Path_DriveLetterUppercase_ShouldBePreserved" computerName="HP405G8" duration="00:00:00.0000866" startTime="2026-01-13T09:14:46.5146280+09:00" endTime="2026-01-13T09:14:46.5146577+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fc6aaa17-816c-4469-8f95-c70e93de49f9" />
+    <UnitTestResult executionId="ff88b32f-1b18-402a-ad41-38e0d4cacb36" testId="14d10dca-0e27-4108-3663-d0dc892074ea" testName="CommandParserTests.ParseSequence_ShouldHandleUnixStylePaths" computerName="HP405G8" duration="00:00:00.0001986" startTime="2026-01-13T09:14:46.5324702+09:00" endTime="2026-01-13T09:14:46.5325118+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff88b32f-1b18-402a-ad41-38e0d4cacb36" />
+    <UnitTestResult executionId="6d41d1d4-5cd0-4ba5-afc5-3d3de06ac07f" testId="c0af3f68-437b-f6f3-ab0e-4ff0f2e7daef" testName="PathAndQuotingTests.Path_WindowsStyle_ShouldAcceptBackslash" computerName="HP405G8" duration="00:00:00.0023222" startTime="2026-01-13T09:14:46.5148277+09:00" endTime="2026-01-13T09:14:46.5161555+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d41d1d4-5cd0-4ba5-afc5-3d3de06ac07f" />
+    <UnitTestResult executionId="9382ed74-8c0e-45e5-8cc7-6adfa880ed9c" testId="6dfba341-0a79-0ad3-788c-1ad2d9dcfa5c" testName="PathAndQuotingTests.Path_WithHome_RelativeToHome" computerName="HP405G8" duration="00:00:00.0001147" startTime="2026-01-13T09:14:46.5184344+09:00" endTime="2026-01-13T09:14:46.5184918+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9382ed74-8c0e-45e5-8cc7-6adfa880ed9c" />
+    <UnitTestResult executionId="4065ebea-73c3-4d63-ab75-1aac8ce32002" testId="22eebdb8-af43-1e96-e75e-dddb2af6bc41" testName="CommandParserTests.Parse_ShouldHandleDoubleQuotedArguments_WithSpaces" computerName="HP405G8" duration="00:00:00.0037333" startTime="2026-01-13T09:14:46.5106297+09:00" endTime="2026-01-13T09:14:46.5155613+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4065ebea-73c3-4d63-ab75-1aac8ce32002" />
+    <UnitTestResult executionId="e4712296-4947-4db7-968d-b77356caafbb" testId="671afb79-d760-7018-4729-75794d534c72" testName="CommandRunnerTests.Run_Pipeline_WithFinalRedirect_ShouldRedirectPipeOutput" computerName="HP405G8" duration="00:00:00.0024995" startTime="2026-01-13T09:14:46.5206445+09:00" endTime="2026-01-13T09:14:46.5276176+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4712296-4947-4db7-968d-b77356caafbb" />
+    <UnitTestResult executionId="b7b60abb-3e53-475a-8cbf-50581156da57" testId="1a3a9935-32f6-6c14-e25f-e3336fcb7456" testName="CommandRunnerTests.Run_WhitespaceOnlyInput_ShouldHandleGracefully" computerName="HP405G8" duration="00:00:00.0008524" startTime="2026-01-13T09:14:46.5295922+09:00" endTime="2026-01-13T09:14:46.5302691+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7b60abb-3e53-475a-8cbf-50581156da57" />
+    <UnitTestResult executionId="40bbf202-4f3d-4f26-9ed0-eb98a5b5f2eb" testId="8437d8de-fe55-9fde-70eb-95cb12bfd927" testName="CommandRunnerTests.Run_Echo_ShouldExpandEnvironmentVariable" computerName="HP405G8" duration="00:00:00.0006567" startTime="2026-01-13T09:14:46.5442438+09:00" endTime="2026-01-13T09:14:46.5443234+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40bbf202-4f3d-4f26-9ed0-eb98a5b5f2eb" />
+    <UnitTestResult executionId="ad853f6b-135a-4586-9510-4ff846627b5a" testId="49a205ab-c847-2ec3-f235-3ddbc3de35ce" testName="PathAndQuotingTests.Quotes_SingleQuoted_StringWithSpaces" computerName="HP405G8" duration="00:00:00.0000874" startTime="2026-01-13T09:14:46.5177313+09:00" endTime="2026-01-13T09:14:46.5177589+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad853f6b-135a-4586-9510-4ff846627b5a" />
+    <UnitTestResult executionId="2799bc65-319f-458e-a871-4f6db68cab3d" testId="1d8bddc6-85ef-95f5-ed6b-5aaa44dcf95f" testName="CommandParserTests.ParseSequence_ShouldPreservePathsWithSpaces" computerName="HP405G8" duration="00:00:00.0002158" startTime="2026-01-13T09:14:46.5320902+09:00" endTime="2026-01-13T09:14:46.5321192+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2799bc65-319f-458e-a871-4f6db68cab3d" />
+    <UnitTestResult executionId="72b681ba-fa0d-4d23-92d5-4e937e3677cb" testId="9d1f24d6-c1f1-f9ea-3765-4a97405f22ac" testName="CommandRunnerTests.Run_Echo_ShouldReturnText" computerName="HP405G8" duration="00:00:00.0006537" startTime="2026-01-13T09:14:46.5449952+09:00" endTime="2026-01-13T09:14:46.5450607+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72b681ba-fa0d-4d23-92d5-4e937e3677cb" />
+    <UnitTestResult executionId="9576abd6-07fa-464d-bee0-b10fc4b182f9" testId="15249b79-4925-0c55-da8b-f3ea19a5c816" testName="PathAndQuotingTests.QuotedPath_OutputRedirect_WithSpaces" computerName="HP405G8" duration="00:00:00.0001490" startTime="2026-01-13T09:14:46.5176360+09:00" endTime="2026-01-13T09:14:46.5176638+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9576abd6-07fa-464d-bee0-b10fc4b182f9" />
+    <UnitTestResult executionId="7e232063-827f-4215-8cf0-fa8f8246ac67" testId="6fdf84c8-3620-8cf0-d0a0-2e162979289a" testName="CommandParserTests.Parse_ShouldHandleMultipleArguments" computerName="HP405G8" duration="00:00:00.0002524" startTime="2026-01-13T09:14:46.5284789+09:00" endTime="2026-01-13T09:14:46.5285310+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e232063-827f-4215-8cf0-fa8f8246ac67" />
+    <UnitTestResult executionId="c0568740-2572-4678-b2bd-142e4e448045" testId="6e839e88-025a-019c-a501-0d9adbad498e" testName="PathAndQuotingTests.Path_UnixStyle_ShouldAcceptForwardSlash" computerName="HP405G8" duration="00:00:00.0002868" startTime="2026-01-13T09:14:46.5201410+09:00" endTime="2026-01-13T09:14:46.5201747+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0568740-2572-4678-b2bd-142e4e448045" />
+    <UnitTestResult executionId="2d9b8209-7969-400f-add3-a041ea5cad84" testId="f7a8c264-c987-867d-c998-1127056f0623" testName="ShellOperatorsTests.Operator_InvalidRedirectPath_ShouldHandleError" computerName="HP405G8" duration="00:00:00.0019329" startTime="2026-01-13T09:14:46.5368601+09:00" endTime="2026-01-13T09:14:46.5381338+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d9b8209-7969-400f-add3-a041ea5cad84" />
+    <UnitTestResult executionId="9f51091d-cef1-4cf8-9739-b2e29c589e22" testId="87d50cba-2192-bdf3-0d46-1275198e8862" testName="ShellOperatorsTests.Operator_AppendRedirect_ShouldCreateFileIfNotExists" computerName="HP405G8" duration="00:00:00.0027094" startTime="2026-01-13T09:14:46.5389544+09:00" endTime="2026-01-13T09:14:46.5404756+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f51091d-cef1-4cf8-9739-b2e29c589e22" />
+    <UnitTestResult executionId="f849b761-7a4b-4b39-b7ac-3e3731e6e975" testId="61b8495d-d629-6c50-9929-74ac3190ec5c" testName="CommandRunnerTests.Run_WithInputRedirect_NonExistentFile_ShouldReturnError" computerName="HP405G8" duration="00:00:00.0005978" startTime="2026-01-13T09:14:46.5365079+09:00" endTime="2026-01-13T09:14:46.5366356+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f849b761-7a4b-4b39-b7ac-3e3731e6e975" />
+    <UnitTestResult executionId="33610d51-e28f-4c94-b9fa-465373e019f9" testId="1ccf9820-7463-d17a-ea5d-fdd432c8c6f5" testName="cssh.Tests.CsshConstantsTests.Version_ShouldBe_v020" computerName="HP405G8" duration="00:00:00.0043666" startTime="2026-01-13T09:14:46.4394486+09:00" endTime="2026-01-13T09:14:46.4590491+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33610d51-e28f-4c94-b9fa-465373e019f9" />
+    <UnitTestResult executionId="17ecd38f-b6b7-40c7-b568-42a87a8dac5b" testId="bb33f3be-2bcd-516b-8be9-0d2765c6d361" testName="CommandParserTests.ParseSequence_ShouldParseInputRedirect" computerName="HP405G8" duration="00:00:00.0002513" startTime="2026-01-13T09:14:46.5317997+09:00" endTime="2026-01-13T09:14:46.5318481+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17ecd38f-b6b7-40c7-b568-42a87a8dac5b" />
+    <UnitTestResult executionId="0dc77a35-9fd1-4b2e-9751-a0b8c5842602" testId="fcc0ba15-0e1d-cf41-f4ec-eb16678087c0" testName="ShellOperatorsTests.Operator_OutputRedirect_ShouldCreateNewFile" computerName="HP405G8" duration="00:00:00.0035673" startTime="2026-01-13T09:14:46.5205107+09:00" endTime="2026-01-13T09:14:46.5207955+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0dc77a35-9fd1-4b2e-9751-a0b8c5842602" />
+    <UnitTestResult executionId="cc7b86f9-3c1b-49ad-b914-759bc364f176" testId="c77203b6-68fc-fbfb-d2d4-cfe1afd94eb3" testName="CommandParserTests.Parse_ShouldHandleSingleQuotedArguments_WithSpaces" computerName="HP405G8" duration="00:00:00.0001823" startTime="2026-01-13T09:14:46.5323084+09:00" endTime="2026-01-13T09:14:46.5323600+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc7b86f9-3c1b-49ad-b914-759bc364f176" />
+    <UnitTestResult executionId="7c869804-eaae-418f-9e3b-e9b06c249fd9" testId="29889314-27ea-b8ca-fe81-1d4996b4d0f6" testName="ShellOperatorsTests.Operator_AppendRedirect_ShouldAppendToExistingFile" computerName="HP405G8" duration="00:00:00.0058639" startTime="2026-01-13T09:14:46.5189336+09:00" endTime="2026-01-13T09:14:46.5204351+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c869804-eaae-418f-9e3b-e9b06c249fd9" />
+    <UnitTestResult executionId="45264ed0-39d8-4892-b4f6-633367ef5ac8" testId="dc26f637-bb05-399a-ccef-ba1595660cd7" testName="CommandParserTests.ParseSequence_ShouldHandleCommandWithMultipleArguments_AndRedirect" computerName="HP405G8" duration="00:00:00.0036634" startTime="2026-01-13T09:14:46.5207576+09:00" endTime="2026-01-13T09:14:46.5283177+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45264ed0-39d8-4892-b4f6-633367ef5ac8" />
+    <UnitTestResult executionId="8cd7367a-a298-4080-b307-f3b289d0dacf" testId="47f8273b-b525-d224-19cd-c2ae7facab0b" testName="ShellOperatorsTests.Spec_ShouldNotSupportConditionalExecution" computerName="HP405G8" duration="00:00:00.0009327" startTime="2026-01-13T09:14:46.5385214+09:00" endTime="2026-01-13T09:14:46.5386146+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8cd7367a-a298-4080-b307-f3b289d0dacf" />
+    <UnitTestResult executionId="8ba679e5-a099-4550-8816-622dfc9d670f" testId="94e5d112-3b62-4248-5e26-4358cc039d7d" testName="CommandRunnerTests.Run_Echo_ShouldHandleQuotedText" computerName="HP405G8" duration="00:00:00.0005287" startTime="2026-01-13T09:14:46.5375729+09:00" endTime="2026-01-13T09:14:46.5376694+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ba679e5-a099-4550-8816-622dfc9d670f" />
+    <UnitTestResult executionId="1b1f058b-437b-4072-b75b-2677409da747" testId="7dfae08c-c0e5-8c48-0f22-a117b5ff80f9" testName="ShellOperatorsTests.Operator_OutputRedirect_ShouldTruncateExistingFile" computerName="HP405G8" duration="00:00:00.0015490" startTime="2026-01-13T09:14:46.5213295+09:00" endTime="2026-01-13T09:14:46.5278740+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b1f058b-437b-4072-b75b-2677409da747" />
+    <UnitTestResult executionId="df0c674c-9acb-4e3d-b2c5-c2e5889ad682" testId="aa30a654-5397-53c1-922b-f34f56014cee" testName="PathAndQuotingTests.Redirect_RelativePath_DotSlash" computerName="HP405G8" duration="00:00:00.0001837" startTime="2026-01-13T09:14:46.5147298+09:00" endTime="2026-01-13T09:14:46.5147584+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df0c674c-9acb-4e3d-b2c5-c2e5889ad682" />
+    <UnitTestResult executionId="aeb694a7-9614-4dde-a56e-fbf27fd2a541" testId="a66c246b-7072-834d-269c-b26522b46fe9" testName="CommandParserTests.ParseSequence_ShouldParsePipelineWithArguments" computerName="HP405G8" duration="00:00:00.0003873" startTime="2026-01-13T09:14:46.5293790+09:00" endTime="2026-01-13T09:14:46.5296239+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aeb694a7-9614-4dde-a56e-fbf27fd2a541" />
+    <UnitTestResult executionId="814d735f-9359-49e5-aabb-b7585b34d01f" testId="f6ddda31-6e22-774f-c974-70ae493e6667" testName="EditModeTests.EditCommand_EntersEditMode" computerName="HP405G8" duration="00:00:00.0007695" startTime="2026-01-13T09:14:46.5413339+09:00" endTime="2026-01-13T09:14:46.5415051+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="814d735f-9359-49e5-aabb-b7585b34d01f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Strings differ&#xD;
+Expected: ""&#xD;
+Actual:   "Error: ハンドルが無効です。"&#xD;
+           ↑ (pos 0)</Message>
+          <StackTrace>   at EditModeTests.EditCommand_EntersEditMode() in D:\workspace\Cssh\cssh.Tests\EditModeTests.cs:line 33&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="19f14d8a-0349-4fab-a80a-c67ca4cc3647" testId="23f20d56-9f0b-a334-584f-c5c81d7ab8eb" testName="PathAndQuotingTests.Quotes_DoubleQuoted_StringWithSpaces" computerName="HP405G8" duration="00:00:00.0001621" startTime="2026-01-13T09:14:46.5144099+09:00" endTime="2026-01-13T09:14:46.5144424+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19f14d8a-0349-4fab-a80a-c67ca4cc3647" />
+    <UnitTestResult executionId="63e425d3-9d32-4682-8c65-860925a8a6c3" testId="1de90115-ad66-2f5d-b07c-b924a10c4bde" testName="PathAndQuotingTests.QuotedPath_InputRedirect_WithSpaces" computerName="HP405G8" duration="00:00:00.0002293" startTime="2026-01-13T09:14:46.5117225+09:00" endTime="2026-01-13T09:14:46.5142339+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63e425d3-9d32-4682-8c65-860925a8a6c3" />
+    <UnitTestResult executionId="b9d32a3e-177d-4f37-98f4-650c6c019fd8" testId="d5a93c5f-6da6-98d3-8edc-dececfe16d6a" testName="ShellOperatorsTests.Operator_InputRedirect_ShouldReadFileContent" computerName="HP405G8" duration="00:00:00.0027479" startTime="2026-01-13T09:14:46.6989847+09:00" endTime="2026-01-13T09:14:46.7014153+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9d32a3e-177d-4f37-98f4-650c6c019fd8" />
+    <UnitTestResult executionId="66dbc643-8c1c-41cb-a0af-8e5e461aaa4f" testId="26c9fd67-c060-cff9-315b-fec4f546fa15" testName="CommandParserTests.ParseSequence_ShouldHaveEmptyArgsOnSecondCommandForEchoPipe" computerName="HP405G8" duration="00:00:00.0001616" startTime="2026-01-13T09:14:46.5326077+09:00" endTime="2026-01-13T09:14:46.5326450+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66dbc643-8c1c-41cb-a0af-8e5e461aaa4f" />
+    <UnitTestResult executionId="cfac7f4e-4afa-43ac-9316-4f7858970eda" testId="4a79a95e-e10e-7ae4-7077-3bf9d5ef4aa4" testName="CommandParserTests.Parse_ShouldHandleQuotedPathsWithBackslash" computerName="HP405G8" duration="00:00:00.0001564" startTime="2026-01-13T09:14:46.5307015+09:00" endTime="2026-01-13T09:14:46.5307961+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfac7f4e-4afa-43ac-9316-4f7858970eda" />
+    <UnitTestResult executionId="162ac66f-b042-4bb7-97e8-75e665954116" testId="4595eea4-0400-f349-4407-ea9819b8b8ed" testName="ShellOperatorsTests.Parser_ShouldRecognizeOutputRedirectTruncate" computerName="HP405G8" duration="00:00:00.0042383" startTime="2026-01-13T09:14:46.7037645+09:00" endTime="2026-01-13T09:14:46.7079806+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="162ac66f-b042-4bb7-97e8-75e665954116" />
+    <UnitTestResult executionId="d649e833-1ec3-4be6-8316-d726bfda44ff" testId="00dd2fa6-720c-060f-05a8-116ced63f5cf" testName="CommandRunnerTests.Run_EmptyInput_ShouldHandleGracefully" computerName="HP405G8" duration="00:00:00.0006454" startTime="2026-01-13T09:14:46.5350457+09:00" endTime="2026-01-13T09:14:46.5363913+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d649e833-1ec3-4be6-8316-d726bfda44ff" />
+    <UnitTestResult executionId="34627e01-e7b9-4fb3-9259-ff9896f792d8" testId="58306f8c-4c45-d110-bf72-7f746f4ef245" testName="ShellOperatorsTests.Operator_Pipe_WithFinalRedirect_ShouldApplyRedirectToLastCommand" computerName="HP405G8" duration="00:00:00.0013845" startTime="2026-01-13T09:14:46.7023326+09:00" endTime="2026-01-13T09:14:46.7036249+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34627e01-e7b9-4fb3-9259-ff9896f792d8" />
+    <UnitTestResult executionId="6aa03230-1a57-491a-8d85-268452ed5ca5" testId="4ee8ff93-3867-f4e7-b2e8-3b166f897a1b" testName="CommandParserTests.ParseSequence_ShouldHandleOptionsWithDash" computerName="HP405G8" duration="00:00:00.0108678" startTime="2026-01-13T09:14:46.5170728+09:00" endTime="2026-01-13T09:14:46.5206851+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6aa03230-1a57-491a-8d85-268452ed5ca5" />
+    <UnitTestResult executionId="541acc4d-f71c-49ba-bb41-00d21be22ab9" testId="1f2d4986-7ff9-4c8e-a504-498f87785c45" testName="CommandParserTests.Parse_ShouldReturnCommandName_WhenOnlyCommandGiven" computerName="HP405G8" duration="00:00:00.0001819" startTime="2026-01-13T09:14:46.5359551+09:00" endTime="2026-01-13T09:14:46.5360224+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="541acc4d-f71c-49ba-bb41-00d21be22ab9" />
+    <UnitTestResult executionId="d0190e56-1b99-4ef5-86a5-0baf71a68bb2" testId="03b35353-c0d5-3a49-9b57-a78b115261f6" testName="CommandRunnerTests.Run_Touch_ShouldCreateFile" computerName="HP405G8" duration="00:00:00.0016187" startTime="2026-01-13T09:14:46.5427407+09:00" endTime="2026-01-13T09:14:46.5428315+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0190e56-1b99-4ef5-86a5-0baf71a68bb2" />
+    <UnitTestResult executionId="694051fe-d0cb-45d7-b656-e7351d87e14c" testId="5830c149-c488-708c-2698-dded6c4a8378" testName="CommandParserTests.Parse_ShouldHandleQuotedPathsWithForwardSlash" computerName="HP405G8" duration="00:00:00.0001095" startTime="2026-01-13T09:14:46.5357651+09:00" endTime="2026-01-13T09:14:46.5358185+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="694051fe-d0cb-45d7-b656-e7351d87e14c" />
+    <UnitTestResult executionId="2be5a19d-8332-46b7-a3d1-32d904e5d76d" testId="f923e228-eff5-042a-b194-349970971a81" testName="CommandRunnerTests.Run_ExternalCommand_FromPath_ShouldExecute" computerName="HP405G8" duration="00:00:00.0432341" startTime="2026-01-13T09:14:46.5380756+09:00" endTime="2026-01-13T09:14:46.5425726+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2be5a19d-8332-46b7-a3d1-32d904e5d76d" />
+    <UnitTestResult executionId="5694a804-ae90-46a0-ae61-3ef633014618" testId="5fa8e9c4-863d-7d78-70ee-11cb4ddeaf01" testName="CommandRunnerTests.Run_Pipeline_EchoToCat_ShouldTransmitData" computerName="HP405G8" duration="00:00:00.0005426" startTime="2026-01-13T09:14:46.5378177+09:00" endTime="2026-01-13T09:14:46.5379216+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5694a804-ae90-46a0-ae61-3ef633014618" />
+    <UnitTestResult executionId="4795ac2a-6508-472a-be16-ef5442b04fa5" testId="13859ce3-122f-353f-ed87-b91bf99e8ac0" testName="PathAndQuotingTests.QuotedPath_DoubleQuotes_ShouldPreserveSpaces" computerName="HP405G8" duration="00:00:00.0001048" startTime="2026-01-13T09:14:46.5202545+09:00" endTime="2026-01-13T09:14:46.5202831+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4795ac2a-6508-472a-be16-ef5442b04fa5" />
+    <UnitTestResult executionId="4f78dc21-e754-4ed7-985c-8be3571f0632" testId="1d19f6c2-5b39-706e-569a-9f2781dfc870" testName="PathAndQuotingTests.Quotes_DoubleQuoteInsideSingle" computerName="HP405G8" duration="00:00:00.0001053" startTime="2026-01-13T09:14:46.5185794+09:00" endTime="2026-01-13T09:14:46.5186079+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f78dc21-e754-4ed7-985c-8be3571f0632" />
+    <UnitTestResult executionId="b6335ead-e7d8-4412-b0be-a80dda80628c" testId="60a7026f-07f1-f639-e861-eed3367d03a8" testName="PathAndQuotingTests.Redirect_OutputPath_WithForwardSlash" computerName="HP405G8" duration="00:00:00.0001713" startTime="2026-01-13T09:14:46.5190973+09:00" endTime="2026-01-13T09:14:46.5191474+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6335ead-e7d8-4412-b0be-a80dda80628c" />
+    <UnitTestResult executionId="506b4824-7272-45e5-9629-f64d392c787e" testId="a35a328d-ffb3-ee25-b761-daf47599440e" testName="ShellOperatorsTests.Spec_ShouldNotSupportBackgroundExecution" computerName="HP405G8" duration="00:00:00.0006711" startTime="2026-01-13T09:14:46.7016377+09:00" endTime="2026-01-13T09:14:46.7021666+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="506b4824-7272-45e5-9629-f64d392c787e" />
+    <UnitTestResult executionId="75ebe355-fa11-466e-8ddc-80a51bd86d23" testId="b90ebf4b-363a-f307-8584-40e7bf475689" testName="EditModeTests.Quit_ExitsEditMode" computerName="HP405G8" duration="00:00:00.0037585" startTime="2026-01-13T09:14:46.5411103+09:00" endTime="2026-01-13T09:14:46.5411951+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75ebe355-fa11-466e-8ddc-80a51bd86d23" />
+    <UnitTestResult executionId="3a19a138-d2af-437e-9d1b-0adf4ae79fba" testId="fbcfd3ca-221d-1ff3-0e74-18b60dfc6a05" testName="ShellOperatorsTests.Operators_Combined_PipeAndRedirect" computerName="HP405G8" duration="00:00:00.0058774" startTime="2026-01-13T09:14:46.5302074+09:00" endTime="2026-01-13T09:14:46.5367452+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a19a138-d2af-437e-9d1b-0adf4ae79fba" />
+    <UnitTestResult executionId="6dc12fe0-8b5d-4cfa-89ac-bb552a4fe896" testId="abec36e0-4180-960b-e190-9deb9d120f2e" testName="CommandRunnerTests.Run_Echo_WithOutputRedirectAppend_ShouldAppendToFile" computerName="HP405G8" duration="00:00:00.0046324" startTime="2026-01-13T09:14:46.5451689+09:00" endTime="2026-01-13T09:14:46.5452401+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dc12fe0-8b5d-4cfa-89ac-bb552a4fe896" />
+    <UnitTestResult executionId="8cab3818-b734-4bda-bdfa-e5af57b379d2" testId="e8ba5ae8-5939-edda-501d-34bf35e3d15d" testName="ShellOperatorsTests.Parser_ShouldRecognizePipe" computerName="HP405G8" duration="00:00:00.0009096" startTime="2026-01-13T09:14:46.5387528+09:00" endTime="2026-01-13T09:14:46.5388359+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8cab3818-b734-4bda-bdfa-e5af57b379d2" />
+    <UnitTestResult executionId="2e6bad16-2812-424e-80c3-6141aaa86eac" testId="2b0b64b7-436e-71f2-9376-54350e403eb7" testName="CommandParserTests.ParseSequence_ShouldParseOutputRedirect_Truncate" computerName="HP405G8" duration="00:00:00.0003188" startTime="2026-01-13T09:14:46.5347066+09:00" endTime="2026-01-13T09:14:46.5347634+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e6bad16-2812-424e-80c3-6141aaa86eac" />
+    <UnitTestResult executionId="74d8fa75-87b8-4aef-937b-faf0b1535860" testId="87f48ceb-9c8a-da56-fcc8-5d147a19c702" testName="CommandRunnerTests.Run_UnknownCommand_ShouldReturnError" computerName="HP405G8" duration="00:00:00.0247620" startTime="2026-01-13T09:14:46.4390846+09:00" endTime="2026-01-13T09:14:46.5205591+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74d8fa75-87b8-4aef-937b-faf0b1535860" />
+    <UnitTestResult executionId="d46fa19a-058a-493b-b375-a884964e068b" testId="05676e50-17a0-564f-ce31-e0adff23a62b" testName="EditModeTests.RunCommand_ExecutesEchoLines" computerName="HP405G8" duration="00:00:00.0153644" startTime="2026-01-13T09:14:46.4394281+09:00" endTime="2026-01-13T09:14:46.5219226+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d46fa19a-058a-493b-b375-a884964e068b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Strings differ&#xD;
+                ↓ (pos 5)&#xD;
+Expected: "hello\nworld"&#xD;
+Actual:   "hello\r\nworld"&#xD;
+                ↑ (pos 5)</Message>
+          <StackTrace>   at EditModeTests.RunCommand_ExecutesEchoLines() in D:\workspace\Cssh\cssh.Tests\EditModeTests.cs:line 103&#xD;
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="baa711c7-cdad-404c-bf8f-78081578f50d" testId="ab89fc9c-16dc-a03e-b796-13a3a2f5abc0" testName="ShellStateTests.Initial_PreviousDirectory_ShouldBe_EnvironmentCurrentDirectory" computerName="HP405G8" duration="00:00:00.0000958" startTime="2026-01-13T09:14:46.5140280+09:00" endTime="2026-01-13T09:14:46.5143499+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="baa711c7-cdad-404c-bf8f-78081578f50d" />
+    <UnitTestResult executionId="764addb1-0819-4448-8756-c539df9152b2" testId="b4732b29-1f73-2fd5-3968-071712656f59" testName="ShellStateTests.Updating_PreviousDirectory_ShouldNotChange_CurrentDirectory" computerName="HP405G8" duration="00:00:00.0002030" startTime="2026-01-13T09:14:46.5112086+09:00" endTime="2026-01-13T09:14:46.5120046+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="764addb1-0819-4448-8756-c539df9152b2" />
+    <UnitTestResult executionId="2ca82c1d-4e97-4fc6-9b78-0e38a0c54e1f" testId="a3317203-d04c-abb9-572b-64eebb572bc2" testName="CommandRunnerTests.Run_Echo_WithOutputRedirectTruncate_ShouldCreateFile" computerName="HP405G8" duration="00:00:00.0026824" startTime="2026-01-13T09:14:46.5446400+09:00" endTime="2026-01-13T09:14:46.5447186+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ca82c1d-4e97-4fc6-9b78-0e38a0c54e1f" />
+    <UnitTestResult executionId="d5d9e51d-6ad3-479a-8a85-9b3c492c5e44" testId="5b80b727-a92f-b2e5-6a25-f4e9f7c56c7c" testName="CommandParserTests.ParseSequence_ShouldParseTwoCommandPipeline" computerName="HP405G8" duration="00:00:00.0002477" startTime="2026-01-13T09:14:46.5339729+09:00" endTime="2026-01-13T09:14:46.5340162+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5d9e51d-6ad3-479a-8a85-9b3c492c5e44" />
+    <UnitTestResult executionId="cdcebbd2-d593-4450-9147-59126fd95cc8" testId="c4293865-c6e8-8886-9f69-2d9922711ef3" testName="CommandParserTests.ParseSequence_ShouldHandleWhitespaceOnlyInput" computerName="HP405G8" duration="00:00:00.0005215" startTime="2026-01-13T09:14:46.5299368+09:00" endTime="2026-01-13T09:14:46.5304812+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cdcebbd2-d593-4450-9147-59126fd95cc8" />
+    <UnitTestResult executionId="3fe33888-afdf-4c0a-9602-284c2299b77e" testId="6a1621c9-98c6-7fd7-9d33-f2c187301183" testName="PathAndQuotingTests.Quotes_MixedQuotes_InSameCommand" computerName="HP405G8" duration="00:00:00.0070422" startTime="2026-01-13T09:14:46.4394671+09:00" endTime="2026-01-13T09:14:46.4590875+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fe33888-afdf-4c0a-9602-284c2299b77e" />
+    <UnitTestResult executionId="6f9ceb25-e8ff-4e46-a36c-3e8040db87c2" testId="1ff05742-c374-4341-9f2b-39035b70dba9" testName="ShellOperatorsTests.Operator_AppendRedirect_MultipleAppends_ShouldPreserveAllLines" computerName="HP405G8" duration="00:00:00.0060391" startTime="2026-01-13T09:14:46.6874615+09:00" endTime="2026-01-13T09:14:46.6985286+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f9ceb25-e8ff-4e46-a36c-3e8040db87c2" />
+    <UnitTestResult executionId="7f186b99-b625-410f-a194-d1fa95b94c30" testId="cce05e8a-bbe4-92bd-4ee3-7a65f933c6cb" testName="ShellOperatorsTests.Operator_OutputRedirect_ShouldHandleSpecialCharacters" computerName="HP405G8" duration="00:00:00.0042223" startTime="2026-01-13T09:14:46.5105286+09:00" endTime="2026-01-13T09:14:46.5173792+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f186b99-b625-410f-a194-d1fa95b94c30" />
+    <UnitTestResult executionId="67b5923e-fca0-40af-b2f9-a4608b56d7ff" testId="e646dbad-4a8b-29db-fd84-ce3343493d68" testName="ShellOperatorsTests.Operators_Combined_InputAndPipe" computerName="HP405G8" duration="00:00:00.0031065" startTime="2026-01-13T09:14:46.6840248+09:00" endTime="2026-01-13T09:14:46.6864125+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67b5923e-fca0-40af-b2f9-a4608b56d7ff" />
+    <UnitTestResult executionId="09a7fae2-679f-44db-816e-2adc117d9b64" testId="c2917bc2-a6bd-d130-8ae0-c55f1de3f700" testName="CommandParserTests.ParseSequence_ShouldHandleEmptyInput" computerName="HP405G8" duration="00:00:00.0002667" startTime="2026-01-13T09:14:46.5363325+09:00" endTime="2026-01-13T09:14:46.5365284+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09a7fae2-679f-44db-816e-2adc117d9b64" />
+    <UnitTestResult executionId="ec2f7135-52f6-410d-a810-8116013efd61" testId="539c7dbc-a582-8219-7f63-f04dbff34e98" testName="CommandRunnerTests.Run_Pipeline_MultipleCommands_ShouldChain" computerName="HP405G8" duration="00:00:00.0016668" startTime="2026-01-13T09:14:46.5282483+09:00" endTime="2026-01-13T09:14:46.5294529+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec2f7135-52f6-410d-a810-8116013efd61" />
+    <UnitTestResult executionId="2f03145b-1ca4-4856-b257-10e1ae4259ee" testId="a4b7e44b-facb-baf4-da65-d6f890f010b5" testName="PathAndQuotingTests.Quotes_NestedOppositeQuotes_ShouldWork" computerName="HP405G8" duration="00:00:00.0001131" startTime="2026-01-13T09:14:46.5187094+09:00" endTime="2026-01-13T09:14:46.5188955+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f03145b-1ca4-4856-b257-10e1ae4259ee" />
+    <UnitTestResult executionId="cbeb3449-32ff-402d-9b02-5db059a0d24d" testId="4fa49db2-3b32-d4a4-7356-eed0606e851c" testName="CommandParserTests.ParseSequence_ShouldParseOutputRedirect_Append" computerName="HP405G8" duration="00:00:00.0001839" startTime="2026-01-13T09:14:46.5345226+09:00" endTime="2026-01-13T09:14:46.5345916+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbeb3449-32ff-402d-9b02-5db059a0d24d" />
+    <UnitTestResult executionId="0db2f2e1-70e4-42fd-b914-06df9e60b891" testId="4ebdb19a-301d-db00-97e5-268560832e2c" testName="PathAndQuotingTests.Path_WithDots_ShouldBePreserved" computerName="HP405G8" duration="00:00:00.0001668" startTime="2026-01-13T09:14:46.5194620+09:00" endTime="2026-01-13T09:14:46.5195090+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0db2f2e1-70e4-42fd-b914-06df9e60b891" />
+    <UnitTestResult executionId="5c42b1a3-3844-4c6c-9ea9-6310d9cd08db" testId="d202c20e-9124-be4a-6a01-e37b7f4c8f39" testName="EditModeTests.AppendLines_AppendsToBufferAndMarksDirty" computerName="HP405G8" duration="00:00:00.0006950" startTime="2026-01-13T09:14:46.5401159+09:00" endTime="2026-01-13T09:14:46.5402255+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c42b1a3-3844-4c6c-9ea9-6310d9cd08db" />
+    <UnitTestResult executionId="0d8c222c-de0f-49be-b353-cc1b2c006079" testId="eb1b1825-db05-6e01-01de-3984cddd022f" testName="PathAndQuotingTests.QuotedPath_PartialQuote_SpaceInMiddle" computerName="HP405G8" duration="00:00:00.0001654" startTime="2026-01-13T09:14:46.5170898+09:00" endTime="2026-01-13T09:14:46.5171394+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d8c222c-de0f-49be-b353-cc1b2c006079" />
+    <UnitTestResult executionId="cadae543-706b-49ac-85d7-e3fa8aa64e59" testId="328c91f3-c127-5a57-f42b-8b6f64e45b3a" testName="ShellOperatorsTests.Operator_Pipe_TwoStages_ShouldChainCorrectly" computerName="HP405G8" duration="00:00:00.0030059" startTime="2026-01-13T09:14:46.5280400+09:00" endTime="2026-01-13T09:14:46.5300589+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cadae543-706b-49ac-85d7-e3fa8aa64e59" />
+    <UnitTestResult executionId="ed45973e-9390-44a3-a22e-f37cb7491407" testId="25477407-db94-e9f4-28ce-692b229693be" testName="CommandParserTests.Parse_ShouldHandleMixedQuotes" computerName="HP405G8" duration="00:00:00.0001932" startTime="2026-01-13T09:14:46.5319528+09:00" endTime="2026-01-13T09:14:46.5320003+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed45973e-9390-44a3-a22e-f37cb7491407" />
+    <UnitTestResult executionId="ef8c43df-3252-43c3-86e3-f64d9fb00fba" testId="248bee9d-152f-8a31-d391-c5bf2855c0cd" testName="PathAndQuotingTests.Path_DriveLetterLowercase_ShouldBePreserved" computerName="HP405G8" duration="00:00:00.0005795" startTime="2026-01-13T09:14:46.5192797+09:00" endTime="2026-01-13T09:14:46.5193279+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef8c43df-3252-43c3-86e3-f64d9fb00fba" />
+    <UnitTestResult executionId="c2cfa1b9-0655-4fcf-9c58-c1b474baf06a" testId="365b05db-75d9-48cb-5b9c-163277034535" testName="PathAndQuotingTests.Path_WithDots_RelativePath" computerName="HP405G8" duration="00:00:00.0001099" startTime="2026-01-13T09:14:46.5189984+09:00" endTime="2026-01-13T09:14:46.5190268+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2cfa1b9-0655-4fcf-9c58-c1b474baf06a" />
+    <UnitTestResult executionId="d349fbd6-4489-4d42-9728-0b0b90951b9d" testId="bea24fe3-4e05-0a10-c87b-c4589e947e4b" testName="CommandParserTests.ParseSequence_ShouldHandleConsecutiveSpaces" computerName="HP405G8" duration="00:00:00.0001814" startTime="2026-01-13T09:14:46.5327452+09:00" endTime="2026-01-13T09:14:46.5327905+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d349fbd6-4489-4d42-9728-0b0b90951b9d" />
+    <UnitTestResult executionId="b7d8e123-af53-4afe-8730-e541b59dbbb9" testId="e87ec400-7208-0f66-508c-1822ce65bb78" testName="PathAndQuotingTests.Redirect_OutputPath_WithBackslash" computerName="HP405G8" duration="00:00:00.0002279" startTime="2026-01-13T09:14:46.5145162+09:00" endTime="2026-01-13T09:14:46.5145454+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7d8e123-af53-4afe-8730-e541b59dbbb9" />
+    <UnitTestResult executionId="71e00d96-e171-47d2-8fb2-2ef91e244676" testId="119d9543-299d-50d0-995b-3d9faf8172c1" testName="CommandRunnerTests.Run_Mkdir_ShouldCreateDirectory" computerName="HP405G8" duration="00:00:00.0013978" startTime="2026-01-13T09:14:46.5437924+09:00" endTime="2026-01-13T09:14:46.5438898+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71e00d96-e171-47d2-8fb2-2ef91e244676" />
+    <UnitTestResult executionId="f5f0defc-1695-4b7c-9e06-c3fafec48069" testId="4dadcf0a-cd31-0f01-62f5-d1f8b9017db8" testName="CommandParserTests.ParseSequence_ShouldSplitBySemicolon" computerName="HP405G8" duration="00:00:00.0070937" startTime="2026-01-13T09:14:46.4393966+09:00" endTime="2026-01-13T09:14:46.4529697+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5f0defc-1695-4b7c-9e06-c3fafec48069" />
+    <UnitTestResult executionId="47f8f361-7f60-416f-a9eb-86563203333f" testId="952f279b-e212-00c4-7377-5a70eef6cc1d" testName="CommandRunnerTests.Run_Echo_ShouldExpandInDoubleQuotes" computerName="HP405G8" duration="00:00:00.0010594" startTime="2026-01-13T09:14:46.5277653+09:00" endTime="2026-01-13T09:14:46.5280985+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47f8f361-7f60-416f-a9eb-86563203333f" />
+    <UnitTestResult executionId="c2177e23-6036-4b15-9f33-92ab013a81bb" testId="1232cd8f-6794-9630-6f74-efb5674ef505" testName="CommandRunnerTests.Run_Echo_ShouldNotExpandInSingleQuotes" computerName="HP405G8" duration="00:00:00.0007203" startTime="2026-01-13T09:14:46.5367056+09:00" endTime="2026-01-13T09:14:46.5369235+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2177e23-6036-4b15-9f33-92ab013a81bb" />
+    <UnitTestResult executionId="ff868b94-94fa-46b0-ab6f-c17715a0eb60" testId="6dcf314b-d958-71b5-100b-7d286b4a1ad9" testName="CommandParserTests.Parse_ShouldSplitCommandAndArguments" computerName="HP405G8" duration="00:00:00.0001793" startTime="2026-01-13T09:14:46.5321904+09:00" endTime="2026-01-13T09:14:46.5322186+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff868b94-94fa-46b0-ab6f-c17715a0eb60" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldNotSplitSemicolonInsideQuotes" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="15510086-d034-7f02-9b3c-70ca6a663bc8">
+      <Execution id="ef6ebaca-a485-4c32-b010-a6e96f4febbe" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldNotSplitSemicolonInsideQuotes" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Quotes_SingleQuoted_StringWithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="49a205ab-c847-2ec3-f235-3ddbc3de35ce">
+      <Execution id="ad853f6b-135a-4586-9510-4ff846627b5a" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Quotes_SingleQuoted_StringWithSpaces" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.Quit_ExitsEditMode" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="b90ebf4b-363a-f307-8584-40e7bf475689">
+      <Execution id="75ebe355-fa11-466e-8ddc-80a51bd86d23" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="Quit_ExitsEditMode" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Parser_ShouldRecognizePipe" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="e8ba5ae8-5939-edda-501d-34bf35e3d15d">
+      <Execution id="8cab3818-b734-4bda-bdfa-e5af57b379d2" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Parser_ShouldRecognizePipe" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_Pipe_WithFinalRedirect_ShouldApplyRedirectToLastCommand" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="58306f8c-4c45-d110-bf72-7f746f4ef245">
+      <Execution id="34627e01-e7b9-4fb3-9259-ff9896f792d8" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_Pipe_WithFinalRedirect_ShouldApplyRedirectToLastCommand" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_MixedStyle_ShouldAcceptMixedSlashes" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="9a41acfd-9872-061f-c3fe-6d6cfcf427da">
+      <Execution id="eccc7006-0cb1-41b8-97aa-4f1e4224319e" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_MixedStyle_ShouldAcceptMixedSlashes" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleQuotedPathsWithBackslash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4a79a95e-e10e-7ae4-7077-3bf9d5ef4aa4">
+      <Execution id="cfac7f4e-4afa-43ac-9316-4f7858970eda" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleQuotedPathsWithBackslash" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleWindowsPaths" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="e1b1855c-a03d-4419-9f44-039a50fb0a60">
+      <Execution id="74653f63-92f6-4198-8dd0-8cacc3b32e4a" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleWindowsPaths" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_CommandWithMultipleArgs_AndRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="19f5a540-1330-1b72-8924-34ce6599e694">
+      <Execution id="140ecc97-7657-45b5-b593-06059acca61f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_CommandWithMultipleArgs_AndRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleWhitespaceOnlyInput" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="c4293865-c6e8-8886-9f69-2d9922711ef3">
+      <Execution id="cdcebbd2-d593-4450-9147-59126fd95cc8" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleWhitespaceOnlyInput" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_AppendRedirect_ShouldCreateFileIfNotExists" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="87d50cba-2192-bdf3-0d46-1275198e8862">
+      <Execution id="9f51091d-cef1-4cf8-9739-b2e29c589e22" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_AppendRedirect_ShouldCreateFileIfNotExists" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Mkdir_ShouldCreateDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="119d9543-299d-50d0-995b-3d9faf8172c1">
+      <Execution id="71e00d96-e171-47d2-8fb2-2ef91e244676" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Mkdir_ShouldCreateDirectory" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldSplitBySemicolon" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4dadcf0a-cd31-0f01-62f5-d1f8b9017db8">
+      <Execution id="f5f0defc-1695-4b7c-9e06-c3fafec48069" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldSplitBySemicolon" />
+    </UnitTest>
+    <UnitTest name="cssh.Tests.CsshConstantsTests.ModeEdit_ShouldBe_edit" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="cc1d1cad-e8f7-c759-13d5-311c0c76fbb9">
+      <Execution id="beed316f-6f3c-4a2a-b1df-4342efd2b4b6" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="cssh.Tests.CsshConstantsTests" name="ModeEdit_ShouldBe_edit" />
+    </UnitTest>
+    <UnitTest name="LsCommandTests.Ls_ShouldListFilesAndDirectories_InCurrentDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="87038aa1-05d1-066f-1980-b29053acc77c">
+      <Execution id="6361d176-032f-4272-a018-40f82753c691" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="LsCommandTests" name="Ls_ShouldListFilesAndDirectories_InCurrentDirectory" />
+    </UnitTest>
+    <UnitTest name="ShellStateTests.Initial_CurrentDirectory_ShouldBe_EnvironmentCurrentDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="ef609a78-d027-2551-9452-0f95f902dc9b">
+      <Execution id="af994b35-3d19-435e-93ce-42cb66bbc345" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellStateTests" name="Initial_CurrentDirectory_ShouldBe_EnvironmentCurrentDirectory" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.QuotedPath_PartialQuote_SpaceInMiddle" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="eb1b1825-db05-6e01-01de-3984cddd022f">
+      <Execution id="0d8c222c-de0f-49be-b353-cc1b2c006079" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="QuotedPath_PartialQuote_SpaceInMiddle" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseMultipleCommandPipeline" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="56a0364e-e50a-9457-d7cd-85a2d0a1c888">
+      <Execution id="5cc24095-4dd5-4c01-a121-3268347338b8" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseMultipleCommandPipeline" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleCommandWithMultipleArguments_AndRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="dc26f637-bb05-399a-ccef-ba1595660cd7">
+      <Execution id="45264ed0-39d8-4892-b4f6-633367ef5ac8" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleCommandWithMultipleArguments_AndRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldNotExpandInSingleQuotes" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1232cd8f-6794-9630-6f74-efb5674ef505">
+      <Execution id="c2177e23-6036-4b15-9f33-92ab013a81bb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldNotExpandInSingleQuotes" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleMultipleArguments" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6fdf84c8-3620-8cf0-d0a0-2e162979289a">
+      <Execution id="7e232063-827f-4215-8cf0-fa8f8246ac67" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleMultipleArguments" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Pipeline_EchoToCat_ShouldTransmitData" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="5fa8e9c4-863d-7d78-70ee-11cb4ddeaf01">
+      <Execution id="5694a804-ae90-46a0-ae61-3ef633014618" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Pipeline_EchoToCat_ShouldTransmitData" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleSingleQuotedArguments_WithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="c77203b6-68fc-fbfb-d2d4-cfe1afd94eb3">
+      <Execution id="cc7b86f9-3c1b-49ad-b914-759bc364f176" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleSingleQuotedArguments_WithSpaces" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_InputRedirect_ShouldReadFileContent" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="d5a93c5f-6da6-98d3-8edc-dececfe16d6a">
+      <Execution id="b9d32a3e-177d-4f37-98f4-650c6c019fd8" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_InputRedirect_ShouldReadFileContent" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Quotes_DoubleQuoted_StringWithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="23f20d56-9f0b-a334-584f-c5c81d7ab8eb">
+      <Execution id="19f14d8a-0349-4fab-a80a-c67ca4cc3647" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Quotes_DoubleQuoted_StringWithSpaces" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Redirect_RelativePath_DotSlash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="aa30a654-5397-53c1-922b-f34f56014cee">
+      <Execution id="df0c674c-9acb-4e3d-b2c5-c2e5889ad682" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Redirect_RelativePath_DotSlash" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Spec_ShouldNotSupportBackgroundExecution" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a35a328d-ffb3-ee25-b761-daf47599440e">
+      <Execution id="506b4824-7272-45e5-9629-f64d392c787e" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Spec_ShouldNotSupportBackgroundExecution" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.QuotedPath_SingleQuotes_ShouldPreserveSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a8d67a16-8795-8011-6c47-5b7fa2693d58">
+      <Execution id="e9458ad8-8cd8-4595-8427-32de98cd358c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="QuotedPath_SingleQuotes_ShouldPreserveSpaces" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_OutputRedirect_ShouldCreateNewFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="fcc0ba15-0e1d-cf41-f4ec-eb16678087c0">
+      <Execution id="0dc77a35-9fd1-4b2e-9751-a0b8c5842602" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_OutputRedirect_ShouldCreateNewFile" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_UNCPath_Windows" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="9ba399b0-cce4-a11d-55e9-0634e6d797dc">
+      <Execution id="6c9410ad-5dc8-49ff-b1f5-11d5990e713d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_UNCPath_Windows" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_WindowsStyle_ShouldAcceptBackslash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="c0af3f68-437b-f6f3-ab0e-4ff0f2e7daef">
+      <Execution id="6d41d1d4-5cd0-4ba5-afc5-3d3de06ac07f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_WindowsStyle_ShouldAcceptBackslash" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldReturnEmptyCommand_WhenInputIsEmpty" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="02ebb9b1-60dd-2eba-f0a5-3425fce62c07">
+      <Execution id="86f2ca2e-0960-43b2-85ff-4dc71c7053bb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldReturnEmptyCommand_WhenInputIsEmpty" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseOutputRedirect_Append" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4fa49db2-3b32-d4a4-7356-eed0606e851c">
+      <Execution id="cbeb3449-32ff-402d-9b02-5db059a0d24d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseOutputRedirect_Append" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldReturnCommandName_WhenOnlyCommandGiven" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1f2d4986-7ff9-4c8e-a504-498f87785c45">
+      <Execution id="541acc4d-f71c-49ba-bb41-00d21be22ab9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldReturnCommandName_WhenOnlyCommandGiven" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_LongPath_WindowsStyle" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a8d3eeaf-66ea-fd56-170a-1a5682d3aa9f">
+      <Execution id="e4bb9389-f873-4f14-9214-da5de52b4afb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_LongPath_WindowsStyle" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleDoubleQuotedArguments_WithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="22eebdb8-af43-1e96-e75e-dddb2af6bc41">
+      <Execution id="4065ebea-73c3-4d63-ab75-1aac8ce32002" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleDoubleQuotedArguments_WithSpaces" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_EmptyInput_ShouldHandleGracefully" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="00dd2fa6-720c-060f-05a8-116ced63f5cf">
+      <Execution id="d649e833-1ec3-4be6-8316-d726bfda44ff" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_EmptyInput_ShouldHandleGracefully" />
+    </UnitTest>
+    <UnitTest name="cssh.Tests.CsshConstantsTests.Version_ShouldBe_v020" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1ccf9820-7463-d17a-ea5d-fdd432c8c6f5">
+      <Execution id="33610d51-e28f-4c94-b9fa-465373e019f9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="cssh.Tests.CsshConstantsTests" name="Version_ShouldBe_v020" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_UnixStyle_ShouldAcceptForwardSlash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6e839e88-025a-019c-a501-0d9adbad498e">
+      <Execution id="c0568740-2572-4678-b2bd-142e4e448045" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_UnixStyle_ShouldAcceptForwardSlash" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_DriveLetterLowercase_ShouldBePreserved" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="248bee9d-152f-8a31-d391-c5bf2855c0cd">
+      <Execution id="ef8c43df-3252-43c3-86e3-f64d9fb00fba" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_DriveLetterLowercase_ShouldBePreserved" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Parser_ShouldRecognizeOutputRedirectAppend" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="b194bc36-f91a-a1f2-f907-7fffb62a71fd">
+      <Execution id="ae21671e-8d08-4c67-a90f-934fb6683405" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Parser_ShouldRecognizeOutputRedirectAppend" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.QuotedPath_DoubleQuotes_ShouldPreserveSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="13859ce3-122f-353f-ed87-b91bf99e8ac0">
+      <Execution id="4795ac2a-6508-472a-be16-ef5442b04fa5" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="QuotedPath_DoubleQuotes_ShouldPreserveSpaces" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_WithOutputRedirectAppend_ShouldAppendToFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="abec36e0-4180-960b-e190-9deb9d120f2e">
+      <Execution id="6dc12fe0-8b5d-4cfa-89ac-bb552a4fe896" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_WithOutputRedirectAppend_ShouldAppendToFile" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseRedirectWithQuotedPath" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="f0450f10-a75c-a929-c921-2606830580d2">
+      <Execution id="d52fc6bf-9353-4ab4-92c8-91ea7917611a" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseRedirectWithQuotedPath" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Redirect_OutputPath_WithBackslash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="e87ec400-7208-0f66-508c-1822ce65bb78">
+      <Execution id="b7d8e123-af53-4afe-8730-e541b59dbbb9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Redirect_OutputPath_WithBackslash" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleUnixStylePaths" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="14d10dca-0e27-4108-3663-d0dc892074ea">
+      <Execution id="ff88b32f-1b18-402a-ad41-38e0d4cacb36" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleUnixStylePaths" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_UnknownCommand_ShouldReturnError" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="87f48ceb-9c8a-da56-fcc8-5d147a19c702">
+      <Execution id="74d8fa75-87b8-4aef-937b-faf0b1535860" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_UnknownCommand_ShouldReturnError" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseInputRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="bb33f3be-2bcd-516b-8be9-0d2765c6d361">
+      <Execution id="17ecd38f-b6b7-40c7-b568-42a87a8dac5b" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseInputRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Cat_WithInputRedirect_ShouldReadFromFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="9041f042-888e-7a2c-d034-81262802f635">
+      <Execution id="2987873f-7f71-4674-b6ca-20234e9092ba" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Cat_WithInputRedirect_ShouldReadFromFile" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_InvalidRedirectPath_ShouldHandleError" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="f7a8c264-c987-867d-c998-1127056f0623">
+      <Execution id="2d9b8209-7969-400f-add3-a041ea5cad84" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_InvalidRedirectPath_ShouldHandleError" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldExpandInlineVariables" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4ecb264c-91ca-c30a-08b2-9153e31285fc">
+      <Execution id="7a44f2d4-54fa-4ab0-b7a4-46e300bf4be5" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldExpandInlineVariables" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldPreservePathsWithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1d8bddc6-85ef-95f5-ed6b-5aaa44dcf95f">
+      <Execution id="2799bc65-319f-458e-a871-4f6db68cab3d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldPreservePathsWithSpaces" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.WriteCommand_UsesExistingFileName_WhenNoArgProvided" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="17ad0023-bc12-9f24-12e0-9a4dea5ff970">
+      <Execution id="b146e838-b5fc-4af8-8035-abb10bb6e3bb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="WriteCommand_UsesExistingFileName_WhenNoArgProvided" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldExpandEnvironmentVariable" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="8437d8de-fe55-9fde-70eb-95cb12bfd927">
+      <Execution id="40bbf202-4f3d-4f26-9ed0-eb98a5b5f2eb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldExpandEnvironmentVariable" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Quotes_DoubleQuoteInsideSingle" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1d19f6c2-5b39-706e-569a-9f2781dfc870">
+      <Execution id="4f78dc21-e754-4ed7-985c-8be3571f0632" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Quotes_DoubleQuoteInsideSingle" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.RunCommand_ExecutesEchoLines" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="05676e50-17a0-564f-ce31-e0adff23a62b">
+      <Execution id="d46fa19a-058a-493b-b375-a884964e068b" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="RunCommand_ExecutesEchoLines" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParsePipelineWithFinalRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="933b69b5-17dc-c98f-40a6-ec9ee384b597">
+      <Execution id="855e4cfe-1fe4-416a-925b-a92e035eb29c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParsePipelineWithFinalRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_WithOutputRedirectTruncate_ShouldCreateFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a3317203-d04c-abb9-572b-64eebb572bc2">
+      <Execution id="2ca82c1d-4e97-4fc6-9b78-0e38a0c54e1f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_WithOutputRedirectTruncate_ShouldCreateFile" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Pipeline_WithFinalRedirect_ShouldRedirectPipeOutput" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="671afb79-d760-7018-4729-75794d534c72">
+      <Execution id="e4712296-4947-4db7-968d-b77356caafbb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Pipeline_WithFinalRedirect_ShouldRedirectPipeOutput" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseOutputRedirect_Truncate" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="2b0b64b7-436e-71f2-9376-54350e403eb7">
+      <Execution id="2e6bad16-2812-424e-80c3-6141aaa86eac" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseOutputRedirect_Truncate" />
+    </UnitTest>
+    <UnitTest name="ShellStateTests.Updating_CurrentDirectory_ShouldNotChange_PreviousDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="74c9a553-b169-a189-b3d3-76ad3610165a">
+      <Execution id="deb1e8e6-e8ce-4b2f-9e5d-8d033b9b72e3" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellStateTests" name="Updating_CurrentDirectory_ShouldNotChange_PreviousDirectory" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.QuotedPath_OutputRedirect_WithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="15249b79-4925-0c55-da8b-f3ea19a5c816">
+      <Execution id="9576abd6-07fa-464d-bee0-b10fc4b182f9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="QuotedPath_OutputRedirect_WithSpaces" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Quotes_NestedOppositeQuotes_ShouldWork" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a4b7e44b-facb-baf4-da65-d6f890f010b5">
+      <Execution id="2f03145b-1ca4-4856-b257-10e1ae4259ee" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Quotes_NestedOppositeQuotes_ShouldWork" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Quotes_MixedQuotes_InSameCommand" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6a1621c9-98c6-7fd7-9d33-f2c187301183">
+      <Execution id="3fe33888-afdf-4c0a-9602-284c2299b77e" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Quotes_MixedQuotes_InSameCommand" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldReturnText" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="9d1f24d6-c1f1-f9ea-3765-4a97405f22ac">
+      <Execution id="72b681ba-fa0d-4d23-92d5-4e937e3677cb" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldReturnText" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHaveEmptyArgsOnSecondCommandForEchoPipe" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="26c9fd67-c060-cff9-315b-fec4f546fa15">
+      <Execution id="66dbc643-8c1c-41cb-a0af-8e5e461aaa4f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHaveEmptyArgsOnSecondCommandForEchoPipe" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Pipeline_MultipleCommands_ShouldChain" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="539c7dbc-a582-8219-7f63-f04dbff34e98">
+      <Execution id="ec2f7135-52f6-410d-a810-8116013efd61" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Pipeline_MultipleCommands_ShouldChain" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_AppendRedirect_ShouldAppendToExistingFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="29889314-27ea-b8ca-fe81-1d4996b4d0f6">
+      <Execution id="7c869804-eaae-418f-9e3b-e9b06c249fd9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_AppendRedirect_ShouldAppendToExistingFile" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_WithMultipleRedirects_ShouldUseLastRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="9860960c-5bcf-35c2-3148-c559fb781d57">
+      <Execution id="e2e53b24-ab08-4c88-bea3-ec5c865b50c4" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_WithMultipleRedirects_ShouldUseLastRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldExpandInDoubleQuotes" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="952f279b-e212-00c4-7377-5a70eef6cc1d">
+      <Execution id="47f8f361-7f60-416f-a9eb-86563203333f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldExpandInDoubleQuotes" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_Pipe_ShouldTransmitOutput" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6a7bac17-4410-0115-e6b2-52b66efc5eb6">
+      <Execution id="bf7d8809-657e-40e3-b9e0-81962e263e89" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_Pipe_ShouldTransmitOutput" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.AppendLines_AppendsToBufferAndMarksDirty" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="d202c20e-9124-be4a-6a01-e37b7f4c8f39">
+      <Execution id="5c42b1a3-3844-4c6c-9ea9-6310d9cd08db" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="AppendLines_AppendsToBufferAndMarksDirty" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldSplitCommandAndArguments" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6dcf314b-d958-71b5-100b-7d286b4a1ad9">
+      <Execution id="ff868b94-94fa-46b0-ab6f-c17715a0eb60" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldSplitCommandAndArguments" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Parser_ShouldRecognizeOutputRedirectTruncate" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4595eea4-0400-f349-4407-ea9819b8b8ed">
+      <Execution id="162ac66f-b042-4bb7-97e8-75e665954116" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Parser_ShouldRecognizeOutputRedirectTruncate" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleOptionsWithDash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4ee8ff93-3867-f4e7-b2e8-3b166f897a1b">
+      <Execution id="6aa03230-1a57-491a-8d85-268452ed5ca5" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleOptionsWithDash" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_WhitespaceOnlyInput_ShouldHandleGracefully" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1a3a9935-32f6-6c14-e25f-e3336fcb7456">
+      <Execution id="b7b60abb-3e53-475a-8cbf-50581156da57" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_WhitespaceOnlyInput_ShouldHandleGracefully" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_Pipe_MultipleStages_ShouldChainAll" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4676d085-e5be-1f59-e738-584e17997c14">
+      <Execution id="9638787e-fb53-4a74-a35b-97c0d8c9cded" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_Pipe_MultipleStages_ShouldChainAll" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_OutputRedirect_ShouldHandleSpecialCharacters" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="cce05e8a-bbe4-92bd-4ee3-7a65f933c6cb">
+      <Execution id="7f186b99-b625-410f-a194-d1fa95b94c30" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_OutputRedirect_ShouldHandleSpecialCharacters" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_Pipe_TwoStages_ShouldChainCorrectly" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="328c91f3-c127-5a57-f42b-8b6f64e45b3a">
+      <Execution id="cadae543-706b-49ac-85d7-e3fa8aa64e59" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_Pipe_TwoStages_ShouldChainCorrectly" />
+    </UnitTest>
+    <UnitTest name="cssh.Tests.CsshConstantsTests.ModeInteractive_ShouldBe_interactive" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="7c126647-72d5-0d36-f774-8fecf1412d84">
+      <Execution id="7406c49d-9a22-4cc9-ad3e-d1b4c39d204b" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="cssh.Tests.CsshConstantsTests" name="ModeInteractive_ShouldBe_interactive" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_WithDots_RelativePath" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="365b05db-75d9-48cb-5b9c-163277034535">
+      <Execution id="c2cfa1b9-0655-4fcf-9c58-c1b474baf06a" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_WithDots_RelativePath" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Spec_QuoteMismatch_DoubleInside" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="adda8d73-15f5-09ef-628e-b72119783843">
+      <Execution id="abbfd097-a2d6-4caf-9d49-f9d750e209dd" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Spec_QuoteMismatch_DoubleInside" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Touch_ShouldCreateFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="03b35353-c0d5-3a49-9b57-a78b115261f6">
+      <Execution id="d0190e56-1b99-4ef5-86a5-0baf71a68bb2" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Touch_ShouldCreateFile" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Semicolon_Commands_ShouldExecuteSequentially" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="043eeb3b-583d-2ec4-7ff7-952a06281d66">
+      <Execution id="bf3827c6-b9cf-4628-860a-c6c4e74044b5" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Semicolon_Commands_ShouldExecuteSequentially" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.ReadCommand_LoadsFileIntoBuffer" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="ce5c361a-c9fd-4ffe-e4e6-2d5a35b011bf">
+      <Execution id="e258ad61-86ac-4469-b033-9d0a8806bb45" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="ReadCommand_LoadsFileIntoBuffer" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Parser_ShouldRecognizeInputRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="98695dc8-c18a-8725-d0be-07a5fb1f3ba2">
+      <Execution id="797cc0b5-ccc1-4031-bda2-2eac1574b459" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Parser_ShouldRecognizeInputRedirect" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleConsecutiveSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="bea24fe3-4e05-0a10-c87b-c4589e947e4b">
+      <Execution id="d349fbd6-4489-4d42-9728-0b0b90951b9d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleConsecutiveSpaces" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.QuotedPath_InputRedirect_WithSpaces" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1de90115-ad66-2f5d-b07c-b924a10c4bde">
+      <Execution id="63e425d3-9d32-4682-8c65-860925a8a6c3" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="QuotedPath_InputRedirect_WithSpaces" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleMixedQuotes" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="25477407-db94-e9f4-28ce-692b229693be">
+      <Execution id="ed45973e-9390-44a3-a22e-f37cb7491407" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleMixedQuotes" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.Parse_ShouldHandleQuotedPathsWithForwardSlash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="5830c149-c488-708c-2698-dded6c4a8378">
+      <Execution id="694051fe-d0cb-45d7-b656-e7351d87e14c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="Parse_ShouldHandleQuotedPathsWithForwardSlash" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_WithHome_RelativeToHome" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6dfba341-0a79-0ad3-788c-1ad2d9dcfa5c">
+      <Execution id="9382ed74-8c0e-45e5-8cc7-6adfa880ed9c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_WithHome_RelativeToHome" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_WithDots_ShouldBePreserved" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4ebdb19a-301d-db00-97e5-268560832e2c">
+      <Execution id="0db2f2e1-70e4-42fd-b914-06df9e60b891" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_WithDots_ShouldBePreserved" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_OutputRedirect_ShouldTruncateExistingFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="7dfae08c-c0e5-8c48-0f22-a117b5ff80f9">
+      <Execution id="1b1f058b-437b-4072-b75b-2677409da747" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_OutputRedirect_ShouldTruncateExistingFile" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Path_DriveLetterUppercase_ShouldBePreserved" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="d1489da4-0f22-91ff-c7ba-b785a828f92c">
+      <Execution id="fc6aaa17-816c-4469-8f95-c70e93de49f9" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Path_DriveLetterUppercase_ShouldBePreserved" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.WriteCommand_SavesBufferToFile" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="0a3fcee8-f12e-1aeb-92c8-82a19704f8ac">
+      <Execution id="4a3d767a-e568-4e59-ace9-7dfdb7a2ad90" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="WriteCommand_SavesBufferToFile" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParsePipelineWithArguments" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="a66c246b-7072-834d-269c-b26522b46fe9">
+      <Execution id="aeb694a7-9614-4dde-a56e-fbf27fd2a541" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParsePipelineWithArguments" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_WithInputRedirect_NonExistentFile_ShouldReturnError" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="61b8495d-d629-6c50-9929-74ac3190ec5c">
+      <Execution id="f849b761-7a4b-4b39-b7ac-3e3731e6e975" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_WithInputRedirect_NonExistentFile_ShouldReturnError" />
+    </UnitTest>
+    <UnitTest name="PathAndQuotingTests.Redirect_OutputPath_WithForwardSlash" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="60a7026f-07f1-f639-e861-eed3367d03a8">
+      <Execution id="b6335ead-e7d8-4412-b0be-a80dda80628c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PathAndQuotingTests" name="Redirect_OutputPath_WithForwardSlash" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operators_Combined_InputAndPipe" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="e646dbad-4a8b-29db-fd84-ce3343493d68">
+      <Execution id="67b5923e-fca0-40af-b2f9-a4608b56d7ff" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operators_Combined_InputAndPipe" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_Echo_ShouldHandleQuotedText" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="94e5d112-3b62-4248-5e26-4358cc039d7d">
+      <Execution id="8ba679e5-a099-4550-8816-622dfc9d670f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_Echo_ShouldHandleQuotedText" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operators_Combined_PipeAndRedirect" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="fbcfd3ca-221d-1ff3-0e74-18b60dfc6a05">
+      <Execution id="3a19a138-d2af-437e-9d1b-0adf4ae79fba" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operators_Combined_PipeAndRedirect" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_AppendRedirect_MultipleAppends_ShouldPreserveAllLines" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="1ff05742-c374-4341-9f2b-39035b70dba9">
+      <Execution id="6f9ceb25-e8ff-4e46-a36c-3e8040db87c2" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_AppendRedirect_MultipleAppends_ShouldPreserveAllLines" />
+    </UnitTest>
+    <UnitTest name="EditModeTests.EditCommand_EntersEditMode" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="f6ddda31-6e22-774f-c974-70ae493e6667">
+      <Execution id="814d735f-9359-49e5-aabb-b7585b34d01f" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="EditModeTests" name="EditCommand_EntersEditMode" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Operator_InputRedirect_NonExistentFile_ShouldReturnError" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="6a4a73b6-e8b9-fea2-63d9-47871d0cbc2b">
+      <Execution id="be1b3edb-2fa1-40b9-807b-51e7ece8408c" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Operator_InputRedirect_NonExistentFile_ShouldReturnError" />
+    </UnitTest>
+    <UnitTest name="ShellOperatorsTests.Spec_ShouldNotSupportConditionalExecution" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="47f8273b-b525-d224-19cd-c2ae7facab0b">
+      <Execution id="8cd7367a-a298-4080-b307-f3b289d0dacf" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellOperatorsTests" name="Spec_ShouldNotSupportConditionalExecution" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldParseTwoCommandPipeline" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="5b80b727-a92f-b2e5-6a25-f4e9f7c56c7c">
+      <Execution id="d5d9e51d-6ad3-479a-8a85-9b3c492c5e44" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldParseTwoCommandPipeline" />
+    </UnitTest>
+    <UnitTest name="ShellStateTests.Initial_PreviousDirectory_ShouldBe_EnvironmentCurrentDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="ab89fc9c-16dc-a03e-b796-13a3a2f5abc0">
+      <Execution id="baa711c7-cdad-404c-bf8f-78081578f50d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellStateTests" name="Initial_PreviousDirectory_ShouldBe_EnvironmentCurrentDirectory" />
+    </UnitTest>
+    <UnitTest name="ShellStateTests.Updating_PreviousDirectory_ShouldNotChange_CurrentDirectory" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="b4732b29-1f73-2fd5-3968-071712656f59">
+      <Execution id="764addb1-0819-4448-8756-c539df9152b2" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="ShellStateTests" name="Updating_PreviousDirectory_ShouldNotChange_CurrentDirectory" />
+    </UnitTest>
+    <UnitTest name="cssh.Tests.CsshConstantsTests.DefaultPromptDirTrim_ShouldBe_2" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="4d8c2b76-a547-3002-489e-a1b22eb1170b">
+      <Execution id="b13af8d8-ffe5-4a22-9544-843cef7b65ec" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="cssh.Tests.CsshConstantsTests" name="DefaultPromptDirTrim_ShouldBe_2" />
+    </UnitTest>
+    <UnitTest name="CommandParserTests.ParseSequence_ShouldHandleEmptyInput" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="c2917bc2-a6bd-d130-8ae0-c55f1de3f700">
+      <Execution id="09a7fae2-679f-44db-816e-2adc117d9b64" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandParserTests" name="ParseSequence_ShouldHandleEmptyInput" />
+    </UnitTest>
+    <UnitTest name="CommandRunnerTests.Run_ExternalCommand_FromPath_ShouldExecute" storage="d:\workspace\cssh\cssh.tests\bin\debug\net10.0\cssh.tests.dll" id="f923e228-eff5-042a-b194-349970971a81">
+      <Execution id="2be5a19d-8332-46b7-a3d1-32d904e5d76d" />
+      <TestMethod codeBase="D:\workspace\Cssh\cssh.Tests\bin\Debug\net10.0\cssh.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="CommandRunnerTests" name="Run_ExternalCommand_FromPath_ShouldExecute" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7c126647-72d5-0d36-f774-8fecf1412d84" executionId="7406c49d-9a22-4cc9-ad3e-d1b4c39d204b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="043eeb3b-583d-2ec4-7ff7-952a06281d66" executionId="bf3827c6-b9cf-4628-860a-c6c4e74044b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc1d1cad-e8f7-c759-13d5-311c0c76fbb9" executionId="beed316f-6f3c-4a2a-b1df-4342efd2b4b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1b1855c-a03d-4419-9f44-039a50fb0a60" executionId="74653f63-92f6-4198-8dd0-8cacc3b32e4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a41acfd-9872-061f-c3fe-6d6cfcf427da" executionId="eccc7006-0cb1-41b8-97aa-4f1e4224319e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4676d085-e5be-1f59-e738-584e17997c14" executionId="9638787e-fb53-4a74-a35b-97c0d8c9cded" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98695dc8-c18a-8725-d0be-07a5fb1f3ba2" executionId="797cc0b5-ccc1-4031-bda2-2eac1574b459" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8d67a16-8795-8011-6c47-5b7fa2693d58" executionId="e9458ad8-8cd8-4595-8427-32de98cd358c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8d3eeaf-66ea-fd56-170a-1a5682d3aa9f" executionId="e4bb9389-f873-4f14-9214-da5de52b4afb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9041f042-888e-7a2c-d034-81262802f635" executionId="2987873f-7f71-4674-b6ca-20234e9092ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87038aa1-05d1-066f-1980-b29053acc77c" executionId="6361d176-032f-4272-a018-40f82753c691" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a7bac17-4410-0115-e6b2-52b66efc5eb6" executionId="bf7d8809-657e-40e3-b9e0-81962e263e89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02ebb9b1-60dd-2eba-f0a5-3425fce62c07" executionId="86f2ca2e-0960-43b2-85ff-4dc71c7053bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56a0364e-e50a-9457-d7cd-85a2d0a1c888" executionId="5cc24095-4dd5-4c01-a121-3268347338b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce5c361a-c9fd-4ffe-e4e6-2d5a35b011bf" executionId="e258ad61-86ac-4469-b033-9d0a8806bb45" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="933b69b5-17dc-c98f-40a6-ec9ee384b597" executionId="855e4cfe-1fe4-416a-925b-a92e035eb29c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a3fcee8-f12e-1aeb-92c8-82a19704f8ac" executionId="4a3d767a-e568-4e59-ace9-7dfdb7a2ad90" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15510086-d034-7f02-9b3c-70ca6a663bc8" executionId="ef6ebaca-a485-4c32-b010-a6e96f4febbe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b194bc36-f91a-a1f2-f907-7fffb62a71fd" executionId="ae21671e-8d08-4c67-a90f-934fb6683405" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="adda8d73-15f5-09ef-628e-b72119783843" executionId="abbfd097-a2d6-4caf-9d49-f9d750e209dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74c9a553-b169-a189-b3d3-76ad3610165a" executionId="deb1e8e6-e8ce-4b2f-9e5d-8d033b9b72e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef609a78-d027-2551-9452-0f95f902dc9b" executionId="af994b35-3d19-435e-93ce-42cb66bbc345" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ba399b0-cce4-a11d-55e9-0634e6d797dc" executionId="6c9410ad-5dc8-49ff-b1f5-11d5990e713d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19f5a540-1330-1b72-8924-34ce6599e694" executionId="140ecc97-7657-45b5-b593-06059acca61f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9860960c-5bcf-35c2-3148-c559fb781d57" executionId="e2e53b24-ab08-4c88-bea3-ec5c865b50c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17ad0023-bc12-9f24-12e0-9a4dea5ff970" executionId="b146e838-b5fc-4af8-8035-abb10bb6e3bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a4a73b6-e8b9-fea2-63d9-47871d0cbc2b" executionId="be1b3edb-2fa1-40b9-807b-51e7ece8408c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ecb264c-91ca-c30a-08b2-9153e31285fc" executionId="7a44f2d4-54fa-4ab0-b7a4-46e300bf4be5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d8c2b76-a547-3002-489e-a1b22eb1170b" executionId="b13af8d8-ffe5-4a22-9544-843cef7b65ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0450f10-a75c-a929-c921-2606830580d2" executionId="d52fc6bf-9353-4ab4-92c8-91ea7917611a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1489da4-0f22-91ff-c7ba-b785a828f92c" executionId="fc6aaa17-816c-4469-8f95-c70e93de49f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="14d10dca-0e27-4108-3663-d0dc892074ea" executionId="ff88b32f-1b18-402a-ad41-38e0d4cacb36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0af3f68-437b-f6f3-ab0e-4ff0f2e7daef" executionId="6d41d1d4-5cd0-4ba5-afc5-3d3de06ac07f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6dfba341-0a79-0ad3-788c-1ad2d9dcfa5c" executionId="9382ed74-8c0e-45e5-8cc7-6adfa880ed9c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22eebdb8-af43-1e96-e75e-dddb2af6bc41" executionId="4065ebea-73c3-4d63-ab75-1aac8ce32002" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="671afb79-d760-7018-4729-75794d534c72" executionId="e4712296-4947-4db7-968d-b77356caafbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1a3a9935-32f6-6c14-e25f-e3336fcb7456" executionId="b7b60abb-3e53-475a-8cbf-50581156da57" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8437d8de-fe55-9fde-70eb-95cb12bfd927" executionId="40bbf202-4f3d-4f26-9ed0-eb98a5b5f2eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49a205ab-c847-2ec3-f235-3ddbc3de35ce" executionId="ad853f6b-135a-4586-9510-4ff846627b5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1d8bddc6-85ef-95f5-ed6b-5aaa44dcf95f" executionId="2799bc65-319f-458e-a871-4f6db68cab3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d1f24d6-c1f1-f9ea-3765-4a97405f22ac" executionId="72b681ba-fa0d-4d23-92d5-4e937e3677cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15249b79-4925-0c55-da8b-f3ea19a5c816" executionId="9576abd6-07fa-464d-bee0-b10fc4b182f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6fdf84c8-3620-8cf0-d0a0-2e162979289a" executionId="7e232063-827f-4215-8cf0-fa8f8246ac67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e839e88-025a-019c-a501-0d9adbad498e" executionId="c0568740-2572-4678-b2bd-142e4e448045" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7a8c264-c987-867d-c998-1127056f0623" executionId="2d9b8209-7969-400f-add3-a041ea5cad84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87d50cba-2192-bdf3-0d46-1275198e8862" executionId="9f51091d-cef1-4cf8-9739-b2e29c589e22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61b8495d-d629-6c50-9929-74ac3190ec5c" executionId="f849b761-7a4b-4b39-b7ac-3e3731e6e975" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ccf9820-7463-d17a-ea5d-fdd432c8c6f5" executionId="33610d51-e28f-4c94-b9fa-465373e019f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb33f3be-2bcd-516b-8be9-0d2765c6d361" executionId="17ecd38f-b6b7-40c7-b568-42a87a8dac5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fcc0ba15-0e1d-cf41-f4ec-eb16678087c0" executionId="0dc77a35-9fd1-4b2e-9751-a0b8c5842602" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c77203b6-68fc-fbfb-d2d4-cfe1afd94eb3" executionId="cc7b86f9-3c1b-49ad-b914-759bc364f176" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29889314-27ea-b8ca-fe81-1d4996b4d0f6" executionId="7c869804-eaae-418f-9e3b-e9b06c249fd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc26f637-bb05-399a-ccef-ba1595660cd7" executionId="45264ed0-39d8-4892-b4f6-633367ef5ac8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47f8273b-b525-d224-19cd-c2ae7facab0b" executionId="8cd7367a-a298-4080-b307-f3b289d0dacf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94e5d112-3b62-4248-5e26-4358cc039d7d" executionId="8ba679e5-a099-4550-8816-622dfc9d670f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7dfae08c-c0e5-8c48-0f22-a117b5ff80f9" executionId="1b1f058b-437b-4072-b75b-2677409da747" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa30a654-5397-53c1-922b-f34f56014cee" executionId="df0c674c-9acb-4e3d-b2c5-c2e5889ad682" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a66c246b-7072-834d-269c-b26522b46fe9" executionId="aeb694a7-9614-4dde-a56e-fbf27fd2a541" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f6ddda31-6e22-774f-c974-70ae493e6667" executionId="814d735f-9359-49e5-aabb-b7585b34d01f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23f20d56-9f0b-a334-584f-c5c81d7ab8eb" executionId="19f14d8a-0349-4fab-a80a-c67ca4cc3647" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1de90115-ad66-2f5d-b07c-b924a10c4bde" executionId="63e425d3-9d32-4682-8c65-860925a8a6c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5a93c5f-6da6-98d3-8edc-dececfe16d6a" executionId="b9d32a3e-177d-4f37-98f4-650c6c019fd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26c9fd67-c060-cff9-315b-fec4f546fa15" executionId="66dbc643-8c1c-41cb-a0af-8e5e461aaa4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4a79a95e-e10e-7ae4-7077-3bf9d5ef4aa4" executionId="cfac7f4e-4afa-43ac-9316-4f7858970eda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4595eea4-0400-f349-4407-ea9819b8b8ed" executionId="162ac66f-b042-4bb7-97e8-75e665954116" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00dd2fa6-720c-060f-05a8-116ced63f5cf" executionId="d649e833-1ec3-4be6-8316-d726bfda44ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58306f8c-4c45-d110-bf72-7f746f4ef245" executionId="34627e01-e7b9-4fb3-9259-ff9896f792d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ee8ff93-3867-f4e7-b2e8-3b166f897a1b" executionId="6aa03230-1a57-491a-8d85-268452ed5ca5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f2d4986-7ff9-4c8e-a504-498f87785c45" executionId="541acc4d-f71c-49ba-bb41-00d21be22ab9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03b35353-c0d5-3a49-9b57-a78b115261f6" executionId="d0190e56-1b99-4ef5-86a5-0baf71a68bb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5830c149-c488-708c-2698-dded6c4a8378" executionId="694051fe-d0cb-45d7-b656-e7351d87e14c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f923e228-eff5-042a-b194-349970971a81" executionId="2be5a19d-8332-46b7-a3d1-32d904e5d76d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fa8e9c4-863d-7d78-70ee-11cb4ddeaf01" executionId="5694a804-ae90-46a0-ae61-3ef633014618" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="13859ce3-122f-353f-ed87-b91bf99e8ac0" executionId="4795ac2a-6508-472a-be16-ef5442b04fa5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1d19f6c2-5b39-706e-569a-9f2781dfc870" executionId="4f78dc21-e754-4ed7-985c-8be3571f0632" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60a7026f-07f1-f639-e861-eed3367d03a8" executionId="b6335ead-e7d8-4412-b0be-a80dda80628c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a35a328d-ffb3-ee25-b761-daf47599440e" executionId="506b4824-7272-45e5-9629-f64d392c787e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b90ebf4b-363a-f307-8584-40e7bf475689" executionId="75ebe355-fa11-466e-8ddc-80a51bd86d23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbcfd3ca-221d-1ff3-0e74-18b60dfc6a05" executionId="3a19a138-d2af-437e-9d1b-0adf4ae79fba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="abec36e0-4180-960b-e190-9deb9d120f2e" executionId="6dc12fe0-8b5d-4cfa-89ac-bb552a4fe896" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8ba5ae8-5939-edda-501d-34bf35e3d15d" executionId="8cab3818-b734-4bda-bdfa-e5af57b379d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b0b64b7-436e-71f2-9376-54350e403eb7" executionId="2e6bad16-2812-424e-80c3-6141aaa86eac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87f48ceb-9c8a-da56-fcc8-5d147a19c702" executionId="74d8fa75-87b8-4aef-937b-faf0b1535860" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05676e50-17a0-564f-ce31-e0adff23a62b" executionId="d46fa19a-058a-493b-b375-a884964e068b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab89fc9c-16dc-a03e-b796-13a3a2f5abc0" executionId="baa711c7-cdad-404c-bf8f-78081578f50d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4732b29-1f73-2fd5-3968-071712656f59" executionId="764addb1-0819-4448-8756-c539df9152b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3317203-d04c-abb9-572b-64eebb572bc2" executionId="2ca82c1d-4e97-4fc6-9b78-0e38a0c54e1f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b80b727-a92f-b2e5-6a25-f4e9f7c56c7c" executionId="d5d9e51d-6ad3-479a-8a85-9b3c492c5e44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4293865-c6e8-8886-9f69-2d9922711ef3" executionId="cdcebbd2-d593-4450-9147-59126fd95cc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a1621c9-98c6-7fd7-9d33-f2c187301183" executionId="3fe33888-afdf-4c0a-9602-284c2299b77e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ff05742-c374-4341-9f2b-39035b70dba9" executionId="6f9ceb25-e8ff-4e46-a36c-3e8040db87c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cce05e8a-bbe4-92bd-4ee3-7a65f933c6cb" executionId="7f186b99-b625-410f-a194-d1fa95b94c30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e646dbad-4a8b-29db-fd84-ce3343493d68" executionId="67b5923e-fca0-40af-b2f9-a4608b56d7ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2917bc2-a6bd-d130-8ae0-c55f1de3f700" executionId="09a7fae2-679f-44db-816e-2adc117d9b64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="539c7dbc-a582-8219-7f63-f04dbff34e98" executionId="ec2f7135-52f6-410d-a810-8116013efd61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a4b7e44b-facb-baf4-da65-d6f890f010b5" executionId="2f03145b-1ca4-4856-b257-10e1ae4259ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fa49db2-3b32-d4a4-7356-eed0606e851c" executionId="cbeb3449-32ff-402d-9b02-5db059a0d24d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ebdb19a-301d-db00-97e5-268560832e2c" executionId="0db2f2e1-70e4-42fd-b914-06df9e60b891" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d202c20e-9124-be4a-6a01-e37b7f4c8f39" executionId="5c42b1a3-3844-4c6c-9ea9-6310d9cd08db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb1b1825-db05-6e01-01de-3984cddd022f" executionId="0d8c222c-de0f-49be-b353-cc1b2c006079" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="328c91f3-c127-5a57-f42b-8b6f64e45b3a" executionId="cadae543-706b-49ac-85d7-e3fa8aa64e59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25477407-db94-e9f4-28ce-692b229693be" executionId="ed45973e-9390-44a3-a22e-f37cb7491407" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="248bee9d-152f-8a31-d391-c5bf2855c0cd" executionId="ef8c43df-3252-43c3-86e3-f64d9fb00fba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="365b05db-75d9-48cb-5b9c-163277034535" executionId="c2cfa1b9-0655-4fcf-9c58-c1b474baf06a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bea24fe3-4e05-0a10-c87b-c4589e947e4b" executionId="d349fbd6-4489-4d42-9728-0b0b90951b9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e87ec400-7208-0f66-508c-1822ce65bb78" executionId="b7d8e123-af53-4afe-8730-e541b59dbbb9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="119d9543-299d-50d0-995b-3d9faf8172c1" executionId="71e00d96-e171-47d2-8fb2-2ef91e244676" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4dadcf0a-cd31-0f01-62f5-d1f8b9017db8" executionId="f5f0defc-1695-4b7c-9e06-c3fafec48069" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="952f279b-e212-00c4-7377-5a70eef6cc1d" executionId="47f8f361-7f60-416f-a9eb-86563203333f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1232cd8f-6794-9630-6f74-efb5674ef505" executionId="c2177e23-6036-4b15-9f33-92ab013a81bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6dcf314b-d958-71b5-100b-7d286b4a1ad9" executionId="ff868b94-94fa-46b0-ab6f-c17715a0eb60" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="111" executed="111" passed="109" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.1)&#xD;
+[xUnit.net 00:00:00.07]   Discovering: cssh.Tests&#xD;
+[xUnit.net 00:00:00.11]   Discovered:  cssh.Tests&#xD;
+[xUnit.net 00:00:00.13]   Starting:    cssh.Tests&#xD;
+Redirect error: Could not find a part of the path 'D:\invalid\path\file.txt'.&#xD;
+[xUnit.net 00:00:00.24]       Assert.Equal() Failure: Strings differ&#xD;
+[xUnit.net 00:00:00.24]                       ↓ (pos 5)&#xD;
+[xUnit.net 00:00:00.24]       Expected: "hello\nworld"&#xD;
+[xUnit.net 00:00:00.24]       Actual:   "hello\r\nworld"&#xD;
+[xUnit.net 00:00:00.24]                       ↑ (pos 5)&#xD;
+[xUnit.net 00:00:00.24]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.24]         D:\workspace\Cssh\cssh.Tests\EditModeTests.cs(103,0): at EditModeTests.RunCommand_ExecutesEchoLines()&#xD;
+[xUnit.net 00:00:00.24]            at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+[xUnit.net 00:00:00.24]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:00.26]       Assert.Equal() Failure: Strings differ&#xD;
+[xUnit.net 00:00:00.26]       Expected: ""&#xD;
+[xUnit.net 00:00:00.26]       Actual:   "Error: ハンドルが無効です。"&#xD;
+[xUnit.net 00:00:00.26]                  ↑ (pos 0)&#xD;
+[xUnit.net 00:00:00.26]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.26]         D:\workspace\Cssh\cssh.Tests\EditModeTests.cs(33,0): at EditModeTests.EditCommand_EntersEditMode()&#xD;
+[xUnit.net 00:00:00.26]            at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)&#xD;
+[xUnit.net 00:00:00.26]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:00.43]   Finished:    cssh.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="HP405G8" outcome="Error" timestamp="2026-01-13T09:14:46.5513356+09:00">
+        <Text>[xUnit.net 00:00:00.24]     EditModeTests.RunCommand_ExecutesEchoLines [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="HP405G8" outcome="Error" timestamp="2026-01-13T09:14:46.5665869+09:00">
+        <Text>[xUnit.net 00:00:00.26]     EditModeTests.EditCommand_EntersEditMode [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

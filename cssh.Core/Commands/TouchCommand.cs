@@ -1,4 +1,4 @@
-/* cssh.Core.Commands.TouchCommand.cs v0.1.5 */
+/* cssh.Core.Commands.TouchCommand.cs v0.2.0 */
 namespace cssh.Core.Commands;
 
 /// <summary>
@@ -7,19 +7,28 @@ namespace cssh.Core.Commands;
 /// </summary>
 public class TouchCommand : ICommand
 {
+  /// <summary>
+  /// The Name field.
+  /// </summary>
   public string Name => "touch";
 
+  /// <summary>
+  /// The Description field.
+  /// </summary>
   public string Description => "Create a file or update its modification time.";
 
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
   public string Execute(ShellState state, string[] args)
   {
     if (args.Length == 0)
-      return "touch: missing operand";
+    return "touch: missing operand";
 
     var path = PathNormalizer.Normalize(args[0]);
 
     if (!Path.IsPathRooted(path))
-      path = Path.Combine(state.CurrentDirectory, path);
+    path = Path.Combine(state.CurrentDirectory, path);
 
     try
     {

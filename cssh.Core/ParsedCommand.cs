@@ -16,10 +16,10 @@ public record ParsedCommand(string Command, string[] Arguments)
     foreach (var arg in Arguments)
     {
       if (!arg.StartsWith("-"))
-        continue;
+      continue;
 
       if (arg.Contains(opt))
-        return true;
+      return true;
     }
     return false;
   }

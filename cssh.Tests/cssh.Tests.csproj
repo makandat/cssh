@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\cssh.Core\cssh.Core.csproj" />
+    <ProjectReference Include="..\cssh.Std\cssh.Std.csproj" />
   </ItemGroup>
 
 </Project>

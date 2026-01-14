@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.Core", "cssh.Core\cssh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.Tests", "cssh.Tests\cssh.Tests.csproj", "{CF481725-75EE-4472-A375-2E43F35CFE24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.Std", "cssh.Std\cssh.Std.csproj", "{537D568D-4B82-44CC-ACAB-D0EE7062F382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x64.Build.0 = Release|Any CPU
 		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x86.ActiveCfg = Release|Any CPU
 		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x86.Build.0 = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|x64.Build.0 = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Debug|x86.Build.0 = Debug|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|x64.ActiveCfg = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|x64.Build.0 = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|x86.ActiveCfg = Release|Any CPU
+		{537D568D-4B82-44CC-ACAB-D0EE7062F382}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

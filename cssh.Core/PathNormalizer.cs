@@ -13,7 +13,7 @@ public static class PathNormalizer
   public static string Normalize(string path)
   {
     if (string.IsNullOrWhiteSpace(path))
-      return path;
+    return path;
 
     return path.Replace('/', '\\');
   }

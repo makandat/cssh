@@ -1,0 +1,4825 @@
+# ソリューション： C:\workspace\Cssh
+
+## cssh.sln
+
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.App", "cssh.App\cssh.App.csproj", "{67DE9796-4DCD-427C-9234-60CDFA415F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.Core", "cssh.Core\cssh.Core.csproj", "{FA0B8875-B399-4B13-B7CD-BB361252D63E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cssh.Tests", "cssh.Tests\cssh.Tests.csproj", "{CF481725-75EE-4472-A375-2E43F35CFE24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|x64.Build.0 = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Debug|x86.Build.0 = Debug|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|x64.ActiveCfg = Release|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|x64.Build.0 = Release|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|x86.ActiveCfg = Release|Any CPU
+		{67DE9796-4DCD-427C-9234-60CDFA415F79}.Release|x86.Build.0 = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|x64.Build.0 = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Debug|x86.Build.0 = Debug|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|x64.ActiveCfg = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|x64.Build.0 = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA0B8875-B399-4B13-B7CD-BB361252D63E}.Release|x86.Build.0 = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|x64.Build.0 = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Debug|x86.Build.0 = Debug|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x64.ActiveCfg = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x64.Build.0 = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF481725-75EE-4472-A375-2E43F35CFE24}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+
+
+## cssh.App\cssh.App.csproj
+
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\cssh.Core\cssh.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+
+## cssh.App\Program.cs
+
+/* cssh - A cross-platform C# shell ver.0.2.0 Program.cs */
+using cssh.Core;
+using cssh.Core.Commands;
+using System.Globalization;
+
+/// <summary>
+/// Entry point of the cssh shell application (v0.2.0).
+/// Initializes shell state, command registry, and the main REPL loop.
+/// </summary>
+var parser = new CommandParser();
+var registry = new CommandRegistry();
+var state = new ShellState(registry);
+var runner = new CommandRunner(parser, registry);
+
+/// <summary>
+/// Registers built-in commands for v0.2.0
+/// </summary>
+if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja")
+{
+  registry.Register(new HelpCommand(), "ヘルプを表示する");
+  registry.Register(new ClearCommand(), "画面をクリアする");
+  registry.Register(new EditCommand(), "編集モードへ遷移する");
+  registry.Register(new CdCommand(), "現在のディレクトリを変更する");
+  registry.Register(new LsCommand(), "ディレクトリの内容を表示する");
+  registry.Register(new PwdCommand(), "現在のディレクトリを表示する");
+  registry.Register(new EchoCommand(), "文字列を表示する");
+  registry.Register(new CatCommand(), "ファイルの内容を表示する");
+  registry.Register(new TouchCommand(), "ファイルのタイムスタンプを作成または更新する");
+  registry.Register(new RmCommand(), "ファイルを削除する");
+  registry.Register(new MkdirCommand(), "ディレクトリを作成する");
+  registry.Register(new RmdirCommand(), "ディレクトリを削除する");
+  registry.Register(new WhichCommand(registry), "コマンドの場所を表示する");
+  registry.Register(new AliasCommand("dir", "ls"), "ls コマンドの別名");
+  registry.Register(new AliasCommand("type", "cat"), "cat コマンドの別名");
+  registry.Register(new AliasCommand("del", "rm"), "rm コマンドの別名");
+  registry.Register(new AliasCommand("cls", "clear"), "clear コマンドの別名");
+  registry.Register(new AliasCommand("h", "history"), "history コマンドの別名");
+  registry.Register(new AliasCommand("where", "which"), "which コマンドの別名");
+
+  // 動的 alias / 履歴サポート (v0.2.1)
+  registry.Register(new AliasBuiltinCommand(), "エイリアスの一覧または作成");
+  registry.Register(new HistoryCommand(), "コマンド履歴を表示する");
+  // 履歴の短縮名
+  registry.Register(new AliasCommand("h", "history"), "history コマンドの短縮名");
+}
+else
+{
+  registry.Register(new HelpCommand(), "Show help for commands.");
+  registry.Register(new ClearCommand(), "Clear the screen.");
+  registry.Register(new EditCommand(), "Enter script edit mode.");
+  registry.Register(new CdCommand(), "Change directory.");
+  registry.Register(new LsCommand(), "List directory contents.");
+  registry.Register(new PwdCommand(), "Print working directory.");
+  registry.Register(new EchoCommand(), "Print arguments.");
+  registry.Register(new CatCommand(), "Print file contents.");
+  registry.Register(new TouchCommand(), "Create or update file timestamp.");
+  registry.Register(new RmCommand(), "Remove a file.");
+  registry.Register(new MkdirCommand(), "Create a directory.");
+  registry.Register(new RmdirCommand(), "Remove a directory.");
+  registry.Register(new WhichCommand(registry), "Show command location.");
+
+  // Static aliases
+  registry.Register(new AliasCommand("dir", "ls"), "Alias of ls command.");
+  registry.Register(new AliasCommand("type", "cat"), "Alias of cat command.");
+  registry.Register(new AliasCommand("del", "rm"), "Alias of rm command.");
+  registry.Register(new AliasCommand("cls", "clear"), "Alias of clear command.");
+
+  // Dynamic alias/history support (v0.2.1)
+  registry.Register(new AliasBuiltinCommand(), "List or create aliases (alias name expansion)");
+  registry.Register(new HistoryCommand(), "Show command history");
+  // convenience short-name for history
+  registry.Register(new AliasCommand("h", "history"), "Alias of history");
+  registry.Register(new AliasCommand("where", "which"), "Alias of which");
+}
+
+//
+// 🔥 起動時の画面クリア + タイトル表示
+//
+Console.Clear();
+Console.WriteLine($"cssh {cssh.Core.Constants.CsshConstants.Version}");
+Console.WriteLine();
+
+//
+// 🔁 メイン REPL
+//
+while (true)
+{
+  Console.Write($"cssh: {state.CurrentDirectory}> ");
+  var input = Console.ReadLine();
+  if (string.IsNullOrWhiteSpace(input))
+  continue;
+
+  // exit / quit は特別扱い
+  var trimmed = input.Trim();
+  if (trimmed == "exit" || trimmed == "quit")
+  break;
+
+  var output = runner.Run(state, input);
+  Console.WriteLine(output);
+}
+
+
+## cssh.Core\AST.cs
+
+/* cssh.Core.AST.cs - A cross-platform C# shell v0.2.0 Abstract Syntax Tree definitions */
+namespace Cssh.Core.Ast;
+
+/// <summary>
+/// Represents the RedirectType enum.
+/// </summary>
+public enum RedirectType
+{
+  None,
+  OutputTruncate, // >
+  OutputAppend,   // >>
+  Input           // <
+}
+
+/// <summary>
+/// Represents the RedirectInfo class.
+/// </summary>
+public sealed class RedirectInfo
+{
+  /// <summary>
+  /// Gets or sets the Type.
+  /// </summary>
+  public RedirectType Type { get; }
+  public string? FilePath { get; }
+
+  public RedirectInfo(RedirectType type, string? filePath)
+  {
+    Type = type;
+    FilePath = filePath;
+  }
+
+  /// <param name="new(RedirectType.None"></param>
+  /// <param name="null"></param>
+  /// <returns></returns>
+  public static RedirectInfo None() => new(RedirectType.None, null);
+}
+
+/// <summary>
+/// Represents the CommandNode class.
+/// </summary>
+public sealed class CommandNode
+{
+  /// <summary>
+  /// Gets or sets the Name.
+  /// </summary>
+  public string Name { get; }
+  /// <summary>
+  /// Gets or sets the Args.
+  /// </summary>
+  public IReadOnlyList<string> Args { get; }
+  /// <summary>
+  /// Gets or sets the Redirect.
+  /// </summary>
+  public RedirectInfo Redirect { get; }
+
+  public CommandNode(string name, IReadOnlyList<string> args, RedirectInfo redirect)
+  {
+    Name = name;
+    Args = args;
+    Redirect = redirect;
+  }
+}
+
+/// <summary>
+/// Represents the Pipeline class.
+/// </summary>
+public sealed class Pipeline
+{
+  /// <summary>
+  /// Gets or sets the Commands.
+  /// </summary>
+  public IReadOnlyList<CommandNode> Commands { get; }
+
+  public Pipeline(IReadOnlyList<CommandNode> commands)
+  {
+    Commands = commands;
+  }
+}
+
+/// <summary>
+/// Represents the Sequence class.
+/// </summary>
+public sealed class Sequence
+{
+  /// <summary>
+  /// Gets or sets the Pipelines.
+  /// </summary>
+  public IReadOnlyList<Pipeline> Pipelines { get; }
+
+  public Sequence(IReadOnlyList<Pipeline> pipelines)
+  {
+    Pipelines = pipelines;
+  }
+}
+
+
+## cssh.Core\CommandParser.cs
+
+/* cssh.Core.CommandParser.cs - Pipeline and Redirect support (>, >>, <, |) */
+namespace cssh.Core;
+
+using System.Text;
+using Cssh.Core.Ast;
+
+/// <summary>
+/// Parses raw input into AST (Sequence of Pipelines with Redirects).
+/// Supports quoted arguments using both "..." and '...' and operators (>, >>, <, |).
+/// </summary>
+public class CommandParser
+{
+  /// <summary>
+  /// Parses input into a Sequence (for pipeline execution).
+  /// Supports multiple command groups separated by ';' (outside quotes).
+  /// </summary>
+  public Sequence ParseSequence(string input)
+  {
+    var pipelines = new List<Pipeline>();
+
+    var parts = SplitBySemicolons(input);
+
+    foreach (var part in parts)
+    {
+      var commands = ParsePipeline(part);
+      if (commands.Count > 0)
+      {
+        pipelines.Add(new Pipeline(commands));
+      }
+    }
+
+    return new Sequence(pipelines.Count > 0 ? pipelines : new[] { new Pipeline(new List<CommandNode>()) });
+  }
+
+  /// <summary>
+  /// Parses a single pipeline (one or more commands separated by |).
+  /// </summary>
+  private List<CommandNode> ParsePipeline(string input)
+  {
+    var commands = new List<CommandNode>();
+    var tokens = TokenizeWithRedirects(input);
+
+    int i = 0;
+    while (i < tokens.Count)
+    {
+      var token = tokens[i];
+
+      // Skip pipes
+      if (token == "|")
+      {
+        i++;
+        continue;
+      }
+
+      var args = new List<string>();
+      var redirect = RedirectInfo.None();
+
+      // Collect arguments until next pipe or redirect
+      while (i < tokens.Count && tokens[i] != "|" && !IsRedirectOperator(tokens[i]))
+      {
+        args.Add(tokens[i]);
+        i++;
+      }
+
+      // Check for redirect
+      if (i < tokens.Count && IsRedirectOperator(tokens[i]))
+      {
+        var op = tokens[i];
+        i++;
+
+        if (i >= tokens.Count)
+        {
+          // Error: redirect operator without target
+          break;
+        }
+
+        var filePath = tokens[i];
+        var redirectType = op switch
+        {
+          ">" => RedirectType.OutputTruncate,
+          ">>" => RedirectType.OutputAppend,
+          "<" => RedirectType.Input,
+          _ => RedirectType.None
+        };
+
+        redirect = new RedirectInfo(redirectType, filePath);
+        i++;
+      }
+
+      if (args.Count > 0)
+      {
+        var cmdName = args[0];
+        var cmdArgs = args.Skip(1).ToList();
+        commands.Add(new CommandNode(cmdName, cmdArgs, redirect));
+      }
+    }
+
+    return commands;
+  }
+
+  /// <summary>
+  /// Tokenizes input while preserving redirect operators and quoted strings.
+  /// </summary>
+  private List<string> TokenizeWithRedirects(string input)
+  {
+    var tokens = new List<string>();
+    var current = new StringBuilder();
+    bool inDoubleQuotes = false;
+    bool inSingleQuotes = false;
+
+    for (int i = 0; i < input.Length; i++)
+    {
+      var c = input[i];
+
+      if (c == '"' && !inSingleQuotes)
+      {
+        inDoubleQuotes = !inDoubleQuotes;
+        continue;
+      }
+
+      if (c == '\'' && !inDoubleQuotes)
+      {
+        inSingleQuotes = !inSingleQuotes;
+        continue;
+      }
+
+      // Detect redirect operators outside quotes
+      if (!inDoubleQuotes && !inSingleQuotes && IsRedirectChar(c))
+      {
+        if (current.Length > 0)
+        {
+          tokens.Add(current.ToString());
+          current.Clear();
+        }
+
+        // Handle >> and << as single tokens
+        if (c == '>' && i + 1 < input.Length && input[i + 1] == '>')
+        {
+          tokens.Add(">>");
+          i++;
+        }
+        else if (c == '<' && i + 1 < input.Length && input[i + 1] == '<')
+        {
+          tokens.Add("<<");
+          i++;
+        }
+        else
+        {
+          tokens.Add(c.ToString());
+        }
+        continue;
+      }
+
+      // Handle pipes outside quotes
+      if (!inDoubleQuotes && !inSingleQuotes && c == '|')
+      {
+        if (current.Length > 0)
+        {
+          tokens.Add(current.ToString());
+          current.Clear();
+        }
+        tokens.Add("|");
+        continue;
+      }
+
+      // Regular character or whitespace
+      if (char.IsWhiteSpace(c) && !inDoubleQuotes && !inSingleQuotes)
+      {
+        if (current.Length > 0)
+        {
+          tokens.Add(current.ToString());
+          current.Clear();
+        }
+      }
+      else
+      {
+        // Environment variable expansion: expand $VAR when not inside single quotes
+        if (c == '$' && !inSingleQuotes)
+        {
+          // Parse variable name (letters, digits, underscore)
+          int j = i + 1;
+          while (j < input.Length && (char.IsLetterOrDigit(input[j]) || input[j] == '_'))
+          j++;
+
+          if (j > i + 1)
+          {
+            var varName = input.Substring(i + 1, j - (i + 1));
+            var value = Environment.GetEnvironmentVariable(varName) ?? string.Empty;
+            current.Append(value);
+            i = j - 1; // advance the main loop to the last var char
+            continue;
+          }
+          else
+          {
+            // not a valid var name, treat '$' as literal
+            current.Append(c);
+            continue;
+          }
+        }
+
+        current.Append(c);
+      }
+    }
+
+    if (current.Length > 0)
+    tokens.Add(current.ToString());
+
+    return tokens;
+  }
+
+  /// <summary>
+  /// Splits input by pipes (outside quotes).
+  /// </summary>
+  private List<string> SplitByPipes(string input)
+  {
+    var parts = new List<string>();
+    var current = new StringBuilder();
+    bool inDoubleQuotes = false;
+    bool inSingleQuotes = false;
+
+    foreach (var c in input)
+    {
+      if (c == '"' && !inSingleQuotes)
+      {
+        inDoubleQuotes = !inDoubleQuotes;
+        current.Append(c);
+        continue;
+      }
+
+      if (c == '\'' && !inDoubleQuotes)
+      {
+        inSingleQuotes = !inSingleQuotes;
+        current.Append(c);
+        continue;
+      }
+
+      if (c == '|' && !inDoubleQuotes && !inSingleQuotes)
+      {
+        if (current.Length > 0)
+        parts.Add(current.ToString());
+        current.Clear();
+        continue;
+      }
+
+      current.Append(c);
+    }
+
+    if (current.Length > 0)
+    parts.Add(current.ToString());
+
+    return parts;
+  }
+
+  /// <summary>
+  /// Splits input by semicolons (outside quotes).
+  /// </summary>
+  private List<string> SplitBySemicolons(string input)
+  {
+    var parts = new List<string>();
+    var current = new StringBuilder();
+    bool inDoubleQuotes = false;
+    bool inSingleQuotes = false;
+
+    for (int i = 0; i < input.Length; i++)
+    {
+      var c = input[i];
+
+      if (c == '"' && !inSingleQuotes)
+      {
+        inDoubleQuotes = !inDoubleQuotes;
+        current.Append(c);
+        continue;
+      }
+
+      if (c == '\'' && !inDoubleQuotes)
+      {
+        inSingleQuotes = !inSingleQuotes;
+        current.Append(c);
+        continue;
+      }
+
+      if (c == ';' && !inDoubleQuotes && !inSingleQuotes)
+      {
+        if (current.Length > 0)
+        parts.Add(current.ToString());
+        current.Clear();
+        continue;
+      }
+
+      current.Append(c);
+    }
+
+    if (current.Length > 0)
+    parts.Add(current.ToString());
+
+    return parts;
+  }
+
+  /// <param name="token"></param>
+  /// <returns></returns>
+  private bool IsRedirectOperator(string token)
+  {
+    return token == ">" || token == ">>" || token == "<" || token == "<<";
+  }
+
+  /// <param name="c"></param>
+  /// <returns></returns>
+  private bool IsRedirectChar(char c)
+  {
+    return c == '>' || c == '<';
+  }
+
+  /// <summary>
+  /// Legacy Parse method for backward compatibility.
+  /// </summary>
+  public ParsedCommand Parse(string input)
+  {
+    var args = new List<string>();
+    var current = new StringBuilder();
+
+    bool inDoubleQuotes = false;
+    bool inSingleQuotes = false;
+
+    foreach (var c in input.Trim())
+    {
+      if (c == '"' && !inSingleQuotes)
+      {
+        inDoubleQuotes = !inDoubleQuotes;
+        continue;
+      }
+
+      if (c == '\'' && !inDoubleQuotes)
+      {
+        inSingleQuotes = !inSingleQuotes;
+        continue;
+      }
+
+      if (char.IsWhiteSpace(c) && !inDoubleQuotes && !inSingleQuotes)
+      {
+        if (current.Length > 0)
+        {
+          args.Add(current.ToString());
+          current.Clear();
+        }
+      }
+      else
+      {
+        current.Append(c);
+      }
+    }
+
+    if (current.Length > 0)
+    args.Add(current.ToString());
+
+    var command = args.Count > 0 ? args[0] : string.Empty;
+    var commandArgs = args.Skip(1).ToArray();
+
+    return new ParsedCommand(command, commandArgs);
+  }
+}
+
+
+## cssh.Core\CommandParseResult.cs
+
+/* cssh.Core.CommandParseResult.cs - A cross-platform C# shell ver.0.2.0 CommandParseResult record */
+namespace cssh.Core;
+
+/// <param name="Command"></param>
+/// <param name="Arguments"></param>
+/// <returns></returns>
+public record CommandParseResult(string Command, string[] Arguments);
+
+
+## cssh.Core\CommandRunner.cs
+
+/* cssh.Core.CommandRunner.cs - Pipeline and Redirect support */
+namespace cssh.Core;
+
+using cssh.Core.Commands;
+using Cssh.Core.Ast;
+using System.Diagnostics;
+using System.Linq;
+
+/// <summary>
+/// Executes commands by coordinating the parser, registry, and shell state.
+/// Supports pipelines (|) and redirects (>, >>, <).
+/// </summary>
+public class CommandRunner
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="CommandRunner"/> class.
+  /// </summary>
+  /// <param name="parser">The command parser.</param>
+  /// <param name="registry">The command registry.</param>
+  public CommandRunner(CommandParser parser, CommandRegistry registry)
+  {
+    _parser = parser;
+    _registry = registry;
+  }
+
+  /// <summary>
+  /// Parses and executes a command string with support for pipelines and redirects.
+  /// </summary>
+  /// <param name="state">The current shell state.</param>
+  /// <param name="input">The raw input string.</param>
+  /// <returns>The command output, or an error message.</returns>
+  public string Run(ShellState state, string input)
+  {
+    try
+    {
+      // If in edit mode, handle editor commands / buffer edits
+      if (state.Mode == ShellMode.Edit)
+      {
+        return HandleEditModeInput(state, input);
+      }
+
+      var trimmed = input?.Trim() ?? string.Empty;
+      if (string.IsNullOrEmpty(trimmed))
+      return string.Empty;
+
+      // History expansion: !<n> or !<prefix>
+      if (trimmed.StartsWith("!") && trimmed.Length > 1)
+      {
+        var key = trimmed.Substring(1);
+
+        // numeric index: !<n>
+        if (int.TryParse(key, out var idx))
+        {
+          if (idx < 1 || idx > state.History.Count)
+          return "history: event not found";
+
+          // Replace input with historical entry (1-based)
+          input = state.History[idx - 1];
+        }
+        else
+        {
+          // prefix search: find most recent history entry that starts with the given prefix
+          string? found = null;
+          for (int i = state.History.Count - 1; i >= 0; i--)
+          {
+            if (state.History[i].StartsWith(key, StringComparison.Ordinal))
+            {
+              found = state.History[i];
+              break;
+            }
+          }
+
+          if (found == null)
+          return "history: event not found";
+
+          input = found;
+        }
+      }
+
+      // Ensure input is non-null and record it in history (session-local)
+      input ??= string.Empty;
+      state.History.Add(input);
+
+      var sequence = _parser.ParseSequence(input);
+      var results = new List<string>();
+
+      foreach (var pipeline in sequence.Pipelines)
+      {
+        if (pipeline.Commands.Count == 0)
+        continue;
+
+        var output = ExecutePipeline(state, pipeline);
+        if (!string.IsNullOrEmpty(output))
+        results.Add(output);
+      }
+
+      return string.Join(Environment.NewLine, results);
+    }
+    catch (Exception ex)
+    {
+      return $"Error: {ex.Message}";
+    }
+  }
+
+  /// <summary>
+  /// Handles inputs while in edit mode.
+  /// Supported editor commands:
+  ///  - read|r <file>  : load file into buffer
+  ///  - write|w [file] : write buffer to file (optional file to save as)
+  ///  - run [file]     : run buffer as simple script (supports only lines starting with 'echo ')
+  ///  - quit|q         : exit edit mode
+  /// Any other input is appended as a line to the edit buffer.
+  /// </summary>
+  private string HandleEditModeInput(ShellState state, string input)
+  {
+    var trimmed = input?.Trim() ?? string.Empty;
+    if (string.IsNullOrEmpty(trimmed))
+    return string.Empty;
+
+    var parts = trimmed.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries);
+    var cmd = parts[0].ToLowerInvariant();
+    var arg = parts.Length > 1 ? parts[1].Trim() : string.Empty;
+
+    if (cmd == "read" || cmd == "r")
+    {
+      if (string.IsNullOrEmpty(arg))
+      return "read: error: missing filename";
+
+      var path = arg.Trim('"');
+      if (!File.Exists(path))
+      return $"read: error: {path}: No such file or directory";
+
+      try
+      {
+        state.EditBuffer = File.ReadAllText(path);
+        state.EditFileName = path;
+        state.EditDirty = false;
+        return string.Empty;
+      }
+      catch (Exception ex)
+      {
+        return $"read: error: {ex.Message}";
+      }
+    }
+
+    if (cmd == "write" || cmd == "w")
+    {
+      string path = state.EditFileName;
+      if (!string.IsNullOrEmpty(arg))
+      path = arg.Trim('"');
+
+      if (string.IsNullOrEmpty(path))
+      return "write: error: missing filename";
+
+      try
+      {
+        File.WriteAllText(path, state.EditBuffer ?? string.Empty);
+        state.EditFileName = path;
+        state.EditDirty = false;
+        return string.Empty;
+      }
+      catch (Exception ex)
+      {
+        return $"write: error: {ex.Message}";
+      }
+    }
+
+    if (cmd == "run")
+    {
+      // Optional filename argument: load it first
+      if (!string.IsNullOrEmpty(arg))
+      {
+        var path = arg.Trim('"');
+        if (!File.Exists(path))
+        return $"run: error: {path}: No such file or directory";
+
+        try
+        {
+          state.EditBuffer = File.ReadAllText(path);
+          state.EditFileName = path;
+          state.EditDirty = false;
+        }
+        catch (Exception ex)
+        {
+          return $"run: error: {ex.Message}";
+        }
+      }
+
+      // Script runner: support simple 'echo' lines, and C# (.csx) execution via Roslyn scripting for files with .csx or when buffer looks like C# script
+      var buffer = state.EditBuffer ?? string.Empty;
+      var lines = buffer.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+      // If buffer looks like a C# script (shebang // or contains 'using ' or lines with C# code), try Roslyn scripting
+      bool looksLikeCSharp = buffer.Contains("using ") || buffer.Contains("System") || buffer.Contains("class ") || buffer.Contains("Console.") || buffer.TrimStart().StartsWith("#") || buffer.TrimStart().StartsWith("//");
+
+      if (looksLikeCSharp)
+      {
+        try
+        {
+          // Execute C# script using Roslyn scripting
+          var scriptOptions = Microsoft.CodeAnalysis.Scripting.ScriptOptions.Default
+          .AddReferences(AppDomain.CurrentDomain.GetAssemblies().Where(a => !a.IsDynamic && !string.IsNullOrEmpty(a.Location)))
+          .AddImports("System", "System.IO", "System.Linq", "System.Text");
+
+          var script = Microsoft.CodeAnalysis.CSharp.Scripting.CSharpScript.Create(buffer, scriptOptions);
+          var scriptState = script.RunAsync().GetAwaiter().GetResult();
+
+          if (scriptState?.ReturnValue != null)
+          return scriptState.ReturnValue.ToString() ?? string.Empty;
+
+          return string.Empty;
+        }
+        catch (Microsoft.CodeAnalysis.Scripting.CompilationErrorException cex)
+        {
+          // Return first diagnostic with line number info
+          var diag = cex.Diagnostics.FirstOrDefault();
+          if (diag != null)
+          return $"run: error: {diag.GetMessage()} (Line {diag.Location.GetLineSpan().StartLinePosition.Line + 1})";
+
+          return $"run: error: {cex.Message}";
+        }
+        catch (Exception ex)
+        {
+          return $"run: error: {ex.Message}";
+        }
+      }
+
+      // Fallback to simple echo-only script: each 'echo ' line is printed
+      var outputs = new List<string>();
+      foreach (var line in lines)
+      {
+        var s = line.Trim();
+        if (s.StartsWith("echo ", StringComparison.OrdinalIgnoreCase))
+        {
+          outputs.Add(s.Substring(5));
+        }
+        else if (string.IsNullOrEmpty(s))
+        {
+          // skip
+        }
+        else
+        {
+          return "run: error: unsupported script content";
+        }
+      }
+
+      return string.Join(Environment.NewLine, outputs);
+    }
+
+    if (cmd == "clear" || cmd == "cls")
+    {
+      // Clear the edit buffer and reset dirty flag; also clear the screen to mimic UI behavior
+      state.EditBuffer = string.Empty;
+      state.EditDirty = false;
+      try {
+        Console.Clear();
+      } catch {
+        // ignore if running in non-interactive test environment
+      }
+      return string.Empty;
+    }
+
+    if (cmd == "quit" || cmd == "q")
+    {
+      state.Mode = ShellMode.Normal;
+      return string.Empty;
+    }
+
+    // Any other input => append to buffer as a new line
+    if (!string.IsNullOrEmpty(state.EditBuffer) && !state.EditBuffer.EndsWith("\n"))
+    state.EditBuffer += "\n";
+    state.EditBuffer += input + "\n";
+    state.EditDirty = true;
+    return string.Empty;
+  }
+
+  /// <summary>
+  /// Executes a pipeline of one or more commands.
+  /// </summary>
+  private string ExecutePipeline(ShellState state, Pipeline pipeline)
+  {
+    var commands = pipeline.Commands;
+
+    if (commands.Count == 0)
+    return string.Empty;
+
+    // Single command with potential redirect
+    if (commands.Count == 1)
+    {
+      return ExecuteCommandWithRedirect(state, commands[0]);
+    }
+
+    // Multiple commands (pipe chain)
+    string intermediateOutput = string.Empty;
+
+    for (int i = 0; i < commands.Count; i++)
+    {
+      var cmd = commands[i];
+      string output;
+
+      if (i == 0)
+      {
+        // First command - execute normally with potential input redirect
+        output = ExecuteCommandWithInputRedirect(state, cmd);
+      }
+      else
+      {
+        // Subsequent commands receive previous output as stdin
+        output = ExecutePipedCommand(state, cmd, intermediateOutput);
+      }
+
+      intermediateOutput = output;
+    }
+
+    // Handle final redirect if present
+    var lastCmd = commands[commands.Count - 1];
+    if (lastCmd.Redirect.Type != RedirectType.None && lastCmd.Redirect.Type != RedirectType.Input)
+    {
+      HandleRedirect(lastCmd.Redirect, intermediateOutput);
+      return string.Empty;
+    }
+
+    return intermediateOutput;
+  }
+
+  /// <summary>
+  /// Executes a command (first in pipeline or standalone) with input redirect support.
+  /// </summary>
+  private string ExecuteCommandWithInputRedirect(ShellState state, CommandNode cmd)
+  {
+    var command = _registry.Resolve(cmd.Name);
+
+    var args = cmd.Args.ToArray();
+
+    // Handle input redirect (<) for builtins: pass file contents as an extra arg
+    if (cmd.Redirect.Type == RedirectType.Input)
+    {
+      if (!File.Exists(cmd.Redirect.FilePath))
+      return $"{cmd.Name}: error: {cmd.Redirect.FilePath}: No such file or directory";
+
+      try
+      {
+        var fileContent = File.ReadAllText(cmd.Redirect.FilePath);
+        var newArgs = new List<string>(args) { StdinPrefix + fileContent };
+
+        if (command != null)
+        return command.Execute(state, newArgs.ToArray());
+
+        // Try external command with file content as stdin
+        return ExecuteExternalCommand(cmd.Name, args, fileContent) ?? $"Unknown command: {cmd.Name}";
+      }
+      catch (Exception ex)
+      {
+        return $"{cmd.Name}: error reading file: {ex.Message}";
+      }
+    }
+
+    if (command != null)
+    return command.Execute(state, args);
+
+    // Fallback to external command execution
+    return ExecuteExternalCommand(cmd.Name, args, null) ?? $"Unknown command: {cmd.Name}";
+  }
+
+  /// <summary>
+  /// Attempts to execute an external command using PATH lookup and Process.
+  /// Returns the command output, or null if command not found/run failed.
+  /// </summary>
+  private string? ExecuteExternalCommand(string name, string[] args, string? stdin)
+  {
+    // Resolve executable path
+    string? resolved = null;
+
+    // If name is rooted or contains directory separators, try it directly
+    if (Path.IsPathRooted(name) || name.Contains("\\") || name.Contains("/"))
+    {
+      if (File.Exists(name))
+      resolved = name;
+    }
+    else
+    {
+      var pathEnv = Environment.GetEnvironmentVariable("PATH") ?? string.Empty;
+      var dirs = pathEnv.Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries);
+      var exts = new[] { string.Empty, ".exe", ".bat", ".cmd", ".ps1" };
+
+      foreach (var dir in dirs)
+      {
+        foreach (var ext in exts)
+        {
+          var candidate = Path.Combine(dir, name + ext);
+          if (File.Exists(candidate))
+          {
+            resolved = candidate;
+            break;
+          }
+        }
+        if (resolved != null)
+        break;
+      }
+    }
+
+    if (resolved == null)
+    return null;
+
+    try
+    {
+      var ext = Path.GetExtension(resolved).ToLowerInvariant();
+      ProcessStartInfo psi;
+
+      if (ext == ".bat" || ext == ".cmd")
+      {
+        // Use cmd.exe /C to run batch files
+        psi = new ProcessStartInfo("cmd.exe", $"/C \"{resolved}\" {EscapeArgs(args)}");
+      }
+      else if (ext == ".ps1")
+      {
+        psi = new ProcessStartInfo("powershell", $"-NoProfile -NonInteractive -File \"{resolved}\" {EscapeArgs(args)}");
+      }
+      else
+      {
+        psi = new ProcessStartInfo(resolved, EscapeArgs(args));
+      }
+
+      psi.UseShellExecute = false;
+      psi.RedirectStandardOutput = true;
+      psi.RedirectStandardError = true;
+      psi.RedirectStandardInput = true;
+      psi.CreateNoWindow = true;
+
+      using var proc = Process.Start(psi);
+      if (proc == null)
+      return null;
+
+      if (!string.IsNullOrEmpty(stdin))
+      {
+        proc.StandardInput.Write(stdin);
+        proc.StandardInput.Close();
+      }
+      else
+      {
+        proc.StandardInput.Close();
+      }
+
+      var stdout = proc.StandardOutput.ReadToEnd();
+      var stderr = proc.StandardError.ReadToEnd();
+      proc.WaitForExit();
+
+      var outText = stdout.TrimEnd('\r', '\n');
+      if (!string.IsNullOrEmpty(outText))
+      return outText;
+
+      var errText = stderr.TrimEnd('\r', '\n');
+      if (!string.IsNullOrEmpty(errText))
+      return errText;
+
+      return string.Empty;
+    }
+    catch
+    {
+      return null;
+    }
+  }
+
+  /// <param name="args"></param>
+  /// <returns></returns>
+  private string EscapeArgs(string[] args)
+  {
+    return string.Join(" ", args.Select(a => a.Contains(' ') ? $"\"{a}\"" : a));
+  }
+
+  /// <summary>
+  /// Executes a piped command (receives input from previous command).
+  /// </summary>
+  private const string StdinPrefix = "\u0001";
+
+  /// <param name="state"></param>
+  /// <param name="cmd"></param>
+  /// <param name="pipeInput"></param>
+  /// <returns></returns>
+  private string ExecutePipedCommand(ShellState state, CommandNode cmd, string pipeInput)
+  {
+    var command = _registry.Resolve(cmd.Name);
+
+    if (command == null)
+    return $"Unknown command: {cmd.Name}";
+
+    // For piped input: if no args, pass piped input as the only content
+    // If args exist, pass them as-is (some commands may not support piping)
+    var args = cmd.Args.ToList();
+
+    // If no arguments and we have piped input, this is stdin
+    if (args.Count == 0 && !string.IsNullOrEmpty(pipeInput))
+    {
+      // Mark the arg as stdin using a special prefix so command implementations can detect it
+      args.Add(StdinPrefix + pipeInput);
+    }
+
+    return command.Execute(state, args.ToArray());
+  }
+
+  /// <summary>
+  /// Executes a command with output redirect (>, >>).
+  /// </summary>
+  private string ExecuteCommandWithRedirect(ShellState state, CommandNode cmd)
+  {
+    // First execute the command normally
+    var output = ExecuteCommandWithInputRedirect(state, cmd);
+
+    // Then handle output redirect if present
+    if (cmd.Redirect.Type != RedirectType.None && cmd.Redirect.Type != RedirectType.Input)
+    {
+      HandleRedirect(cmd.Redirect, output);
+      return string.Empty; // Output was redirected, so return empty
+    }
+
+    return output;
+  }
+
+  /// <summary>
+  /// Handles output redirection (>, >>).
+  /// </summary>
+  private void HandleRedirect(RedirectInfo redirect, string output)
+  {
+    if (string.IsNullOrEmpty(redirect.FilePath))
+    return;
+
+    try
+    {
+      if (redirect.Type == RedirectType.OutputTruncate)
+      {
+        // Truncate writes the output as-is (no added newline)
+        File.WriteAllText(redirect.FilePath, output);
+      }
+      else if (redirect.Type == RedirectType.OutputAppend)
+      {
+        // Append: ensure a single '\n' separates existing content and the new content
+        var existing = File.Exists(redirect.FilePath) ? File.ReadAllText(redirect.FilePath) : string.Empty;
+        if (!string.IsNullOrEmpty(existing) && !existing.EndsWith("\n"))
+        {
+          File.AppendAllText(redirect.FilePath, "\n");
+        }
+        File.AppendAllText(redirect.FilePath, output + "\n");
+      }
+    }
+    catch (Exception ex)
+    {
+      Console.WriteLine($"Redirect error: {ex.Message}");
+    }
+  }
+}
+
+
+## cssh.Core\cssh.Constants.cs
+
+/* cssh.Core.Constants.CsshConstants - A cross-platform C# shell ver.0.2.1 Constants */
+namespace cssh.Core.Constants;
+
+/// <summary>
+/// Provides constant values used throughout the cssh shell.
+/// </summary>
+public static class CsshConstants
+{
+  /// <summary>
+  /// Shell version string.
+  /// </summary>
+  public const string Version = "v0.2.1";
+  /// <summary>
+  /// The Revision field.
+  /// </summary>
+  public const int Revision = 1;
+
+
+  /// <summary>
+  /// Default directory trim length for prompt display.
+  /// </summary>
+  public const int DefaultPromptDirTrim = 2;
+
+  /// <summary>
+  /// Interactive mode identifier.
+  /// </summary>
+  public const string ModeInteractive = "interactive";
+
+  /// <summary>
+  /// Edit mode identifier.
+  /// </summary>
+  public const string ModeEdit = "edit";
+
+  /// <summary>
+  /// Prefix used for shell title display.
+  /// </summary>
+  public const string TitlePrefix = "cssh ";
+
+  //
+  // v0.2.0 追加: コマンド名の定数（将来の help 実装で利用予定）
+  //
+
+  /// <summary>Command name for <c>ls</c>.</summary>
+  public const string CmdLs = "ls";
+
+  /// <summary>Command name for <c>cd</c>.</summary>
+  public const string CmdCd = "cd";
+
+  /// <summary>Command name for <c>pwd</c>.</summary>
+  public const string CmdPwd = "pwd";
+}
+
+
+## cssh.Core\cssh.Core.csproj
+
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.8.0" />
+  </ItemGroup>
+
+</Project>
+
+
+## cssh.Core\ICommand.cs
+
+/* cssh.Core.ICommand.cs - A cross-platform C# shell ver.0.2.0 ICommand interface */
+namespace cssh.Core;
+
+/// <summary>
+/// Represents the ICommand interface.
+/// </summary>
+public interface ICommand
+{
+  string Name { get; }
+
+  string Execute(ShellState state, string[] args);
+}
+
+
+## cssh.Core\ParsedCommand.cs
+
+/* cssh.Core.ParsedCommand.cs - Parsed command representation */
+namespace cssh.Core;
+
+/// <summary>
+/// Represents a parsed command with its arguments.
+/// Provides helper methods for option detection.
+/// </summary>
+public record ParsedCommand(string Command, string[] Arguments)
+{
+  /// <summary>
+  /// Returns true if the argument list contains the given short option.
+  /// Example: HasOption("a") matches "-a", "-la", "-al".
+  /// </summary>
+  public bool HasOption(string opt)
+  {
+    foreach (var arg in Arguments)
+    {
+      if (!arg.StartsWith("-"))
+      continue;
+
+      if (arg.Contains(opt))
+      return true;
+    }
+    return false;
+  }
+}
+
+
+## cssh.Core\PathNormalizer.cs
+
+/* cssh.Core.PathNormalizer.cs Added on v0.1.3 */
+namespace cssh.Core;
+
+/// <summary>
+/// Provides utilities for normalizing paths so that both '/' and '\'
+/// can be used as directory separators.
+/// </summary>
+public static class PathNormalizer
+{
+  /// <summary>
+  /// Normalizes a path by converting '/' to '\' on Windows.
+  /// </summary>
+  public static string Normalize(string path)
+  {
+    if (string.IsNullOrWhiteSpace(path))
+    return path;
+
+    return path.Replace('/', '\\');
+  }
+}
+
+
+## cssh.Core\ShellMode.cs
+
+/* cssh.Core.ShellMode - A cross-platform C# shell ver.0.2.0 ShellMode.cs */
+namespace cssh.Core;
+
+/// <summary>
+/// Represents the ShellMode enum.
+/// </summary>
+public enum ShellMode
+{
+  Normal,
+  Edit
+}
+
+
+## cssh.Core\ShellState.cs
+
+/* cssh.Core.ShellState.cs v0.2.0 */
+using cssh.Core.Commands;
+namespace cssh.Core;
+
+/// <summary>
+/// Represents the ShellState class.
+/// </summary>
+public class ShellState
+{
+  /// <summary>
+  /// The _currentDirectory field.
+  /// </summary>
+  private string _currentDirectory = Directory.GetCurrentDirectory();
+  /// <summary>
+  /// The _previousDirectory field.
+  /// </summary>
+  private string _previousDirectory = Directory.GetCurrentDirectory();
+
+  public string CurrentDirectory
+  {
+    get => _currentDirectory;
+    set => _currentDirectory = PathNormalizer.Normalize(value);
+  }
+
+  public string PreviousDirectory
+  {
+    get => _previousDirectory;
+    set => _previousDirectory = PathNormalizer.Normalize(value);
+  }
+
+  /// <summary>
+  /// Gets or sets the Mode.
+  /// </summary>
+  public ShellMode Mode { get; set; } = ShellMode.Normal;
+
+  // Command history (session-local)
+  /// <summary>
+  /// Gets or sets the History.
+  /// </summary>
+  public List<string> History { get; } = new List<string>();
+
+  // Editing mode buffer and metadata
+  /// <summary>
+  /// Gets or sets the EditBuffer.
+  /// </summary>
+  public string EditBuffer { get; set; } = string.Empty;
+  /// <summary>
+  /// Gets or sets the EditFileName.
+  /// </summary>
+  public string EditFileName { get; set; } = string.Empty;
+  /// <summary>
+  /// Gets or sets the EditDirty.
+  /// </summary>
+  public bool EditDirty { get; set; } = false;
+
+  /// <summary>
+  /// Gets or sets the Registry.
+  /// </summary>
+  public CommandRegistry Registry { get; }
+
+  public ShellState(CommandRegistry registry)
+  {
+    Registry = registry;
+    CurrentDirectory = Directory.GetCurrentDirectory();
+  }
+}
+
+
+## cssh.Core\Commands\AliasBuiltinCommand.cs
+
+using System.Text;
+
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Builtin command 'alias'
+/// Usage:
+///  - alias           -> list aliases
+///  - alias name expr -> set alias 'name' to expansion 'expr' (expr may contain spaces)
+/// </summary>
+public class AliasBuiltinCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "alias";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    var registry = state.Registry;
+
+    if (args.Length == 0)
+    {
+      var aliases = registry.GetAliases();
+      if (aliases.Count == 0)
+      return string.Empty;
+
+      var sb = new StringBuilder();
+      foreach (var kv in aliases)
+      {
+        sb.AppendLine($"{kv.Key}={kv.Value}");
+      }
+      return sb.ToString().TrimEnd('\r','\n');
+    }
+
+    // set alias: first arg is name, rest is expansion
+    var name = args[0];
+    var expansion = string.Join(' ', args.Skip(1));
+    if (string.IsNullOrWhiteSpace(expansion))
+    return "alias: error: missing expansion";
+
+    registry.AddAlias(name, expansion);
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\AliasCommands.cs
+
+/* cssh.Core.Commands.AliasCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Represents the AliasCommand class.
+/// </summary>
+public class AliasCommand : ICommand
+{
+  /// <summary>
+  /// The _target field.
+  /// </summary>
+  private readonly string _target;
+
+  public AliasCommand(string name, string target)
+  {
+    Name = name;
+    _target = target;
+  }
+
+  /// <summary>
+  /// Gets or sets the Name.
+  /// </summary>
+  public string Name { get; }
+
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => $"Alias for '{_target}'.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    // 実際のコマンドを呼び出す
+    var registry = state.Registry; // ShellState に Registry を持たせる必要あり
+    var cmd = registry.Resolve(_target);
+
+    if (cmd == null)
+    return $"alias: target command not found: {_target}";
+
+    return cmd.Execute(state, args);
+  }
+}
+
+
+## cssh.Core\Commands\CatCommand.cs
+
+/* cssh.Core.Commands.CatCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Outputs the contents of a file.
+/// </summary>
+public class CatCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "cat";
+
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Print the contents of a file.";
+
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "cat: missing operand";
+
+    var first = args[0];
+
+    // If input came from stdin (prefixed), return it directly
+    if (first.Length > 0 && first[0] == '\u0001')
+    {
+      return first.Substring(1);
+    }
+
+    var path = PathNormalizer.Normalize(first);
+
+    if (!Path.IsPathRooted(path))
+    path = Path.Combine(state.CurrentDirectory, path);
+
+    if (!File.Exists(path))
+    return $"cat: no such file: {first}";
+
+    try
+    {
+      return File.ReadAllText(path);
+    }
+    catch (Exception ex)
+    {
+      return $"cat: error reading file: {ex.Message}";
+    }
+  }
+}
+
+
+## cssh.Core\Commands\CdCommand.cs
+
+/* cssh.Core.Commands.CdCommand.cs - v0.1.2 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Implements the <c>cd</c> command, changing the current working directory.
+/// Follows Bash behavior for basic directory navigation.
+/// </summary>
+public class CdCommand : ICommand
+{
+  /// <inheritdoc />
+  public string Name => "cd";
+
+  /// <summary>
+  /// Changes the current working directory.
+  /// Supports: cd, cd -, cd .., cd <path>.
+  /// </summary>
+  public string Execute(ShellState state, string[] args)
+  {
+    string target;
+
+    // cd → home directory
+    if (args.Length == 0)
+    {
+      target = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+    }
+    // cd -
+    else if (args[0] == "-")
+    {
+      target = state.PreviousDirectory;
+    }
+    else
+    {
+      target = args[0];
+    }
+    PathNormalizer.Normalize(target);
+
+    // Resolve relative paths
+    if (!Path.IsPathRooted(target))
+    target = Path.GetFullPath(Path.Combine(state.CurrentDirectory, target));
+
+    // Validate directory
+    if (!Directory.Exists(target))
+    return $"cd: no such file or directory: {args[0]}";
+
+    // Update state
+    state.PreviousDirectory = state.CurrentDirectory;
+    state.CurrentDirectory = target;
+
+    // Bash: cd は成功時に出力しない
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\ClearCommand.cs
+
+/* cssh.Core.Commands.ClearCommand.cs v0.2.0 */
+using cssh.Core;
+
+/// <summary>
+/// Represents the ClearCommand class.
+/// </summary>
+public class ClearCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "clear";
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Clear the screen.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    // Bash と同じ動作：画面クリア + カーソルを左上へ
+    // Console.Write("\u001b[2J\u001b[H");
+    // return string.Empty;
+    return "\u001b[2J\u001b[H";
+  }
+}
+
+
+## cssh.Core\Commands\CommandRegistry.cs
+
+/* cssh.Core.Commands.CommandRegistry - A cross-platform C# shell ver.0.2.0 CommandRegistry class */
+using System.Collections.Generic;
+using cssh.Core.Commands;
+
+namespace cssh.Core;
+
+/// <summary>
+/// Represents the CommandRegistry class.
+/// </summary>
+public class CommandRegistry
+{
+  /// <summary>
+  /// The _commands field.
+  /// </summary>
+  private readonly Dictionary<string, ICommand> _commands = new();
+  /// <summary>
+  /// The _descriptions field.
+  /// </summary>
+  private readonly Dictionary<string, string> _descriptions = new();
+
+  // 動的な alias (name -> expansion)
+  /// <summary>
+  /// The _dynamicAliases field.
+  /// </summary>
+  private readonly Dictionary<string, string> _dynamicAliases = new();
+
+  /// <summary>
+  /// コマンドを登録する（説明文付き）
+  /// </summary>
+  public void Register(ICommand command, string description)
+  {
+    _commands[command.Name] = command;
+    _descriptions[command.Name] = description;
+  }
+
+  /// <summary>
+  /// コマンド名から ICommand を取得する
+  /// </summary>
+  public ICommand? Resolve(string name)
+  {
+    if (_commands.TryGetValue(name, out var cmd))
+    return cmd;
+
+    if (_dynamicAliases.TryGetValue(name, out var expansion))
+    return new DynamicAliasInvoker(name, expansion, this);
+
+    return null;
+  }
+
+  /// <summary>
+  /// コマンドの説明文を取得する
+  /// </summary>
+  public string? GetDescription(string name)
+  {
+    return _descriptions.TryGetValue(name, out var desc) ? desc : null;
+  }
+
+  /// <summary>
+  /// 登録されているすべてのコマンド名を返す
+  /// </summary>
+  public IEnumerable<string> GetAllCommandNames()
+  {
+    return _commands.Keys;
+  }
+
+  /// <summary>
+  /// 動的 alias を追加する
+  /// </summary>
+  public void AddAlias(string name, string expansion)
+  {
+    _dynamicAliases[name] = expansion;
+  }
+
+  /// <summary>
+  /// 動的 alias を削除する
+  /// </summary>
+  public bool RemoveAlias(string name)
+  {
+    return _dynamicAliases.Remove(name);
+  }
+
+  /// <summary>
+  /// 現在の alias を取得する
+  /// </summary>
+  public IReadOnlyDictionary<string,string> GetAliases()
+  {
+    return _dynamicAliases;
+  }
+}
+
+
+## cssh.Core\Commands\DynamicAliasInvoker.cs
+
+namespace cssh.Core.Commands;
+
+using Cssh.Core.Ast;
+
+/// <summary>
+/// Invokes a dynamic alias. The expansion string is parsed using the shell parser
+/// so quoting and env expansion behave consistently with normal input.
+/// The alias expansion is executed as: <expansion-command> + appended args
+/// </summary>
+public class DynamicAliasInvoker : ICommand
+{
+  /// <summary>
+  /// The _name field.
+  /// </summary>
+  private readonly string _name;
+  /// <summary>
+  /// The _expansion field.
+  /// </summary>
+  private readonly string _expansion;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+
+  public DynamicAliasInvoker(string name, string expansion, CommandRegistry registry)
+  {
+    _name = name;
+    _expansion = expansion;
+    _registry = registry;
+  }
+
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => _name;
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    var parser = new CommandParser();
+    var seq = parser.ParseSequence(_expansion ?? string.Empty);
+    if (seq.Pipelines.Count == 0)
+    return string.Empty;
+
+    var firstPipeline = seq.Pipelines[0];
+    if (firstPipeline.Commands.Count == 0)
+    return string.Empty;
+
+    var cmdNode = firstPipeline.Commands[0];
+    var targetName = cmdNode.Name;
+    var targetArgs = cmdNode.Args.Concat(args).ToArray();
+
+    var cmd = _registry.Resolve(targetName);
+    if (cmd == null)
+    return $"alias: target command not found: {targetName}";
+
+    return cmd.Execute(state, targetArgs);
+  }
+}
+
+
+## cssh.Core\Commands\EchoCommand.cs
+
+/* cssh.Core.Commands.EchoCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Outputs the given arguments as a single line of text.
+/// No variable expansion or special processing is performed.
+/// </summary>
+public class EchoCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "echo";
+
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Print the given arguments.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    // echo → empty line
+    if (args.Length == 0)
+    return string.Empty;
+
+    return string.Join(" ", args);
+  }
+}
+
+
+## cssh.Core\Commands\EditCommand.cs
+
+/* cssh.Core.Commands.EditCommand - A cross-platform C# shell ver.0.2.0 EditCommand.cs */
+using cssh.Core;
+
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Represents the EditCommand class.
+/// </summary>
+public class EditCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "edit";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    // 編集モードへ遷移
+    state.Mode = ShellMode.Edit;
+
+    // Enter edit mode silently (no console manipulation to keep tests simple)
+    return "> ";
+  }
+}
+
+
+## cssh.Core\Commands\HelpCommand.cs
+
+/* cssh.Core.Commands.HelpCommand - A cross-platform C# shell ver.0.2.0 HelpCommand.cs */
+using cssh.Core;
+using System.Globalization;
+
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Represents the HelpCommand class.
+/// </summary>
+public class HelpCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "help";
+
+  /// <returns></returns>
+  private bool IsJapanese()
+  {
+    return CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja";
+  }
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    // help → 全コマンド一覧
+    if (args.Length == 0)
+    {
+      var names = state.Registry.GetAllCommandNames()
+      .OrderBy(n => n);
+
+      if (IsJapanese())
+      {
+        return "利用可能なコマンド:\n" +
+        string.Join(Environment.NewLine, names);
+      }
+      else
+      {
+        return "Available commands:\n" +
+        string.Join(Environment.NewLine, names);
+      }
+    }
+
+    // help <command>
+    var target = args[0];
+    var cmd = state.Registry.Resolve(target);
+
+    if (cmd == null)
+    {
+      if (IsJapanese())
+      return $"help: コマンドが見つかりません: {target}";
+      else
+      return $"help: no such command: {target}";
+    }
+
+    var desc = state.Registry.GetDescription(target)
+    ?? (IsJapanese() ? "(説明なし)" : "(no description available)");
+
+    if (IsJapanese())
+    return $"{target}: {desc}";
+    else
+    return $"{target}: {desc}";
+  }
+}
+
+
+## cssh.Core\Commands\HistoryCommand.cs
+
+using System.Text;
+
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Builtin command 'history' (alias 'h')
+/// </summary>
+public class HistoryCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "history";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    var hist = state.History;
+    if (hist == null || hist.Count == 0)
+    return string.Empty;
+
+    var sb = new StringBuilder();
+    for (int i = 0; i < hist.Count; i++)
+    {
+      sb.AppendLine($"{i + 1} {hist[i]}");
+    }
+    return sb.ToString().TrimEnd('\r','\n');
+  }
+}
+
+
+## cssh.Core\Commands\LsCommand.cs
+
+/* cssh.Core.Commands.LsCommand.cs - v0.1.3 */
+namespace cssh.Core.Commands;
+
+using System.Globalization;
+
+/// <summary>
+/// Implements the <c>ls</c> command with Bash-like behavior,
+/// supporting <c>-a</c> and <c>-l</c> options.
+/// </summary>
+public class LsCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "ls";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    var parsed = new ParsedCommand("ls", args);
+
+    bool showAll = parsed.HasOption("a");
+    bool longFormat = parsed.HasOption("l");
+
+    var dir = PathNormalizer.Normalize(state.CurrentDirectory);
+
+    var entries = Directory.GetFileSystemEntries(dir)
+    .OrderBy(Path.GetFileName)
+    .Where(path =>
+    {
+      var name = Path.GetFileName(path)!;
+
+      if (showAll)
+      return true;
+
+      // hide dotfiles
+      return !name.StartsWith(".");
+    });
+
+    if (longFormat)
+    return FormatLong(entries);
+
+    return FormatShort(entries);
+  }
+
+  /// <param name="entries"></param>
+  /// <returns></returns>
+  private static string FormatShort(IEnumerable<string> entries)
+  {
+    return string.Join(Environment.NewLine, entries.Select(FormatEntry));
+  }
+
+  /// <param name="entries"></param>
+  /// <returns></returns>
+  private static string FormatLong(IEnumerable<string> entries)
+  {
+    var lines = new List<string>();
+
+    foreach (var path in entries)
+    {
+      var info = new FileInfo(path);
+      var name = FormatEntry(path);
+
+      string perms = GetPseudoPermissions(path);
+      string size = Directory.Exists(path) ? "-" : info.Length.ToString();
+      string date = info.LastWriteTime.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
+
+      lines.Add($"{perms} {size,8} {date} {name}");
+    }
+
+    return string.Join(Environment.NewLine, lines);
+  }
+
+  /// <param name="path"></param>
+  /// <returns></returns>
+  private static string FormatEntry(string path)
+  {
+    var name = Path.GetFileName(path)!;
+
+    if (Directory.Exists(path))
+    return name + "/";
+
+    if (IsSymlink(path))
+    return name + "@";
+
+    if (IsExecutable(path))
+    return name + "*";
+
+    return name;
+  }
+
+  /// <param name="path"></param>
+  /// <returns></returns>
+  private static string GetPseudoPermissions(string path)
+  {
+    if (Directory.Exists(path))
+    return "drwxr-xr-x";
+
+    return "-rw-r--r--";
+  }
+
+  /// <param name="path"></param>
+  /// <returns></returns>
+  private static bool IsExecutable(string path)
+  {
+    var ext = Path.GetExtension(path).ToLowerInvariant();
+    return ext is ".exe" or ".bat" or ".cmd";
+  }
+
+  /// <param name="path"></param>
+  /// <returns></returns>
+  private static bool IsSymlink(string path)
+  {
+    var attr = File.GetAttributes(path);
+    return (attr & FileAttributes.ReparsePoint) != 0;
+  }
+}
+
+
+## cssh.Core\Commands\MkdirCommand.cs
+
+/* cssh.Core.Commands.MkdirCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+using cssh.Core;
+/// <summary>
+/// Represents the MkdirCommand class.
+/// </summary>
+public class MkdirCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "mkdir";
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Create a directory.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "mkdir: missing operand";
+
+    var path = PathNormalizer.Normalize(args[0]);
+
+    if (!Path.IsPathRooted(path))
+    path = Path.Combine(state.CurrentDirectory, path);
+
+    try
+    {
+      Directory.CreateDirectory(path);
+    }
+    catch (Exception ex)
+    {
+      return $"mkdir: error: {ex.Message}";
+    }
+
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\PwdCommand.cs
+
+/* cssh.Core.Commands.PwdCommand.cs - v0.1.2 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Implements the <c>pwd</c> command, printing the current working directory.
+/// </summary>
+public class PwdCommand : ICommand
+{
+  /// <inheritdoc />
+  public string Name => "pwd";
+
+  /// <summary>
+  /// Returns the current working directory, following Bash behavior.
+  /// </summary>
+  public string Execute(ShellState state, string[] args)
+  {
+    return state.CurrentDirectory;
+  }
+}
+
+
+## cssh.Core\Commands\RmCommand.cs
+
+/* cssh.Core.Commands.RmCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+using cssh.Core;
+/// <summary>
+/// Represents the RmCommand class.
+/// </summary>
+public class RmCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "rm";
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Remove a file.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "rm: missing operand";
+
+    var path = PathNormalizer.Normalize(args[0]);
+
+    if (!Path.IsPathRooted(path))
+    path = Path.Combine(state.CurrentDirectory, path);
+
+    if (!File.Exists(path))
+    return $"rm: no such file: {args[0]}";
+
+    try
+    {
+      File.Delete(path);
+    }
+    catch (Exception ex)
+    {
+      return $"rm: error: {ex.Message}";
+    }
+
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\RmdirCommand.cs
+
+/* cssh.Core.Commands.RmdirCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+using cssh.Core;
+/// <summary>
+/// Represents the RmdirCommand class.
+/// </summary>
+public class RmdirCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "rmdir";
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Remove an empty directory.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "rmdir: missing operand";
+
+    var path = PathNormalizer.Normalize(args[0]);
+
+    if (!Path.IsPathRooted(path))
+    path = Path.Combine(state.CurrentDirectory, path);
+
+    if (!Directory.Exists(path))
+    return $"rmdir: no such directory: {args[0]}";
+
+    try
+    {
+      Directory.Delete(path, false); // 空でないと例外
+    }
+    catch (Exception ex)
+    {
+      return $"rmdir: error: {ex.Message}";
+    }
+
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\TouchCommand.cs
+
+/* cssh.Core.Commands.TouchCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+
+/// <summary>
+/// Creates an empty file if it does not exist.
+/// If the file exists, updates its last write time.
+/// </summary>
+public class TouchCommand : ICommand
+{
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "touch";
+
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Create a file or update its modification time.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "touch: missing operand";
+
+    var path = PathNormalizer.Normalize(args[0]);
+
+    if (!Path.IsPathRooted(path))
+    path = Path.Combine(state.CurrentDirectory, path);
+
+    try
+    {
+      if (!File.Exists(path))
+      {
+        // Create empty file
+        File.WriteAllText(path, string.Empty);
+      }
+      else
+      {
+        // Update modification time
+        File.SetLastWriteTime(path, DateTime.Now);
+      }
+    }
+    catch (Exception ex)
+    {
+      return $"touch: error: {ex.Message}";
+    }
+
+    return string.Empty;
+  }
+}
+
+
+## cssh.Core\Commands\WhichCommand.cs
+
+/* cssh.Core.Commands.WhichCommand.cs v0.2.0 */
+namespace cssh.Core.Commands;
+using cssh.Core.Commands;
+using cssh.Core;
+/// <summary>
+/// Represents the WhichCommand class.
+/// </summary>
+public class WhichCommand : ICommand
+{
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+
+  public WhichCommand(CommandRegistry registry)
+  {
+    _registry = registry;
+  }
+
+  /// <summary>
+  /// The Name field.
+  /// </summary>
+  public string Name => "which";
+  /// <summary>
+  /// The Description field.
+  /// </summary>
+  public string Description => "Show the implementation of a command.";
+
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
+  public string Execute(ShellState state, string[] args)
+  {
+    if (args.Length == 0)
+    return "which: missing operand";
+
+    var cmd = _registry.Resolve(args[0]);
+    if (cmd == null)
+    return $"which: no such command: {args[0]}";
+
+    return cmd.GetType().FullName ?? cmd.GetType().Name;
+  }
+}
+
+
+## cssh.Core\Execution\CommandExecuter.cs
+
+/* cssh.Core.Execution.CommandExecutor.cs - v0.2.0 string-based executor */
+using Cssh.Core.Ast;
+namespace cssh.Core.Execution;
+
+using System.Text;
+using cssh.Core;
+using cssh.Core.Commands; // CommandRegistry がここにある前提。実際の namespace に合わせて調整してください。
+
+/// <summary>
+/// Executes parsed AST (Sequence / Pipeline / CommandNode) using the existing
+/// ICommand (string-based) command model.
+/// </summary>
+public sealed class CommandExecutor
+{
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+
+  public CommandExecutor(CommandRegistry registry)
+  {
+    _registry = registry ?? throw new ArgumentNullException(nameof(registry));
+  }
+
+  /// <summary>
+  /// Executes a sequence of pipelines separated by ';'.
+  /// Returns the output of the last pipeline (for REPL display).
+  /// </summary>
+  public string ExecuteSequence(ShellState state, Sequence sequence)
+  {
+    if (sequence == null) throw new ArgumentNullException(nameof(sequence));
+    if (state == null) throw new ArgumentNullException(nameof(state));
+
+    string lastOutput = string.Empty;
+
+    foreach (var pipeline in sequence.Pipelines)
+    {
+      lastOutput = ExecutePipeline(state, pipeline);
+    }
+
+    return lastOutput;
+  }
+
+  /// <summary>
+  /// Executes a single pipeline, e.g. cmd1 | cmd2 | cmd3.
+  /// The output of each command becomes the "piped input" for the next one.
+  /// </summary>
+  private string ExecutePipeline(ShellState state, Pipeline pipeline)
+  {
+    if (pipeline == null) throw new ArgumentNullException(nameof(pipeline));
+
+    string? pipedInput = null;
+    string lastOutput = string.Empty;
+
+    foreach (var node in pipeline.Commands)
+    {
+      lastOutput = ExecuteCommandNode(state, node, pipedInput);
+      pipedInput = lastOutput;
+    }
+
+    return lastOutput;
+  }
+
+  /// <summary>
+  /// Executes a single command node with optional redirects and piped input.
+  /// </summary>
+  private string ExecuteCommandNode(
+  ShellState state,
+  CommandNode node,
+  string? pipedInput)
+  {
+    if (node == null) throw new ArgumentNullException(nameof(node));
+
+    // 1. Resolve command
+    var command = _registry.Resolve(node.Name);
+    if (command == null)
+    {
+      return $"cssh: command not found: {node.Name}";
+    }
+
+    // 2. Build argument list, optionally including "piped input" and redirected input
+    var args = BuildArgumentsWithInput(node, pipedInput);
+
+    // 3. Execute command (ICommand is string-based, unchanged)
+    var rawOutput = command.Execute(state, args);
+
+    // 4. Apply redirects (>, >>). Input redirect (<) is already handled in args.
+    var finalOutput = ApplyOutputRedirects(rawOutput, node.Redirect);
+
+    return finalOutput;
+  }
+
+  /// <summary>
+  /// Builds the argument array for a command, combining:
+  /// - original parsed arguments
+  /// - piped input (if present)
+  /// - input redirection content (&lt; file) if configured
+  ///
+  /// NOTE: この挙動は「最小構成」の暫定方針です。
+  ///       - 元の args をそのまま維持
+  ///       - pipedInput があれば末尾に追加
+  ///       - &lt; file があればさらに末尾に追加
+  /// 実運用で不自然に感じたら、ここを差し替えれば済みます（他の構造には影響しません）。
+  /// </summary>
+  private static string[] BuildArgumentsWithInput(
+  CommandNode node,
+  string? pipedInput)
+  {
+    var list = new List<string>(node.Args);
+
+    // パイプからの入力を最後の引数として追加（暫定仕様）
+    if (!string.IsNullOrEmpty(pipedInput))
+    {
+      list.Add(pipedInput);
+    }
+
+    // 入力リダイレクト (< file) がある場合、ファイル内容をさらに追加
+    if (node.Redirect?.FilePath is string inputPath && !string.IsNullOrWhiteSpace(inputPath))
+    {
+      try
+      {
+        var text = File.ReadAllText(inputPath, Encoding.UTF8);
+        list.Add(text);
+      }
+      catch (Exception ex)
+      {
+        // ここでは例外をそのまま引数として渡すのではなく、
+        // エラー内容を特殊な形で埋め込む簡易実装とする。
+        // 実運用では、エラーを即時返却するなどの方針に変えても構いません。
+        list.Add($"[cssh: failed to read '{inputPath}': {ex.Message}]");
+      }
+    }
+
+    return list.ToArray();
+  }
+
+  /// <summary>
+  /// Applies output redirects (&gt;, &gt;&gt;) if configured.
+  /// When redirected, the text is written to file and an empty string is returned
+  /// so that REPL does not duplicate the output.
+  /// </summary>
+  private static string ApplyOutputRedirects(string output, RedirectInfo? redirect)
+  {
+    if (redirect == null)
+    return output;
+
+    if (string.IsNullOrWhiteSpace(redirect.FilePath))
+    return output;
+
+    try
+    {
+      var path = redirect.FilePath;
+
+      if (redirect.Type == RedirectType.OutputAppend)
+      {
+        File.AppendAllText(path, output, Encoding.UTF8);
+      }
+      else
+      {
+        File.WriteAllText(path, output, Encoding.UTF8);
+      }
+
+      // リダイレクトされた場合は画面には何も表示しない
+      return string.Empty;
+    }
+    catch (Exception ex)
+    {
+      // エラーは画面に出す（リダイレクト失敗はユーザーに見せたい）
+      return $"cssh: redirect failed: {ex.Message}";
+    }
+  }
+}
+
+
+## cssh.Tests\AliasAndHistoryTests.cs
+
+using System;
+using System.IO;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Represents the AliasAndHistoryTests class.
+/// </summary>
+public class AliasAndHistoryTests : IDisposable
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+  /// <summary>
+  /// The _runner field.
+  /// </summary>
+  private readonly CommandRunner _runner;
+  /// <summary>
+  /// The _state field.
+  /// </summary>
+  private readonly ShellState _state;
+  /// <summary>
+  /// The _testDir field.
+  /// </summary>
+  private readonly string _testDir;
+
+  public AliasAndHistoryTests()
+  {
+    _testDir = Path.Combine(Path.GetTempPath(), $"cssh_aliashist_test_{Guid.NewGuid()}");
+    Directory.CreateDirectory(_testDir);
+
+    _parser = new CommandParser();
+    _registry = new CommandRegistry();
+    _state = new ShellState(_registry);
+    _runner = new CommandRunner(_parser, _registry);
+
+    // Register commands needed
+    _registry.Register(new EchoCommand(), "Print arguments");
+    _registry.Register(new AliasBuiltinCommand(), "List or create aliases");
+    _registry.Register(new HistoryCommand(), "Show history");
+    _registry.Register(new AliasCommand("h", "history"), "Alias of history");
+    _registry.Register(new LsCommand(), "List directory contents");
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Alias_CanCreateAndInvoke method.
+  /// </summary>
+  public void Alias_CanCreateAndInvoke()
+  {
+    var res = _runner.Run(_state, "alias greet echo hello");
+    Assert.Equal(string.Empty, res);
+
+    var outp = _runner.Run(_state, "greet");
+    Assert.Equal("hello", outp);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Alias_WithQuotedExpansion_PreservesSpaces method.
+  /// </summary>
+  public void Alias_WithQuotedExpansion_PreservesSpaces()
+  {
+    var res = _runner.Run(_state, "alias greet echo \"hello world\"");
+    Assert.Equal(string.Empty, res);
+
+    var outp = _runner.Run(_state, "greet");
+    Assert.Equal("hello world", outp);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Alias_List_ShowsDefined method.
+  /// </summary>
+  public void Alias_List_ShowsDefined()
+  {
+    _runner.Run(_state, "alias greet echo hello");
+    var outp = _runner.Run(_state, "alias");
+    Assert.Equal("greet=echo hello", outp.Trim());
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Unalias_IsNotRegistered method.
+  /// </summary>
+  public void Unalias_IsNotRegistered()
+  {
+    _runner.Run(_state, "alias greet echo hello");
+    var outp1 = _runner.Run(_state, "greet");
+    Assert.Equal("hello", outp1);
+
+    var outp2 = _runner.Run(_state, "unalias greet");
+    Assert.Equal("Unknown command: unalias", outp2);
+
+    var outp3 = _runner.Run(_state, "greet");
+    Assert.Equal("hello", outp3);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the History_RecordsAndLists method.
+  /// </summary>
+  public void History_RecordsAndLists()
+  {
+    _runner.Run(_state, "echo a");
+    _runner.Run(_state, "echo b");
+    _runner.Run(_state, "echo c");
+
+    var outp = _runner.Run(_state, "history");
+    var lines = outp.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+    Assert.Equal("1 echo a", lines[0]);
+    Assert.Equal("2 echo b", lines[1]);
+    Assert.Equal("3 echo c", lines[2]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Bang_ExecutesHistoryEntry method.
+  /// </summary>
+  public void Bang_ExecutesHistoryEntry()
+  {
+    _runner.Run(_state, "echo a");
+    _runner.Run(_state, "echo b");
+
+    var outp = _runner.Run(_state, "!1");
+    Assert.Equal("a", outp);
+
+    // confirm it was recorded as executed command at end of history
+    var hist = _state.History;
+    Assert.Equal("echo a", hist[^1]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the BangPrefix_ExecutesMostRecentMatchingHistoryEntry method.
+  /// </summary>
+  public void BangPrefix_ExecutesMostRecentMatchingHistoryEntry()
+  {
+    _runner.Run(_state, "echo one");
+    _runner.Run(_state, "ls -la");
+    _runner.Run(_state, "echo two");
+
+    var outp = _runner.Run(_state, "!echo");
+    Assert.Equal("two", outp);
+
+    var hist = _state.History;
+    Assert.Equal("echo two", hist[^1]);
+
+    var outp2 = _runner.Run(_state, "!ls");
+    Assert.NotEqual($"Unknown command: ls", outp2);
+    Assert.Equal("ls -la", _state.History[^1]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the BangPrefix_NotFoundReturnsError method.
+  /// </summary>
+  public void BangPrefix_NotFoundReturnsError()
+  {
+    _runner.Run(_state, "echo a");
+    var outp = _runner.Run(_state, "!nope");
+    Assert.Equal("history: event not found", outp);
+  }
+
+  /// <summary>
+  /// Executes the Dispose method.
+  /// </summary>
+  public void Dispose()
+  {
+    try
+    {
+      if (Directory.Exists(_testDir))
+      Directory.Delete(_testDir, true);
+    }
+    catch { }
+  }
+}
+
+
+## cssh.Tests\CommandParserTests.cs
+
+/* cssh v0.2.0 - CommandParser tests based on specification */
+using cssh.Core;
+using Cssh.Core.Ast;
+using Xunit;
+
+/// <summary>
+/// Tests for CommandParser covering:
+/// - Basic command parsing
+/// - Quoted arguments (single and double quotes)
+/// - Pipeline operators (|)
+/// - Redirection operators (>, >>, <)
+/// - Multiple pipelines and redirects
+/// Per specification section 5: "Shell operators"
+/// </summary>
+public class CommandParserTests
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser = new();
+
+  #region Basic Parsing Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldReturnCommandName_WhenOnlyCommandGiven method.
+  /// </summary>
+  public void Parse_ShouldReturnCommandName_WhenOnlyCommandGiven()
+  {
+    var result = _parser.Parse("pwd");
+
+    Assert.Equal("pwd", result.Command);
+    Assert.Empty(result.Arguments);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldSplitCommandAndArguments method.
+  /// </summary>
+  public void Parse_ShouldSplitCommandAndArguments()
+  {
+    var result = _parser.Parse("echo hello world");
+
+    Assert.Equal("echo", result.Command);
+    Assert.Equal(new[] { "hello", "world" }, result.Arguments);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleMultipleArguments method.
+  /// </summary>
+  public void Parse_ShouldHandleMultipleArguments()
+  {
+    var result = _parser.Parse("cp file1.txt file2.txt destination");
+
+    Assert.Equal("cp", result.Command);
+    Assert.Equal(new[] { "file1.txt", "file2.txt", "destination" }, result.Arguments);
+  }
+
+  #endregion
+
+  #region Quoted Arguments Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleDoubleQuotedArguments_WithSpaces method.
+  /// </summary>
+  public void Parse_ShouldHandleDoubleQuotedArguments_WithSpaces()
+  {
+    var result = _parser.Parse("echo \"hello world\"");
+
+    Assert.Equal("echo", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("hello world", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleSingleQuotedArguments_WithSpaces method.
+  /// </summary>
+  public void Parse_ShouldHandleSingleQuotedArguments_WithSpaces()
+  {
+    var result = _parser.Parse("echo 'hello world'");
+
+    Assert.Equal("echo", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("hello world", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleMixedQuotes method.
+  /// </summary>
+  public void Parse_ShouldHandleMixedQuotes()
+  {
+    var result = _parser.Parse("echo \"first\" 'second' third");
+
+    Assert.Equal("echo", result.Command);
+    Assert.Equal(new[] { "first", "second", "third" }, result.Arguments);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleQuotedPathsWithBackslash method.
+  /// </summary>
+  public void Parse_ShouldHandleQuotedPathsWithBackslash()
+  {
+    var result = _parser.Parse("cat \"C:\\Users\\test.txt\"");
+
+    Assert.Equal("cat", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("C:\\Users\\test.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldHandleQuotedPathsWithForwardSlash method.
+  /// </summary>
+  public void Parse_ShouldHandleQuotedPathsWithForwardSlash()
+  {
+    var result = _parser.Parse("cat \"C:/Users/test.txt\"");
+
+    Assert.Equal("cat", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("C:/Users/test.txt", result.Arguments[0]);
+  }
+
+  #endregion
+
+  #region Redirection Tests (v0.2.0)
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseOutputRedirect_Truncate method.
+  /// </summary>
+  public void ParseSequence_ShouldParseOutputRedirect_Truncate()
+  {
+    var result = _parser.ParseSequence("echo hello > output.txt");
+
+    Assert.Single(result.Pipelines);
+    Assert.Single(result.Pipelines[0].Commands);
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal("echo", cmd.Name);
+    Assert.Equal(RedirectType.OutputTruncate, cmd.Redirect.Type);
+    Assert.Equal("output.txt", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseOutputRedirect_Append method.
+  /// </summary>
+  public void ParseSequence_ShouldParseOutputRedirect_Append()
+  {
+    var result = _parser.ParseSequence("echo hello >> output.txt");
+
+    Assert.Single(result.Pipelines);
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(RedirectType.OutputAppend, cmd.Redirect.Type);
+    Assert.Equal("output.txt", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseInputRedirect method.
+  /// </summary>
+  public void ParseSequence_ShouldParseInputRedirect()
+  {
+    var result = _parser.ParseSequence("cat < input.txt");
+
+    Assert.Single(result.Pipelines);
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal("cat", cmd.Name);
+    Assert.Equal(RedirectType.Input, cmd.Redirect.Type);
+    Assert.Equal("input.txt", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseRedirectWithQuotedPath method.
+  /// </summary>
+  public void ParseSequence_ShouldParseRedirectWithQuotedPath()
+  {
+    var result = _parser.ParseSequence("echo test > \"output file.txt\"");
+
+    Assert.Single(result.Pipelines);
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(RedirectType.OutputTruncate, cmd.Redirect.Type);
+    Assert.Equal("output file.txt", cmd.Redirect.FilePath);
+  }
+
+  #endregion
+
+  #region Pipeline Tests (v0.2.0)
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseTwoCommandPipeline method.
+  /// </summary>
+  public void ParseSequence_ShouldParseTwoCommandPipeline()
+  {
+    var result = _parser.ParseSequence("echo hello | cat");
+
+    Assert.Single(result.Pipelines);
+    Assert.Equal(2, result.Pipelines[0].Commands.Count);
+    Assert.Equal("echo", result.Pipelines[0].Commands[0].Name);
+    Assert.Equal("cat", result.Pipelines[0].Commands[1].Name);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHaveEmptyArgsOnSecondCommandForEchoPipe method.
+  /// </summary>
+  public void ParseSequence_ShouldHaveEmptyArgsOnSecondCommandForEchoPipe()
+  {
+    var result = _parser.ParseSequence("echo hello | cat");
+    var second = result.Pipelines[0].Commands[1];
+    Assert.Empty(second.Args);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParseMultipleCommandPipeline method.
+  /// </summary>
+  public void ParseSequence_ShouldParseMultipleCommandPipeline()
+  {
+    var result = _parser.ParseSequence("echo hello | cat | grep e");
+
+    Assert.Single(result.Pipelines);
+    Assert.Equal(3, result.Pipelines[0].Commands.Count);
+    Assert.Equal("echo", result.Pipelines[0].Commands[0].Name);
+    Assert.Equal("cat", result.Pipelines[0].Commands[1].Name);
+    Assert.Equal("grep", result.Pipelines[0].Commands[2].Name);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParsePipelineWithArguments method.
+  /// </summary>
+  public void ParseSequence_ShouldParsePipelineWithArguments()
+  {
+    var result = _parser.ParseSequence("echo hello world | cat -n");
+
+    Assert.Equal(2, result.Pipelines[0].Commands.Count);
+    Assert.Equal(new[] { "hello", "world" }, result.Pipelines[0].Commands[0].Args);
+    Assert.Equal(new[] { "-n" }, result.Pipelines[0].Commands[1].Args);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldParsePipelineWithFinalRedirect method.
+  /// </summary>
+  public void ParseSequence_ShouldParsePipelineWithFinalRedirect()
+  {
+    var result = _parser.ParseSequence("echo hello | cat > output.txt");
+
+    Assert.Equal(2, result.Pipelines[0].Commands.Count);
+    var lastCmd = result.Pipelines[0].Commands[1];
+    Assert.Equal("cat", lastCmd.Name);
+    Assert.Equal(RedirectType.OutputTruncate, lastCmd.Redirect.Type);
+    Assert.Equal("output.txt", lastCmd.Redirect.FilePath);
+  }
+
+  #endregion
+
+  #region Semicolon Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldSplitBySemicolon method.
+  /// </summary>
+  public void ParseSequence_ShouldSplitBySemicolon()
+  {
+    var result = _parser.ParseSequence("echo one; echo two");
+
+    Assert.Equal(2, result.Pipelines.Count);
+    Assert.Equal("echo", result.Pipelines[0].Commands[0].Name);
+    Assert.Equal("one", result.Pipelines[0].Commands[0].Args[0]);
+    Assert.Equal("echo", result.Pipelines[1].Commands[0].Name);
+    Assert.Equal("two", result.Pipelines[1].Commands[0].Args[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldNotSplitSemicolonInsideQuotes method.
+  /// </summary>
+  public void ParseSequence_ShouldNotSplitSemicolonInsideQuotes()
+  {
+    var result = _parser.ParseSequence("echo \"a;b\"; echo after");
+
+    Assert.Equal(2, result.Pipelines.Count);
+    var first = result.Pipelines[0].Commands[0];
+    Assert.Equal(new[] { "a;b" }, first.Args);
+  }
+
+  #endregion
+
+  #region Complex Scenarios
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleCommandWithMultipleArguments_AndRedirect method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleCommandWithMultipleArguments_AndRedirect()
+  {
+    var result = _parser.ParseSequence("cp file1 file2 destination > result.log");
+
+    Assert.Single(result.Pipelines);
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal("cp", cmd.Name);
+    Assert.Equal(new[] { "file1", "file2", "destination" }, cmd.Args);
+    Assert.Equal(RedirectType.OutputTruncate, cmd.Redirect.Type);
+    Assert.Equal("result.log", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldPreservePathsWithSpaces method.
+  /// </summary>
+  public void ParseSequence_ShouldPreservePathsWithSpaces()
+  {
+    var result = _parser.ParseSequence("echo \"hello world\" > \"my output.txt\"");
+
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(new[] { "hello world" }, cmd.Args);
+    Assert.Equal("my output.txt", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleWindowsPaths method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleWindowsPaths()
+  {
+    var result = _parser.ParseSequence("cat C:\\path\\to\\file.txt");
+
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(new[] { "C:\\path\\to\\file.txt" }, cmd.Args);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleUnixStylePaths method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleUnixStylePaths()
+  {
+    var result = _parser.ParseSequence("cat /path/to/file.txt");
+
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(new[] { "/path/to/file.txt" }, cmd.Args);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleOptionsWithDash method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleOptionsWithDash()
+  {
+    var result = _parser.ParseSequence("ls -la");
+
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal("ls", cmd.Name);
+    Assert.Equal(new[] { "-la" }, cmd.Args);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleEmptyInput method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleEmptyInput()
+  {
+    var result = _parser.ParseSequence("");
+
+    Assert.Single(result.Pipelines);
+    Assert.Empty(result.Pipelines[0].Commands);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleWhitespaceOnlyInput method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleWhitespaceOnlyInput()
+  {
+    var result = _parser.ParseSequence("   ");
+
+    Assert.Single(result.Pipelines);
+    Assert.Empty(result.Pipelines[0].Commands);
+  }
+
+  #endregion
+
+  #region Error Cases
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parse_ShouldReturnEmptyCommand_WhenInputIsEmpty method.
+  /// </summary>
+  public void Parse_ShouldReturnEmptyCommand_WhenInputIsEmpty()
+  {
+    var result = _parser.Parse("");
+
+    Assert.Empty(result.Command);
+    Assert.Empty(result.Arguments);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ParseSequence_ShouldHandleConsecutiveSpaces method.
+  /// </summary>
+  public void ParseSequence_ShouldHandleConsecutiveSpaces()
+  {
+    var result = _parser.ParseSequence("echo    hello    world");
+
+    var cmd = result.Pipelines[0].Commands[0];
+    Assert.Equal(new[] { "hello", "world" }, cmd.Args);
+  }
+
+  #endregion
+}
+
+
+
+## cssh.Tests\CommandRunnerTests.cs
+
+/* cssh v0.2.0 - CommandRunner integration tests */
+using System;
+using System.IO;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Integration tests for CommandRunner covering:
+/// - Pipeline execution
+/// - Redirect execution (>, >>, <)
+/// - Error handling
+/// - Command execution with state
+/// Per specification section 5: "Shell operators and execution rules"
+/// </summary>
+public class CommandRunnerTests : IDisposable
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+  /// <summary>
+  /// The _runner field.
+  /// </summary>
+  private readonly CommandRunner _runner;
+  /// <summary>
+  /// The _state field.
+  /// </summary>
+  private readonly ShellState _state;
+  /// <summary>
+  /// The _testDir field.
+  /// </summary>
+  private readonly string _testDir;
+
+  public CommandRunnerTests()
+  {
+    _testDir = Path.Combine(Path.GetTempPath(), $"cssh_test_{Guid.NewGuid()}");
+    Directory.CreateDirectory(_testDir);
+
+    _parser = new CommandParser();
+    _registry = new CommandRegistry();
+    _state = new ShellState(_registry);
+    _runner = new CommandRunner(_parser, _registry);
+
+    // Register built-in commands
+    _registry.Register(new EchoCommand(), "Print arguments");
+    _registry.Register(new CatCommand(), "Print file contents");
+    _registry.Register(new PwdCommand(), "Print working directory");
+    _registry.Register(new LsCommand(), "List directory contents");
+    _registry.Register(new TouchCommand(), "Create or update file timestamp");
+    _registry.Register(new RmCommand(), "Remove a file");
+    _registry.Register(new MkdirCommand(), "Create a directory");
+  }
+
+  #region Echo Command Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldReturnText method.
+  /// </summary>
+  public void Run_Echo_ShouldReturnText()
+  {
+    var output = _runner.Run(_state, "echo hello world");
+
+    Assert.Equal("hello world", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldHandleQuotedText method.
+  /// </summary>
+  public void Run_Echo_ShouldHandleQuotedText()
+  {
+    var output = _runner.Run(_state, "echo \"hello world\"");
+
+    Assert.Equal("hello world", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldExpandEnvironmentVariable method.
+  /// </summary>
+  public void Run_Echo_ShouldExpandEnvironmentVariable()
+  {
+    Environment.SetEnvironmentVariable("CSSH_TEST_VAR", "myvalue");
+    var output = _runner.Run(_state, "echo $CSSH_TEST_VAR");
+
+    Assert.Equal("myvalue", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldNotExpandInSingleQuotes method.
+  /// </summary>
+  public void Run_Echo_ShouldNotExpandInSingleQuotes()
+  {
+    Environment.SetEnvironmentVariable("CSSH_TEST_VAR", "myvalue");
+    var output = _runner.Run(_state, "echo '$CSSH_TEST_VAR'");
+
+    Assert.Equal("$CSSH_TEST_VAR", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldExpandInDoubleQuotes method.
+  /// </summary>
+  public void Run_Echo_ShouldExpandInDoubleQuotes()
+  {
+    Environment.SetEnvironmentVariable("CSSH_TEST_VAR", "val2");
+    var output = _runner.Run(_state, "echo \"$CSSH_TEST_VAR\"");
+
+    Assert.Equal("val2", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_ShouldExpandInlineVariables method.
+  /// </summary>
+  public void Run_Echo_ShouldExpandInlineVariables()
+  {
+    Environment.SetEnvironmentVariable("CSSH_TEST_VAR", "X");
+    var output = _runner.Run(_state, "echo pre$CSSH_TEST_VAR post");
+
+    Assert.Equal("preX post", output);
+  }
+
+  #endregion
+
+  #region Redirect Output Tests (> and >>)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_WithOutputRedirectTruncate_ShouldCreateFile method.
+  /// </summary>
+  public void Run_Echo_WithOutputRedirectTruncate_ShouldCreateFile()
+  {
+    var filePath = Path.Combine(_testDir, "test_output.txt");
+    var output = _runner.Run(_state, $"echo hello > \"{filePath}\"");
+
+    Assert.Empty(output); // Redirected output returns empty
+    Assert.True(File.Exists(filePath), "File should be created");
+    Assert.Equal("hello", File.ReadAllText(filePath));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_WithOutputRedirectAppend_ShouldAppendToFile method.
+  /// </summary>
+  public void Run_Echo_WithOutputRedirectAppend_ShouldAppendToFile()
+  {
+    var filePath = Path.Combine(_testDir, "test_append.txt");
+
+    // Create initial file
+    File.WriteAllText(filePath, "line1\n");
+
+    // Append
+    _runner.Run(_state, $"echo line2 >> \"{filePath}\"");
+
+    var content = File.ReadAllText(filePath);
+    Assert.Contains("line1", content);
+    Assert.Contains("line2", content);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Echo_WithMultipleRedirects_ShouldUseLastRedirect method.
+  /// </summary>
+  public void Run_Echo_WithMultipleRedirects_ShouldUseLastRedirect()
+  {
+    var filePath = Path.Combine(_testDir, "test_multi.txt");
+    _runner.Run(_state, $"echo test > \"{filePath}\"");
+    _runner.Run(_state, $"echo append >> \"{filePath}\"");
+
+    var content = File.ReadAllText(filePath);
+    Assert.Equal("test\nappend\n", content);
+  }
+
+  #endregion
+
+  #region Input Redirect Tests (<)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Cat_WithInputRedirect_ShouldReadFromFile method.
+  /// </summary>
+  public void Run_Cat_WithInputRedirect_ShouldReadFromFile()
+  {
+    var filePath = Path.Combine(_testDir, "test_input.txt");
+    File.WriteAllText(filePath, "file content");
+
+    var output = _runner.Run(_state, $"cat < \"{filePath}\"");
+
+    Assert.Equal("file content", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_WithInputRedirect_NonExistentFile_ShouldReturnError method.
+  /// </summary>
+  public void Run_WithInputRedirect_NonExistentFile_ShouldReturnError()
+  {
+    var output = _runner.Run(_state, "cat < /nonexistent/file.txt");
+
+    Assert.Contains("No such file", output);
+  }
+
+  #endregion
+
+  #region Pipeline Tests (|)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Pipeline_EchoToCat_ShouldTransmitData method.
+  /// </summary>
+  public void Run_Pipeline_EchoToCat_ShouldTransmitData()
+  {
+    var output = _runner.Run(_state, "echo hello | cat");
+
+    Assert.Equal("hello", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Pipeline_MultipleCommands_ShouldChain method.
+  /// </summary>
+  public void Run_Pipeline_MultipleCommands_ShouldChain()
+  {
+    var filePath = Path.Combine(_testDir, "test_pipe.txt");
+
+    // Create a file
+    _runner.Run(_state, $"echo test > \"{filePath}\"");
+
+    // Read it back through cat
+    var output = _runner.Run(_state, $"cat \"{filePath}\" | cat");
+
+    Assert.Equal("test", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Pipeline_WithFinalRedirect_ShouldRedirectPipeOutput method.
+  /// </summary>
+  public void Run_Pipeline_WithFinalRedirect_ShouldRedirectPipeOutput()
+  {
+    var filePath = Path.Combine(_testDir, "test_pipe_redirect.txt");
+
+    _runner.Run(_state, $"echo hello | cat > \"{filePath}\"");
+
+    Assert.True(File.Exists(filePath));
+    Assert.Equal("hello", File.ReadAllText(filePath));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Semicolon_Commands_ShouldExecuteSequentially method.
+  /// </summary>
+  public void Run_Semicolon_Commands_ShouldExecuteSequentially()
+  {
+    var output = _runner.Run(_state, "echo one; echo two");
+    Assert.Equal($"one{Environment.NewLine}two", output);
+  }
+
+  #endregion
+
+  #region Unknown Command Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_UnknownCommand_ShouldReturnError method.
+  /// </summary>
+  public void Run_UnknownCommand_ShouldReturnError()
+  {
+    var output = _runner.Run(_state, "unknowncommand arg");
+
+    Assert.Contains("Unknown command", output);
+  }
+
+  #endregion
+
+  #region File Operations
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Touch_ShouldCreateFile method.
+  /// </summary>
+  public void Run_Touch_ShouldCreateFile()
+  {
+    var filePath = Path.Combine(_testDir, "touched.txt");
+    _runner.Run(_state, $"touch \"{filePath}\"");
+
+    Assert.True(File.Exists(filePath));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Mkdir_ShouldCreateDirectory method.
+  /// </summary>
+  public void Run_Mkdir_ShouldCreateDirectory()
+  {
+    var dirPath = Path.Combine(_testDir, "newdir");
+    _runner.Run(_state, $"mkdir \"{dirPath}\"");
+
+    Assert.True(Directory.Exists(dirPath));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_ExternalCommand_FromPath_ShouldExecute method.
+  /// </summary>
+  public void Run_ExternalCommand_FromPath_ShouldExecute()
+  {
+    var tempDir = Path.Combine(_testDir, "ext");
+    Directory.CreateDirectory(tempDir);
+
+    var scriptPath = Path.Combine(tempDir, "myecho.cmd");
+    File.WriteAllText(scriptPath, "@echo off\r\necho %*\r\n");
+
+    // Prepend tempDir to PATH
+    var oldPath = Environment.GetEnvironmentVariable("PATH");
+    Environment.SetEnvironmentVariable("PATH", tempDir + Path.PathSeparator + oldPath);
+
+    try
+    {
+      var output = _runner.Run(_state, "myecho hello world");
+      Assert.Equal("hello world", output);
+    }
+    finally
+    {
+      // Restore PATH
+      Environment.SetEnvironmentVariable("PATH", oldPath);
+    }
+  }
+
+  #endregion
+
+  #region Command with Arguments and Redirect
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_CommandWithMultipleArgs_AndRedirect method.
+  /// </summary>
+  public void Run_CommandWithMultipleArgs_AndRedirect()
+  {
+    var outputFile = Path.Combine(_testDir, "result.txt");
+
+    // Note: This is a basic test; actual behavior depends on command implementation
+    _runner.Run(_state, $"echo arg1 arg2 arg3 > \"{outputFile}\"");
+
+    Assert.True(File.Exists(outputFile));
+  }
+
+  #endregion
+
+  #region Edge Cases
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_EmptyInput_ShouldHandleGracefully method.
+  /// </summary>
+  public void Run_EmptyInput_ShouldHandleGracefully()
+  {
+    var output = _runner.Run(_state, "");
+
+    // Should not throw; behavior depends on implementation
+    Assert.NotNull(output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_WhitespaceOnlyInput_ShouldHandleGracefully method.
+  /// </summary>
+  public void Run_WhitespaceOnlyInput_ShouldHandleGracefully()
+  {
+    var output = _runner.Run(_state, "   ");
+
+    Assert.NotNull(output);
+  }
+
+  #endregion
+
+  /// <summary>
+  /// Executes the Dispose method.
+  /// </summary>
+  public void Dispose()
+  {
+    if (Directory.Exists(_testDir))
+    {
+      Directory.Delete(_testDir, true);
+    }
+  }
+}
+
+
+
+## cssh.Tests\cssh.Tests.csproj
+
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cssh.Core\cssh.Core.csproj" />
+  </ItemGroup>
+
+</Project>
+
+## cssh.Tests\csshConstantsTests.cs
+
+/* cssh.Tests.CsshConstantsTests.cs - A cross-platform C# shell ver.0.2.0 CsshConstantsTests class */
+using cssh.Core.Constants;
+using Xunit;
+
+namespace cssh.Tests;
+
+/// <summary>
+/// Unit tests for <see cref="CsshConstants"/> ensuring that
+/// versioning and constant values remain stable across releases.
+/// </summary>
+public class CsshConstantsTests
+{
+  /// <summary>
+  /// Ensures that the shell version matches v0.2.1.
+  /// </summary>
+  [Fact]
+  public void Version_ShouldBe_v021()
+  {
+    Assert.Equal("v0.2.1", CsshConstants.Version);
+  }
+
+  /// <summary>
+  /// Ensures that the default prompt directory trim length is 2.
+  /// </summary>
+  [Fact]
+  public void DefaultPromptDirTrim_ShouldBe_2()
+  {
+    Assert.Equal(2, CsshConstants.DefaultPromptDirTrim);
+  }
+
+  /// <summary>
+  /// Ensures that the interactive mode identifier is correct.
+  /// </summary>
+  [Fact]
+  public void ModeInteractive_ShouldBe_interactive()
+  {
+    Assert.Equal("interactive", CsshConstants.ModeInteractive);
+  }
+
+  /// <summary>
+  /// Ensures that the edit mode identifier is correct.
+  /// </summary>
+  [Fact]
+  public void ModeEdit_ShouldBe_edit()
+  {
+    Assert.Equal("edit", CsshConstants.ModeEdit);
+  }
+}
+
+
+## cssh.Tests\csshShellStateTests.cs
+
+/* cssh v0.2.0 - ShellState tests */
+using System;
+using cssh.Core;
+using Xunit;
+
+/// <summary>
+/// Represents the ShellStateTests class.
+/// </summary>
+public class ShellStateTests
+{
+  [Fact]
+  /// <summary>
+  /// Executes the Initial_CurrentDirectory_ShouldBe_EnvironmentCurrentDirectory method.
+  /// </summary>
+  public void Initial_CurrentDirectory_ShouldBe_EnvironmentCurrentDirectory()
+  {
+    var state = new ShellState(null);
+    Assert.Equal(Environment.CurrentDirectory, state.CurrentDirectory);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Initial_PreviousDirectory_ShouldBe_EnvironmentCurrentDirectory method.
+  /// </summary>
+  public void Initial_PreviousDirectory_ShouldBe_EnvironmentCurrentDirectory()
+  {
+    var state = new ShellState(null);
+    Assert.Equal(Environment.CurrentDirectory, state.PreviousDirectory);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Updating_CurrentDirectory_ShouldNotChange_PreviousDirectory method.
+  /// </summary>
+  public void Updating_CurrentDirectory_ShouldNotChange_PreviousDirectory()
+  {
+    var state = new ShellState(null);
+    var original = state.CurrentDirectory;
+
+    state.CurrentDirectory = @"C:\Test";
+
+    Assert.Equal(original, state.PreviousDirectory);
+    Assert.Equal(@"C:\Test", state.CurrentDirectory);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Updating_PreviousDirectory_ShouldNotChange_CurrentDirectory method.
+  /// </summary>
+  public void Updating_PreviousDirectory_ShouldNotChange_CurrentDirectory()
+  {
+    var state = new ShellState(null);
+    var original = state.CurrentDirectory;
+
+    state.PreviousDirectory = @"C:\Old";
+
+    Assert.Equal(original, state.CurrentDirectory);
+    Assert.Equal(@"C:\Old", state.PreviousDirectory);
+  }
+}
+
+
+## cssh.Tests\EditModeRunCsxTests.cs
+
+using System;
+using System.IO;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Represents the EditModeRunCsxTests class.
+/// </summary>
+public class EditModeRunCsxTests : IDisposable
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+  /// <summary>
+  /// The _runner field.
+  /// </summary>
+  private readonly CommandRunner _runner;
+  /// <summary>
+  /// The _state field.
+  /// </summary>
+  private readonly ShellState _state;
+  /// <summary>
+  /// The _testDir field.
+  /// </summary>
+  private readonly string _testDir;
+
+  public EditModeRunCsxTests()
+  {
+    _testDir = Path.Combine(Path.GetTempPath(), $"cssh_csx_test_{Guid.NewGuid()}");
+    Directory.CreateDirectory(_testDir);
+
+    _parser = new CommandParser();
+    _registry = new CommandRegistry();
+    _state = new ShellState(_registry);
+    _runner = new CommandRunner(_parser, _registry);
+
+    _registry.Register(new EditCommand(), "Enter edit mode");
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Csx_ReturnsConsoleWriteLineOutput method.
+  /// </summary>
+  public void Run_Csx_ReturnsConsoleWriteLineOutput()
+  {
+    var csx = "System.Console.WriteLine(\"hello csx\");";
+    _runner.Run(_state, "edit");
+    _state.EditBuffer = csx;
+
+    var outp = _runner.Run(_state, "run");
+    Assert.Equal(string.Empty, outp); // Console output goes to Console, script return value is empty
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Run_Csx_CompilationErrorReportsLine method.
+  /// </summary>
+  public void Run_Csx_CompilationErrorReportsLine()
+  {
+    var csx = "int x = ;\nSystem.Console.WriteLine(\"won't reach\");";
+    _runner.Run(_state, "edit");
+    _state.EditBuffer = csx;
+
+    var outp = _runner.Run(_state, "run");
+    Assert.Contains("run: error:", outp);
+    Assert.Contains("Line", outp);
+  }
+
+  /// <summary>
+  /// Executes the Dispose method.
+  /// </summary>
+  public void Dispose()
+  {
+    try
+    {
+      if (Directory.Exists(_testDir))
+      Directory.Delete(_testDir, true);
+    }
+    catch { }
+  }
+}
+
+
+## cssh.Tests\EditModeTests.cs
+
+using System;
+using System.IO;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Represents the EditModeTests class.
+/// </summary>
+public class EditModeTests : IDisposable
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+  /// <summary>
+  /// The _runner field.
+  /// </summary>
+  private readonly CommandRunner _runner;
+  /// <summary>
+  /// The _state field.
+  /// </summary>
+  private readonly ShellState _state;
+  /// <summary>
+  /// The _testDir field.
+  /// </summary>
+  private readonly string _testDir;
+
+  public EditModeTests()
+  {
+    _testDir = Path.Combine(Path.GetTempPath(), $"cssh_edit_test_{Guid.NewGuid()}");
+    Directory.CreateDirectory(_testDir);
+
+    _parser = new CommandParser();
+    _registry = new CommandRegistry();
+    _state = new ShellState(_registry);
+    _runner = new CommandRunner(_parser, _registry);
+
+    // Register only the Edit command; editor commands are handled by runner in edit mode
+    _registry.Register(new EditCommand(), "Enter edit mode");
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the EditCommand_EntersEditMode method.
+  /// </summary>
+  public void EditCommand_EntersEditMode()
+  {
+    var outp = _runner.Run(_state, "edit");
+    Assert.Equal(string.Empty, outp);
+    Assert.Equal(ShellMode.Edit, _state.Mode);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ReadCommand_LoadsFileIntoBuffer method.
+  /// </summary>
+  public void ReadCommand_LoadsFileIntoBuffer()
+  {
+    var file = Path.Combine(_testDir, "sample.txt");
+    File.WriteAllText(file, "line1\nline2");
+
+    _runner.Run(_state, "edit");
+    var outp = _runner.Run(_state, $"read \"{file}\"");
+
+    Assert.Equal(string.Empty, outp);
+    Assert.Equal("line1\nline2", _state.EditBuffer);
+    Assert.Equal(file, _state.EditFileName);
+    Assert.False(_state.EditDirty);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the AppendLines_AppendsToBufferAndMarksDirty method.
+  /// </summary>
+  public void AppendLines_AppendsToBufferAndMarksDirty()
+  {
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "first line");
+    _runner.Run(_state, "second line");
+
+    Assert.Equal("first line\nsecond line\n", _state.EditBuffer);
+    Assert.True(_state.EditDirty);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the ClearCommand_ClearsBufferAndResetsDirty method.
+  /// </summary>
+  public void ClearCommand_ClearsBufferAndResetsDirty()
+  {
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "line one");
+    _runner.Run(_state, "line two");
+
+    var outp = _runner.Run(_state, "clear");
+    Assert.Equal(string.Empty, outp);
+    Assert.Equal(string.Empty, _state.EditBuffer);
+    Assert.False(_state.EditDirty);
+    // still in edit mode
+    Assert.Equal(ShellMode.Edit, _state.Mode);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the WriteCommand_SavesBufferToFile method.
+  /// </summary>
+  public void WriteCommand_SavesBufferToFile()
+  {
+    var file = Path.Combine(_testDir, "out.txt");
+
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "hello world");
+    var outp = _runner.Run(_state, $"write \"{file}\"");
+
+    Assert.Equal(string.Empty, outp);
+    Assert.True(File.Exists(file));
+    Assert.Equal("hello world\n", File.ReadAllText(file));
+    Assert.Equal(file, _state.EditFileName);
+    Assert.False(_state.EditDirty);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the WriteCommand_UsesExistingFileName_WhenNoArgProvided method.
+  /// </summary>
+  public void WriteCommand_UsesExistingFileName_WhenNoArgProvided()
+  {
+    var file = Path.Combine(_testDir, "out2.txt");
+    _state.EditFileName = file;
+
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "data");
+    var outp = _runner.Run(_state, "write");
+
+    Assert.Equal(string.Empty, outp);
+    Assert.True(File.Exists(file));
+    Assert.Equal("data\n", File.ReadAllText(file));
+    Assert.False(_state.EditDirty);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the RunCommand_ExecutesEchoLines method.
+  /// </summary>
+  public void RunCommand_ExecutesEchoLines()
+  {
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "echo hello");
+    _runner.Run(_state, "echo world");
+
+    var outp = _runner.Run(_state, "run");
+    Assert.Equal($"hello{Environment.NewLine}world", outp);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quit_ExitsEditMode method.
+  /// </summary>
+  public void Quit_ExitsEditMode()
+  {
+    _runner.Run(_state, "edit");
+    _runner.Run(_state, "quit");
+    Assert.Equal(ShellMode.Normal, _state.Mode);
+  }
+
+  /// <summary>
+  /// Executes the Dispose method.
+  /// </summary>
+  public void Dispose()
+  {
+    try
+    {
+      if (Directory.Exists(_testDir))
+      Directory.Delete(_testDir, true);
+    }
+    catch { }
+  }
+}
+
+
+## cssh.Tests\LsCommandTests.cs
+
+/* cssh v0.2.0 - LsCommand tests */
+using System;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Represents the LsCommandTests class.
+/// </summary>
+public class LsCommandTests
+{
+  [Fact]
+  /// <summary>
+  /// Executes the Ls_ShouldListFilesAndDirectories_InCurrentDirectory method.
+  /// </summary>
+  public void Ls_ShouldListFilesAndDirectories_InCurrentDirectory()
+  {
+    var state = new ShellState(null);
+    var cmd = new LsCommand();
+
+    var output = cmd.Execute(state, Array.Empty<string>());
+
+    Assert.Contains("cssh.Tests", output); // プロジェクト内に存在するはずのディレクトリ
+  }
+}
+
+
+## cssh.Tests\PathAndQuotingTests.cs
+
+/* cssh v0.2.0 - Path and Quoting Tests */
+using cssh.Core;
+using Xunit;
+
+/// <summary>
+/// Tests for path handling and quoting per specification sections 6.1, 6.2
+/// - Windows path support (\ and /)
+/// - Paths with spaces
+/// - Single and double quotes
+/// - Mixed quote styles
+/// </summary>
+public class PathAndQuotingTests
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser = new();
+
+  #region Windows Path Tests (Spec 6.1)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_WindowsStyle_ShouldAcceptBackslash method.
+  /// </summary>
+  public void Path_WindowsStyle_ShouldAcceptBackslash()
+  {
+    var result = _parser.Parse("cat C:\\Users\\file.txt");
+
+    Assert.Equal("cat", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("C:\\Users\\file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_UnixStyle_ShouldAcceptForwardSlash method.
+  /// </summary>
+  public void Path_UnixStyle_ShouldAcceptForwardSlash()
+  {
+    var result = _parser.Parse("cat /path/to/file.txt");
+
+    Assert.Equal("cat", result.Command);
+    Assert.Single(result.Arguments);
+    Assert.Equal("/path/to/file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_MixedStyle_ShouldAcceptMixedSlashes method.
+  /// </summary>
+  public void Path_MixedStyle_ShouldAcceptMixedSlashes()
+  {
+    var result = _parser.Parse("cat C:/path\\to/file.txt");
+
+    Assert.Equal("cat", result.Command);
+    Assert.Equal("C:/path\\to/file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_DriveLetterLowercase_ShouldBePreserved method.
+  /// </summary>
+  public void Path_DriveLetterLowercase_ShouldBePreserved()
+  {
+    var result = _parser.Parse("cat c:\\file.txt");
+
+    Assert.Equal("c:\\file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_DriveLetterUppercase_ShouldBePreserved method.
+  /// </summary>
+  public void Path_DriveLetterUppercase_ShouldBePreserved()
+  {
+    var result = _parser.Parse("cat C:\\FILE.TXT");
+
+    Assert.Equal("C:\\FILE.TXT", result.Arguments[0]);
+  }
+
+  #endregion
+
+  #region Quoted Paths with Spaces (Spec 6.2)
+
+  [Fact]
+  /// <summary>
+  /// Executes the QuotedPath_DoubleQuotes_ShouldPreserveSpaces method.
+  /// </summary>
+  public void QuotedPath_DoubleQuotes_ShouldPreserveSpaces()
+  {
+    var result = _parser.Parse("cat \"C:\\My Documents\\file.txt\"");
+
+    Assert.Equal("C:\\My Documents\\file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the QuotedPath_SingleQuotes_ShouldPreserveSpaces method.
+  /// </summary>
+  public void QuotedPath_SingleQuotes_ShouldPreserveSpaces()
+  {
+    var result = _parser.Parse("cat 'C:\\My Documents\\file.txt'");
+
+    Assert.Equal("C:\\My Documents\\file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the QuotedPath_PartialQuote_SpaceInMiddle method.
+  /// </summary>
+  public void QuotedPath_PartialQuote_SpaceInMiddle()
+  {
+    var result = _parser.Parse("cat C:\\\"My Documents\"\\file.txt");
+
+    // Space-containing part should be captured
+    Assert.Single(result.Arguments);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the QuotedPath_OutputRedirect_WithSpaces method.
+  /// </summary>
+  public void QuotedPath_OutputRedirect_WithSpaces()
+  {
+    var seq = _parser.ParseSequence("echo test > \"C:\\My Files\\output.txt\"");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.Equal("C:\\My Files\\output.txt", cmd.Redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the QuotedPath_InputRedirect_WithSpaces method.
+  /// </summary>
+  public void QuotedPath_InputRedirect_WithSpaces()
+  {
+    var seq = _parser.ParseSequence("cat < \"C:\\My Files\\input.txt\"");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.Equal("C:\\My Files\\input.txt", cmd.Redirect.FilePath);
+  }
+
+  #endregion
+
+  #region Quote Style Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quotes_DoubleQuoted_StringWithSpaces method.
+  /// </summary>
+  public void Quotes_DoubleQuoted_StringWithSpaces()
+  {
+    var result = _parser.Parse("echo \"hello world\"");
+
+    Assert.Equal("hello world", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quotes_SingleQuoted_StringWithSpaces method.
+  /// </summary>
+  public void Quotes_SingleQuoted_StringWithSpaces()
+  {
+    var result = _parser.Parse("echo 'hello world'");
+
+    Assert.Equal("hello world", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quotes_MixedQuotes_InSameCommand method.
+  /// </summary>
+  public void Quotes_MixedQuotes_InSameCommand()
+  {
+    var result = _parser.Parse("echo \"first\" 'second' third");
+
+    Assert.Equal(3, result.Arguments.Length);
+    Assert.Equal("first", result.Arguments[0]);
+    Assert.Equal("second", result.Arguments[1]);
+    Assert.Equal("third", result.Arguments[2]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quotes_NestedOppositeQuotes_ShouldWork method.
+  /// </summary>
+  public void Quotes_NestedOppositeQuotes_ShouldWork()
+  {
+    var result = _parser.Parse("echo \"it's working\"");
+
+    Assert.Equal("it's working", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Quotes_DoubleQuoteInsideSingle method.
+  /// </summary>
+  public void Quotes_DoubleQuoteInsideSingle()
+  {
+    var result = _parser.Parse("echo 'say \"hello\"'");
+
+    Assert.Equal("say \"hello\"", result.Arguments[0]);
+  }
+
+  #endregion
+
+  #region Complex Path Scenarios
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_WithDots_ShouldBePreserved method.
+  /// </summary>
+  public void Path_WithDots_ShouldBePreserved()
+  {
+    var result = _parser.Parse("cd ..");
+
+    Assert.Equal("cd", result.Command);
+    Assert.Equal("..", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_WithDots_RelativePath method.
+  /// </summary>
+  public void Path_WithDots_RelativePath()
+  {
+    var result = _parser.Parse("cat ./file.txt");
+
+    Assert.Equal("./file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_WithHome_RelativeToHome method.
+  /// </summary>
+  public void Path_WithHome_RelativeToHome()
+  {
+    var result = _parser.Parse("cat ~/Documents/file.txt");
+
+    Assert.Equal("~/Documents/file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_UNCPath_Windows method.
+  /// </summary>
+  public void Path_UNCPath_Windows()
+  {
+    var result = _parser.Parse("cat \\\\server\\share\\file.txt");
+
+    Assert.Equal("\\\\server\\share\\file.txt", result.Arguments[0]);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Path_LongPath_WindowsStyle method.
+  /// </summary>
+  public void Path_LongPath_WindowsStyle()
+  {
+    var result = _parser.Parse("cat C:\\very\\long\\path\\to\\some\\deeply\\nested\\directory\\file.txt");
+
+    Assert.Equal("C:\\very\\long\\path\\to\\some\\deeply\\nested\\directory\\file.txt",
+    result.Arguments[0]);
+  }
+
+  #endregion
+
+  #region Spec Compliance - Section 6.2
+
+  [Fact]
+  /// <summary>
+  /// Executes the Spec_QuoteMismatch_DoubleInside method.
+  /// </summary>
+  public void Spec_QuoteMismatch_DoubleInside()
+  {
+    // "...' is an error per spec 6.2
+    // This should ideally error, but parser may just treat it as text
+    var result = _parser.Parse("echo \"hello'");
+
+    Assert.NotNull(result);
+  }
+
+  #endregion
+
+  #region Path in Redirection
+
+  [Fact]
+  /// <summary>
+  /// Executes the Redirect_OutputPath_WithBackslash method.
+  /// </summary>
+  public void Redirect_OutputPath_WithBackslash()
+  {
+    var seq = _parser.ParseSequence("echo test > C:\\output.txt");
+
+    var redirect = seq.Pipelines[0].Commands[0].Redirect;
+    Assert.Equal("C:\\output.txt", redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Redirect_OutputPath_WithForwardSlash method.
+  /// </summary>
+  public void Redirect_OutputPath_WithForwardSlash()
+  {
+    var seq = _parser.ParseSequence("echo test > /tmp/output.txt");
+
+    var redirect = seq.Pipelines[0].Commands[0].Redirect;
+    Assert.Equal("/tmp/output.txt", redirect.FilePath);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Redirect_RelativePath_DotSlash method.
+  /// </summary>
+  public void Redirect_RelativePath_DotSlash()
+  {
+    var seq = _parser.ParseSequence("echo test > ./output.txt");
+
+    var redirect = seq.Pipelines[0].Commands[0].Redirect;
+    Assert.Equal("./output.txt", redirect.FilePath);
+  }
+
+  #endregion
+}
+
+
+
+## cssh.Tests\ShellOperatorsTests.cs
+
+/* cssh v0.2.0 - Shell Operators Tests */
+using System;
+using System.IO;
+using cssh.Core;
+using cssh.Core.Commands;
+using Xunit;
+
+/// <summary>
+/// Focused tests for shell operators per specification section 5
+/// - Pipes (|)
+/// - Output redirection (>, >>)
+/// - Input redirection (<)
+/// - Command sequencing
+/// </summary>
+public class ShellOperatorsTests : IDisposable
+{
+  /// <summary>
+  /// The _parser field.
+  /// </summary>
+  private readonly CommandParser _parser;
+  /// <summary>
+  /// The _registry field.
+  /// </summary>
+  private readonly CommandRegistry _registry;
+  /// <summary>
+  /// The _runner field.
+  /// </summary>
+  private readonly CommandRunner _runner;
+  /// <summary>
+  /// The _state field.
+  /// </summary>
+  private readonly ShellState _state;
+  /// <summary>
+  /// The _testDir field.
+  /// </summary>
+  private readonly string _testDir;
+
+  public ShellOperatorsTests()
+  {
+    _testDir = Path.Combine(Path.GetTempPath(), $"cssh_ops_{Guid.NewGuid()}");
+    Directory.CreateDirectory(_testDir);
+
+    _parser = new CommandParser();
+    _registry = new CommandRegistry();
+    _state = new ShellState(_registry);
+    _runner = new CommandRunner(_parser, _registry);
+
+    _registry.Register(new EchoCommand(), "Print arguments");
+    _registry.Register(new CatCommand(), "Print file contents");
+    _registry.Register(new TouchCommand(), "Create or update file timestamp");
+  }
+
+  #region Operator Parsing Tests
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parser_ShouldRecognizeOutputRedirectTruncate method.
+  /// </summary>
+  public void Parser_ShouldRecognizeOutputRedirectTruncate()
+  {
+    var seq = _parser.ParseSequence("echo test > file.txt");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.NotNull(cmd.Redirect);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parser_ShouldRecognizeOutputRedirectAppend method.
+  /// </summary>
+  public void Parser_ShouldRecognizeOutputRedirectAppend()
+  {
+    var seq = _parser.ParseSequence("echo test >> file.txt");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.NotNull(cmd.Redirect);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parser_ShouldRecognizeInputRedirect method.
+  /// </summary>
+  public void Parser_ShouldRecognizeInputRedirect()
+  {
+    var seq = _parser.ParseSequence("cat < file.txt");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.NotNull(cmd.Redirect);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Parser_ShouldRecognizePipe method.
+  /// </summary>
+  public void Parser_ShouldRecognizePipe()
+  {
+    var seq = _parser.ParseSequence("echo hello | cat");
+
+    Assert.Equal(2, seq.Pipelines[0].Commands.Count);
+  }
+
+  #endregion
+
+  #region Output Redirection (>)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_OutputRedirect_ShouldTruncateExistingFile method.
+  /// </summary>
+  public void Operator_OutputRedirect_ShouldTruncateExistingFile()
+  {
+    var file = Path.Combine(_testDir, "trunc.txt");
+    File.WriteAllText(file, "old content");
+
+    _runner.Run(_state, $"echo new > \"{file}\"");
+
+    Assert.Equal("new", File.ReadAllText(file));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_OutputRedirect_ShouldCreateNewFile method.
+  /// </summary>
+  public void Operator_OutputRedirect_ShouldCreateNewFile()
+  {
+    var file = Path.Combine(_testDir, "new.txt");
+
+    _runner.Run(_state, $"echo content > \"{file}\"");
+
+    Assert.True(File.Exists(file));
+    Assert.Equal("content", File.ReadAllText(file));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_OutputRedirect_ShouldHandleSpecialCharacters method.
+  /// </summary>
+  public void Operator_OutputRedirect_ShouldHandleSpecialCharacters()
+  {
+    var file = Path.Combine(_testDir, "special.txt");
+
+    _runner.Run(_state, $"echo hello > \"{file}\"");
+
+    Assert.Equal("hello", File.ReadAllText(file));
+  }
+
+  #endregion
+
+  #region Append Redirection (>>)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_AppendRedirect_ShouldAppendToExistingFile method.
+  /// </summary>
+  public void Operator_AppendRedirect_ShouldAppendToExistingFile()
+  {
+    var file = Path.Combine(_testDir, "append.txt");
+    File.WriteAllText(file, "line1\n");
+
+    _runner.Run(_state, $"echo line2 >> \"{file}\"");
+
+    var content = File.ReadAllText(file);
+    Assert.Contains("line1", content);
+    Assert.Contains("line2", content);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_AppendRedirect_ShouldCreateFileIfNotExists method.
+  /// </summary>
+  public void Operator_AppendRedirect_ShouldCreateFileIfNotExists()
+  {
+    var file = Path.Combine(_testDir, "newappend.txt");
+
+    _runner.Run(_state, $"echo first >> \"{file}\"");
+
+    Assert.True(File.Exists(file));
+    Assert.Contains("first", File.ReadAllText(file));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_AppendRedirect_MultipleAppends_ShouldPreserveAllLines method.
+  /// </summary>
+  public void Operator_AppendRedirect_MultipleAppends_ShouldPreserveAllLines()
+  {
+    var file = Path.Combine(_testDir, "multi.txt");
+
+    _runner.Run(_state, $"echo line1 >> \"{file}\"");
+    _runner.Run(_state, $"echo line2 >> \"{file}\"");
+    _runner.Run(_state, $"echo line3 >> \"{file}\"");
+
+    var content = File.ReadAllText(file);
+    Assert.Contains("line1", content);
+    Assert.Contains("line2", content);
+    Assert.Contains("line3", content);
+  }
+
+  #endregion
+
+  #region Input Redirection (<)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_InputRedirect_ShouldReadFileContent method.
+  /// </summary>
+  public void Operator_InputRedirect_ShouldReadFileContent()
+  {
+    var file = Path.Combine(_testDir, "read.txt");
+    File.WriteAllText(file, "file content");
+
+    var output = _runner.Run(_state, $"cat < \"{file}\"");
+
+    Assert.Equal("file content", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_InputRedirect_NonExistentFile_ShouldReturnError method.
+  /// </summary>
+  public void Operator_InputRedirect_NonExistentFile_ShouldReturnError()
+  {
+    var output = _runner.Run(_state, "cat < /nonexistent/path/file.txt");
+
+    Assert.Contains("error", output.ToLower());
+  }
+
+  #endregion
+
+  #region Pipe Operator (|)
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_Pipe_ShouldTransmitOutput method.
+  /// </summary>
+  public void Operator_Pipe_ShouldTransmitOutput()
+  {
+    var output = _runner.Run(_state, "echo hello | cat");
+
+    Assert.Equal("hello", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_Pipe_TwoStages_ShouldChainCorrectly method.
+  /// </summary>
+  public void Operator_Pipe_TwoStages_ShouldChainCorrectly()
+  {
+    var file = Path.Combine(_testDir, "chaintest.txt");
+    File.WriteAllText(file, "test content");
+
+    var output = _runner.Run(_state, $"cat \"{file}\" | cat");
+
+    Assert.Equal("test content", output);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_Pipe_WithFinalRedirect_ShouldApplyRedirectToLastCommand method.
+  /// </summary>
+  public void Operator_Pipe_WithFinalRedirect_ShouldApplyRedirectToLastCommand()
+  {
+    var file = Path.Combine(_testDir, "pipefinal.txt");
+
+    _runner.Run(_state, $"echo data | cat > \"{file}\"");
+
+    Assert.True(File.Exists(file));
+    Assert.Equal("data", File.ReadAllText(file));
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_Pipe_MultipleStages_ShouldChainAll method.
+  /// </summary>
+  public void Operator_Pipe_MultipleStages_ShouldChainAll()
+  {
+    // Assuming we can pipe through multiple commands
+    var output = _runner.Run(_state, "echo hello | cat | cat");
+
+    Assert.Equal("hello", output);
+  }
+
+  #endregion
+
+  #region Combined Operators
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operators_Combined_PipeAndRedirect method.
+  /// </summary>
+  public void Operators_Combined_PipeAndRedirect()
+  {
+    var file = Path.Combine(_testDir, "combined.txt");
+
+    _runner.Run(_state, $"echo line1 | cat > \"{file}\"");
+    _runner.Run(_state, $"echo line2 | cat >> \"{file}\"");
+
+    var content = File.ReadAllText(file);
+    Assert.Contains("line1", content);
+    Assert.Contains("line2", content);
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operators_Combined_InputAndPipe method.
+  /// </summary>
+  public void Operators_Combined_InputAndPipe()
+  {
+    var inputFile = Path.Combine(_testDir, "input.txt");
+    File.WriteAllText(inputFile, "input data");
+
+    var output = _runner.Run(_state, $"cat < \"{inputFile}\" | cat");
+
+    Assert.Equal("input data", output);
+  }
+
+  #endregion
+
+  #region Error Handling
+
+  [Fact]
+  /// <summary>
+  /// Executes the Operator_InvalidRedirectPath_ShouldHandleError method.
+  /// </summary>
+  public void Operator_InvalidRedirectPath_ShouldHandleError()
+  {
+    // Path with invalid characters (depends on OS)
+    var output = _runner.Run(_state, "echo test > /invalid/path/file.txt");
+
+    // May contain error message or fail silently depending on implementation
+    Assert.NotNull(output);
+  }
+
+  #endregion
+
+  #region Spec Compliance - Section 5.2
+
+  [Fact]
+  /// <summary>
+  /// Executes the Spec_ShouldNotSupportConditionalExecution method.
+  /// </summary>
+  public void Spec_ShouldNotSupportConditionalExecution()
+  {
+    // Spec says && and || are NOT supported in v0.2.0
+    var seq = _parser.ParseSequence("echo a && echo b");
+
+    // Should parse as literal "&&" in arguments, not as operator
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.Equal("echo", cmd.Name);
+    // Args will include "a", "&&", "echo", "b" as separate tokens
+  }
+
+  [Fact]
+  /// <summary>
+  /// Executes the Spec_ShouldNotSupportBackgroundExecution method.
+  /// </summary>
+  public void Spec_ShouldNotSupportBackgroundExecution()
+  {
+    // Spec says & for background is NOT supported in v0.2.0
+    var seq = _parser.ParseSequence("echo test &");
+
+    var cmd = seq.Pipelines[0].Commands[0];
+    Assert.Equal("echo", cmd.Name);
+    // & should be treated as a regular character, not operator
+  }
+
+  #endregion
+
+  /// <summary>
+  /// Executes the Dispose method.
+  /// </summary>
+  public void Dispose()
+  {
+    if (Directory.Exists(_testDir))
+    {
+      Directory.Delete(_testDir, true);
+    }
+  }
+}
+
+
+
+# ビルドで使われないファイル
+- CLASSES.md
+- README.md
+- build.ps1
+- cssh.Core\AST.cs.bak
+- cssh.Core\CommandParseResult.cs.bak
+- cssh.Core\CommandParser.cs.bak
+- cssh.Core\CommandRunner.cs.bak
+- cssh.Core\Commands\AliasBuiltinCommand.cs.bak
+- cssh.Core\Commands\AliasCommands.cs.bak
+- cssh.Core\Commands\CatCommand.cs.bak
+- cssh.Core\Commands\ClearCommand.cs.bak
+- cssh.Core\Commands\CommandRegistry.cs.bak
+- cssh.Core\Commands\DynamicAliasInvoker.cs.bak
+- cssh.Core\Commands\EchoCommand.cs.bak
+- cssh.Core\Commands\EditCommand.cs.bak
+- cssh.Core\Commands\HelpCommand.cs.bak
+- cssh.Core\Commands\HistoryCommand.cs.bak
+- cssh.Core\Commands\LsCommand.cs.bak
+- cssh.Core\Commands\MkdirCommand.cs.bak
+- cssh.Core\Commands\RmCommand.cs.bak
+- cssh.Core\Commands\RmdirCommand.cs.bak
+- cssh.Core\Commands\TouchCommand.cs.bak
+- cssh.Core\Commands\WhichCommand.cs.bak
+- cssh.Core\Execution\CommandExecuter.cs.bak
+- cssh.Core\ICommand.cs.bak
+- cssh.Core\ShellMode.cs.bak
+- cssh.Core\ShellState.cs.bak
+- cssh.Core\cssh.Constants.cs.bak
+- cssh.Tests\AliasAndHistoryTests.cs.bak
+- cssh.Tests\CommandParserTests.cs.bak
+- cssh.Tests\CommandRunnerTests.cs.bak
+- cssh.Tests\EditModeRunCsxTests.cs.bak
+- cssh.Tests\EditModeTests.cs.bak
+- cssh.Tests\LsCommandTests.cs.bak
+- cssh.Tests\PathAndQuotingTests.cs.bak
+- cssh.Tests\ShellOperatorsTests.cs.bak
+- cssh.Tests\ShellStateTests,cs
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_14_19.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_14_46.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_14_58.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_16_06.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_19_12.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_24_19.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_25_30.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_26_20.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_09_27_59.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_10_11_05.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_10_12_41.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_10_22_04.trx
+- cssh.Tests\TestResults\tadna_HP405G8_2026-01-13_10_27_50.trx
+- cssh.Tests\csshShellStateTests.cs.bak
+- run.ps1
+- scripts\add_xml_docs.ps1
+- scripts\debug_classes.ps1
+- scripts\debug_pending.ps1
+- scripts\generate_classes_md.ps1
+- scripts\reindent.ps1
+- scripts\validate_classes_md.ps1

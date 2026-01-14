@@ -36,11 +36,11 @@ public class CdCommand : ICommand
 
     // Resolve relative paths
     if (!Path.IsPathRooted(target))
-      target = Path.GetFullPath(Path.Combine(state.CurrentDirectory, target));
+    target = Path.GetFullPath(Path.Combine(state.CurrentDirectory, target));
 
     // Validate directory
     if (!Directory.Exists(target))
-      return $"cd: no such file or directory: {args[0]}";
+    return $"cd: no such file or directory: {args[0]}";
 
     // Update state
     state.PreviousDirectory = state.CurrentDirectory;

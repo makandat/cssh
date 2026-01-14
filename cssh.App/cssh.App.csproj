@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\cssh.Core\cssh.Core.csproj" />
+    <ProjectReference Include="..\cssh.Std\Cssh.Std.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

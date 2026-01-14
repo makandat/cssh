@@ -1,0 +1,11 @@
+C:\workspace\Cssh\cssh.Std\bin\Debug\net10.0\cssh.Std.deps.json
+C:\workspace\Cssh\cssh.Std\bin\Debug\net10.0\cssh.Std.dll
+C:\workspace\Cssh\cssh.Std\bin\Debug\net10.0\cssh.Std.pdb
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.AssemblyInfoInputs.cache
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.AssemblyInfo.cs
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.csproj.CoreCompileInputs.cache
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.dll
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\refint\cssh.Std.dll
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\cssh.Std.pdb
+C:\workspace\Cssh\cssh.Std\obj\Debug\net10.0\ref\cssh.Std.dll

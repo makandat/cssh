@@ -1,10 +1,11 @@
-﻿/* cssh - A cross-platform C# shell ver.0.1.5 Program.cs */
+/* cssh - A cross-platform C# shell ver.0.2.0 Program.cs */
 using cssh.Core;
 using cssh.Core.Commands;
 using System.Globalization;
+using static ScriptStd;
 
 /// <summary>
-/// Entry point of the cssh shell application (v0.1.5).
+/// Entry point of the cssh shell application (v0.2.0).
 /// Initializes shell state, command registry, and the main REPL loop.
 /// </summary>
 var parser = new CommandParser();
@@ -12,8 +13,10 @@ var registry = new CommandRegistry();
 var state = new ShellState(registry);
 var runner = new CommandRunner(parser, registry);
 
+ScriptStd.SetArgs(args);
+
 /// <summary>
-/// Registers built-in commands for v0.1.5
+/// Registers built-in commands for v0.2.0
 /// </summary>
 if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja")
 {
@@ -33,7 +36,15 @@ if (CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja")
   registry.Register(new AliasCommand("dir", "ls"), "ls コマンドの別名");
   registry.Register(new AliasCommand("type", "cat"), "cat コマンドの別名");
   registry.Register(new AliasCommand("del", "rm"), "rm コマンドの別名");
-  registry.Register(new AliasCommand("cls", "clear"), "clear コマンドの別名");  
+  registry.Register(new AliasCommand("cls", "clear"), "clear コマンドの別名");
+  registry.Register(new AliasCommand("h", "history"), "history コマンドの別名");
+  registry.Register(new AliasCommand("where", "which"), "which コマンドの別名");
+
+  // 動的 alias / 履歴サポート (v0.2.1)
+  registry.Register(new AliasBuiltinCommand(), "エイリアスの一覧または作成");
+  registry.Register(new HistoryCommand(), "コマンド履歴を表示する");
+  // 履歴の短縮名
+  registry.Register(new AliasCommand("h", "history"), "history コマンドの短縮名");
 }
 else
 {
@@ -50,10 +61,19 @@ else
   registry.Register(new MkdirCommand(), "Create a directory.");
   registry.Register(new RmdirCommand(), "Remove a directory.");
   registry.Register(new WhichCommand(registry), "Show command location.");
+
+  // Static aliases
   registry.Register(new AliasCommand("dir", "ls"), "Alias of ls command.");
   registry.Register(new AliasCommand("type", "cat"), "Alias of cat command.");
   registry.Register(new AliasCommand("del", "rm"), "Alias of rm command.");
   registry.Register(new AliasCommand("cls", "clear"), "Alias of clear command.");
+
+  // Dynamic alias/history support (v0.2.1)
+  registry.Register(new AliasBuiltinCommand(), "List or create aliases (alias name expansion)");
+  registry.Register(new HistoryCommand(), "Show command history");
+  // convenience short-name for history
+  registry.Register(new AliasCommand("h", "history"), "Alias of history");
+  registry.Register(new AliasCommand("where", "which"), "Alias of which");
 }
 
 //
@@ -71,13 +91,16 @@ while (true)
   Console.Write($"cssh: {state.CurrentDirectory}> ");
   var input = Console.ReadLine();
   if (string.IsNullOrWhiteSpace(input))
-    continue;
+  continue;
 
   // exit / quit は特別扱い
   var trimmed = input.Trim();
   if (trimmed == "exit" || trimmed == "quit")
-    break;
+  break;
 
   var output = runner.Run(state, input);
-  Console.WriteLine(output);
+  if (!string.IsNullOrEmpty(output))
+  {
+    Console.WriteLine(output);
+  }
 }

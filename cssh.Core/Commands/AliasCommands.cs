@@ -1,8 +1,14 @@
-/* cssh.Core.Commands.AliasCommand.cs v0.1.5 */
+/* cssh.Core.Commands.AliasCommand.cs v0.2.0 */
 namespace cssh.Core.Commands;
 
+/// <summary>
+/// Represents the AliasCommand class.
+/// </summary>
 public class AliasCommand : ICommand
 {
+  /// <summary>
+  /// The _target field.
+  /// </summary>
   private readonly string _target;
 
   public AliasCommand(string name, string target)
@@ -11,10 +17,19 @@ public class AliasCommand : ICommand
     _target = target;
   }
 
+  /// <summary>
+  /// Gets or sets the Name.
+  /// </summary>
   public string Name { get; }
 
+  /// <summary>
+  /// The Description field.
+  /// </summary>
   public string Description => $"Alias for '{_target}'.";
 
+  /// <param name="state"></param>
+  /// <param name="args"></param>
+  /// <returns></returns>
   public string Execute(ShellState state, string[] args)
   {
     // 実際のコマンドを呼び出す
@@ -22,7 +37,7 @@ public class AliasCommand : ICommand
     var cmd = registry.Resolve(_target);
 
     if (cmd == null)
-      return $"alias: target command not found: {_target}";
+    return $"alias: target command not found: {_target}";
 
     return cmd.Execute(state, args);
   }
