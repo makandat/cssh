@@ -1,329 +1,376 @@
-シェル cssh v0.2 (Rev.2) 仕様書
-# １ 概要
+# cssh v0.2 (Rev.2) Specification
 
-Windows には PowerShell とコマンドプロンプトと言う２大シェルがある。
-PowerShell は高機能だが上級者向け、コマンドプロンプトは MS-DOS 時代の遺物で低機能かつ時代遅れである。
-よって、PowerShell ほどではないが、コマンドプロンプトより高機能で現代的なシェルが欲しいと思っていた。
+# 1. Overview
+Windows currently provides two major shells: PowerShell and Command Prompt.
+PowerShell is powerful but geared toward advanced users, while Command Prompt is a relic from the MS‑DOS era—low‑function and outdated.
+Therefore, I wanted a shell that is more modern and capable than Command Prompt, without the complexity of PowerShell.
+The cssh version 0.x.x series is a prototype.
+The name cssh stands for C# Script Shell.
+Supported OS: Windows only.
+Future versions will support other operating systems where .NET runs.
+Requirements for cssh 0.x
+- OS: Windows only
+- Requires .NET 10.0 or later
+(.NET 8 will be too old by the time cssh is completed)
+- Must be launched from Windows Terminal (PowerShell or CMD.exe)
 
-この cssh バージョン v0.x.x は試作バージョンである。なお、cssh は C# Script Shell を意味する。
+# 2. Screen
+## 2.1 Prompt
+The prompt follows a PowerShell‑like style.
+Example:
+```
+cssh: C:\workspace\Cssh>
+```
 
-対応 OS は Windows のみで、将来は .NET が動作する他の OS にも対応する。
+## 2.2 Modes
+cssh has two modes: normal mode and edit mode.
+- Use the edit command to enter edit mode
+- Use the quit command (in edit mode) to return to normal mode
+- In edit mode, the bottom line of the screen is the command input line, showing the prompt > 
+2.3 Startup Screen and Window
+When cssh starts, it enters normal mode, clears the screen, and displays the prompt at the top.
+The window title is shown as:
+```
+cssh v0.2.n
+```
+where 2 is the minor version and n is the build version.
 
-## cssh 0.x の動作条件
-- OS は Windows のみ
-- .NET 10.0 以上で動作する。(.NET 8 では完成するころには古くなりすぎるため)
-- Windows ターミナルから起動する。(PowerShellやCMD.exeから起動）
+# 3. Built‑in Commands (Normal Mode)
+- Built‑in commands follow Bash syntax and behavior.
+- Their functionality is limited compared to Bash.
+- cssh does not support shell variables.
+- Command behavior and output follow Bash conventions.
 
-
-# ２ 画面
-## 2.1 プロンプト
-PowerShell 風とする。
-(例) cssh: C:\workspace\Cssh>
-
-
-## 2.2 モード
-cssh は通常モードと編集モードがあり、edit コマンドで編集モードへ、編集モードの quit コマンドで対話モードへ遷移する。
-編集モードでは画面の一番下がコマンド入力行でプロンプト “> “が表示される。
-
-## 2.3 起動時の画面とウィンドウ
-cssh を起動すると、対話モードになり、クリア後の画面の一番上にプロンプトを表示して、コマンド入力待ちになる。
-ウィンドウタイトルには、”cssh v0.m.n” と表示する。(m はマイナーバージョン、n はビルドバージョン)
-
-# ３ 通常モードの組み込みコマンド
-- 組み込みコマンドの文法や動作は Bash 準拠とする。また。組み込みコマンドの機能は Bash と比べ限定的である。
-- cssh ではシェル変数のサポートはしない。
-- コマンドの機能および表示は Bash 準拠とする。
-
-## 3.1 ls (Alias dir)
-指定したディレクトリ内容の一覧を表示する。
-オプション
--l 詳細表示
--a 隠しファイル表示
+## 3.1 ls (Alias: dir)
+Displays the contents of a directory.
+Options:
+- -l detailed view
+- -a show hidden files
 
 ## 3.2 cd
-- カレントディレクトリの移動。
-- オプションは - (cd -) のみ。これは直前のディレクトリに移動する。
+Changes the current directory.
+Option:
+- '-' (cd -) — returns to the previous directory
 
 ## 3.3 pwd
-- カレントディレクトリを表示する。オプションなし。
+Displays the current directory.
+No options.
 
-## 3.4 cat (Alias type)
-- テキストファイル (UTF-8のみサポート) の内容を表示する。
-- オプション -n を付けると行番号も表示する。
+## 3.4 cat (Alias: type)
+Displays the contents of a text file (UTF‑8 only).
+Option:
+- -n show line numbers
 
-## 3.5 rm (Alias del)
-ファイルやディレクトリを削除する。以下のオプションがある。
- -r: Recursive
- -f: Force
-オプションを同時に使う場合は、rm -rf … のように書くことができる。
+## 3.5 rm (Alias: del)
+Deletes files or directories.
+Options:
+- -r recursive
+- -f force
+Options may be combined (e.g., rm -rf ...).
+
 ## 3.6 mkdir
-ディレクトリを作成する。ディレクトリ指定は絶対パスでも相対パスでもよい。
-## 3.7 cp (Alias copy)
-ファイルをコピーする。コピー先がディレクトリの場合、その下に新しいファイルを作ってコピーする。すでに同じ名前のファイルがある場合は上書きするが、そのファイルがReadOnlyの場合も -f オプションを付ければ上書きできる。
+Creates a directory.
+Accepts both absolute and relative paths.
 
-## 3.8 mv (Alias move, ren)
-ファイルやディレクトリを移動する。移動先に同じ名前のものがある場合は、Bash に準拠する。以下のオプションがある。
- -f force
+## 3.7 cp (Alias: copy)
+Copies a file.
+If the destination is a directory, a new file is created under it.
+If a file with the same name exists, it is overwritten.
+If the file is read‑only, use -f to force overwrite.
+
+## 3.8 mv (Alias: move, ren)
+Moves files or directories.
+If the destination already exists, behavior follows Bash.
+Option:
+- -f force
 
 ## 3.9 echo
- 文字列や環境変数の内容を表示する。文字列の場合、””で囲む必要がない。
+Displays a string or the value of an environment variable.
+Strings do not require quotes.
 
-## 3.10 which (Alias where)
-- 指定したコマンドが組み込みコマンドの場合、組み込みコマンドであることを表示する。 
-- 外部コマンドの場合は、そのフルパスを表示する。 
+## 3.10 which (Alias: where)
+- If the command is built‑in, displays that it is a built‑in command
+- If it is an external command, displays its full path
 
-## 3.11 clear (Alias cls)
-画面表示をクリアする。
+## 3.11 clear (Alias: cls)
+Clears the screen.
 
 ## 3.12 help
-- コマンドのヘルプを表示する。help だけの場合は、利用できるコマンド一覧、help コマンドと入力すると、そのコマンドのヘルプを表示する。
-- 表示言語は英語Windowsなら英語、日本語Windowsなら日本語とする。（その他の言語は未サポート）
-- help command と入力すると、その command のヘルプを表示する。
+- Displays help for commands
+- help alone shows a list of available commands
+- help command shows help for that command
+- Language follows the OS locale (English or Japanese)
 
-## 3.13 exit (Alias quit)
-cssh を終了する。
+## 3.13 exit (Alias: quit)
+Exits cssh.
 
-## 3.14 history (Alias h)
- - コマンド履歴を表示する。表示方法は Bash 準拠。
- - 履歴はセッション単位（永続化しない）
- - ‘! number’ で履歴上のコマンドを再実行できる。(Bash準拠)
+## 3.14 history (Alias: h)
+- Displays command history (Bash‑style)
+- History is per session (not persisted)
+- !number re‑executes a command from history
 
 ## 3.15 touch
- - ファイルの日付を現在時刻に更新する。
- - 存在しないファイルを指定すると、そのファイル（内容は空）を作成する。
+- Updates the timestamp of a file
+- Creates an empty file if it does not exist
 
 ## 3.16 edit
- - スクリプト編集モードへ遷移する。
- - edit filename とすると、そのファイルを読み込んで編集画面に表示する。
+- Enters edit mode
+- edit filename loads the file into the edit buffer
 
 ## 3.17 sudo (v0.2 Rev.2)
-- 組み込みコマンドや外部コマンドがディスクの保護された領域にアクセスする場合は、sudo を前に付けて実行する。
-- Windows の場合は、実行確認画面が表示される。(Linux などではパスワード入力(ただし、このバージョンでは対象外))
+- Required when accessing protected disk areas
+- On Windows, shows a confirmation dialog
+- (Linux password input is out of scope for this version)
 
 ## 3.18 run (v0.2 Rev.2)
-- 現在の編集バッファにあるスクリプトを実行する。パラメータがある場合は、run の後に空白区切りで順に並べる。
-- 編集バッファが空の場合やスクリプトにエラーがあった場合は、エラーメッセージを表示する。
-- ”run script” のようにスクリプトファイルを指定した場合は、そのファイルを編集バッファに読み込んで実行する。(パラメータとの区別は拡張子とファイルの存在で判別)
-- その際、編集バッファに保存されていない内容がある場合は、ユーザに上書き確認を行う。
-- そのスクリプトが正常終了した場合は通常モードに留まるが、エラーがあった場合は、編集モードへ遷移して、エラー行を下線付き表示するとともに、その行の下にエラーメッセージを表示する。
-- スクリプトが標準出力や標準エラー出力に送った文字列は通常画面にそのまま表示する。
-- スクリプトの実行を中断するときは、Ctrl＋C により行うことができる。(通常画面と編集画面両方）
-- 保護されたディスク領域や管理者用コマンドをスクリプト内で使う場合は sudo run script のように sudo コマンドを付ける。
+Executes the script currently in the edit buffer.
+- Arguments may follow run
+- If the buffer is empty or contains errors, show an error
+- run scriptfile loads the file and executes it
+- If unsaved changes exist, ask for confirmation
+- On success: remain in normal mode
+- On error: return to edit mode, underline the error line, and show the message
+- Script output is shown in the normal screen
+- Ctrl+C interrupts execution
+- sudo run script is allowed
 
-## 3.19 alias  (v0.2 Rev.2)
-- Bash の alias コマンドのような機能を追加
-- 別名設定の具体例　alias ll=’ls -l’
-- alias だけを入力すると別名一覧を表示 (表示方法はBash準拠)
+## 3.19 alias (v0.2 Rev.2)
+- Bash‑style alias command
+- Example: alias ll='ls -l'
+- alias alone shows all aliases
 
-## 3.20 外部コマンドの実行 (v0.2 Rev.2)
-- 管理者コマンドを使用する場合は、sudo を前に付ける。
-- コマンドの呼び出し方法はそのコマンドのヘルプ通りに行えること。
+## 3.20 External Command Execution (v0.2 Rev.2)
+- Use sudo for administrator commands
+- Commands follow their own help specifications
 
+# 4. Built‑in Commands in Edit Mode (Added in v0.2)
+## 4.1 write (Alias: w)
+- Saves the contents of the edit buffer to the file specified as a parameter.
+- If the file already exists, a confirmation message is shown before overwriting.
+- If w! is used, the file is saved immediately without confirmation.
 
-# ４ 編集モードの組み込みコマンド (v0.2で追加)
-## 4.1 write (Alias w)
-- 編集バッファの内容をパラメータで指定したファイルに保存する。
-- 既存のファイルに上書きする場合は、確認メッセージを表示する。
-- ただし、w! のように ! を付けた場合は、直ちにファイル保存する。
+## 4.2 read (Alias: r)
+- Loads the specified file into the edit buffer, replacing its current contents.
+- The loaded file name becomes the “current editing file.”
+- If the buffer contains unsaved changes, a confirmation message is shown.
+- If r! is used, the file is loaded immediately without confirmation.
+- The file does not have to be a script; any text file may be loaded.
 
-## 4.2 read (Alias r)
-- パラメータで指定したファイルを上書きで編集バッファに読み込む。
-- 読み込んだファイル名を「現在の編集中ファイル」として保持する。
-- まだ、ファイル保存されていないものが編集バッファに残っている場合は、確認メッセージを表示する。ただし、r! のように ! を付けた場合は直ちに指定されたファイルを読み込む。
-- ファイル内容は、スクリプトファイルとは限らない。（データの編集なども可能）
-
-## 4.3 quit (Alias q)
-- 編集モードを終了し、通常モードへ戻る。
-- 編集バッファの内容は消去せず、次回、編集モードに戻った時は、表示状態も含めそのまま残っているものとする。
+## 4.3 quit (Alias: q)
+- Exits edit mode and returns to normal mode.
+- The edit buffer is not cleared; when returning to edit mode later, the previous contents and cursor position remain.
 
 ## 4.4 clear
-- 編集バッファをクリアする。
-- 同時に表示もクリアし、プロンプトを左上へ移動すること。
+- Clears the edit buffer.
+- Clears the display and moves the prompt to the top-left corner.
 
 ## 4.5 run
-### 4.5.1 基本動作
-編集バッファの内容をスクリプトして実行する。
+### 4.5.1 Basic Behavior
+Executes the contents of the edit buffer as a script.
 
-### 4.5.2 編集バッファの内容判別
-- その内容がファイルを読み込んだ場合、拡張子でスクリプトかどうかを判別して、必要ならエラーメッセージを表示する。
-- 編集バッファの内容がファイル未保存の場合、スクリプトかデータの判別がつかないので、確認メッセージを表示する。(例）スクリプトとして実行してよいですか？(y/n) ← 英語Windowsの場合は英語で。
-（注意）このバージョンではC#スクリプトのみ対応するので、スクリプトの拡張子は .csx とする。
+### 4.5.2 Determining Whether the Buffer Contains a Script
+- If the buffer was loaded from a file, the extension is used to determine whether it is a script.
+- If the buffer has never been saved, cssh cannot determine whether it is a script or data, so it asks for confirmation:
+“Execute as script? (y/n)”
+- Only C# scripts (.csx) are supported in this version.
 
-### 4.5.3 エラー対応
-- スクリプトにエラーがあった場合、エラー行をハイライト表示する(下線を表示)。
-- 同時にエラーメッセージをエラー行の下に表示する。
-- 実行がエラーなどにより「だんまり」状態になったときは、Ctrl＋Cで中止できる。
+### 4.5.3 Error Handling
+- If the script contains errors, the error line is highlighted (underlined).
+- The error message is displayed below the error line.
+- If execution hangs or becomes unresponsive, Ctrl+C can be used to interrupt it.
 
-### 4.5.4 実行に特権が必要な場合
-ディスクの保護された領域へのアクセスや内部で管理者用コマンドを使う場合は、sudo を前において実行する。（例）sudo run
+### 4.5.4 Privileged Execution
+If the script accesses protected disk areas or uses administrator commands internally, prefix the command with sudo (e.g., sudo run).
 
-### 4.5.5 実行結果の表示と遷移
-- コマンドの実行による文字列は通常画面に表示される。(run コマンド自体のコピーも通常画面にrunコマンドが入力されたように表示する)
-- 編集画面へ戻る場合は、edit コマンドのみを実行する。
+### 4.5.5 Output and Mode Transition
+- Script output (stdout and stderr) is displayed in the normal screen.
+- The run command itself is also echoed in the normal screen.
+- To return to edit mode after execution, run the edit command.
 
-### 4.5.6 run<script> の動作
-- run filename.csx と指定した場合、そのファイルを編集バッファに読み込んで実行する 未保存バッファがある場合は上書き確認
-- 実行後、エラーがなければ通常モードに留まる
-- エラーがあれば編集モードに遷移し、エラー行をハイライト(下線を表示)する。
+### 4.5.6 Behavior of run <script>
+- run filename.csx loads the file into the edit buffer and executes it.
+- If the buffer contains unsaved changes, confirmation is required.
+- If execution succeeds, cssh remains in normal mode.
+- If errors occur, cssh switches to edit mode and highlights the error line.
 
-## 4.6 編集とコマンド入力 (Rev.2)
-- 通常モードで edit コマンドを実行すると画面左上にカーソルを移動し、もし編集バッファに内容が残っていればその内容を表示する。編集バッファが空の場合は、何も表示しない。
-- 画面の一番下の行は、コマンド入力行で編集モードのコマンド入力に使う。
-- 編集中あるいは終了時にコマンドを入力を行うには、ESC キーを押す。
-- ESC キーを押すとカーソルが最終行のプロンプトの後へ移動する。
-- コマンド入力はプロンプト ‘> ‘ に続けて行い、Enter キーを押すとそのコマンドを実行する。
-- quit コマンドの場合は通常画面に戻るが、それ以外のコマンドでは編集画面に留まる。
-- その際、コマンド入力モードになる前にカーソルがあった場所に再びカーソルを表示する。
-- コマンド入力をキャンセルするには、ESCキーを押す。その場合もコマンド入力モードになる前にカーソルがあった場所に再びカーソルを表示する。
-- 編集コマンド実行が失敗した場合は、エラーメッセージを最終行に表示する。これは、ESC キーを押すことでクリアされ、プロンプトと入力したコマンドを再び表示する。
-- その際、カーソルはコマンドの最後に移動する。
+## 4.6 Editing and Command Input (Rev.2)
+- When edit is executed in normal mode, the cursor moves to the top-left corner.
+If the edit buffer contains text, it is displayed; otherwise, the screen is blank.
+- The bottom line of the screen is reserved for command input in edit mode.
+- To enter command input mode, press ESC.
+- Pressing ESC moves the cursor to the bottom prompt (> ).
+- Commands are entered after the prompt and executed with Enter.
+- If the command is quit, cssh returns to normal mode.
+- For other commands, cssh stays in edit mode and restores the cursor to its previous position.
+- Pressing ESC again cancels command input and restores the cursor.
+- If a command fails, the error message is shown on the bottom line.
+Pressing ESC clears the error and restores the prompt and command text.
+- After clearing, the cursor moves to the end of the command.
 
-## 4.7 編集キー操作
-- 基本的にメモ帳のような簡易エディタのキー操作に準じる。以下の操作はそれらに準じないものである。
-- Insert キーは機能しない（常に挿入モード）。
-- ESC キーはコマンド入力モードへ遷移する。（編集画面の最下行へカーソルが移動する）
+## 4.7 Editing Key Operations
+- Basic editing behavior follows simple text editors like Notepad.
+- The Insert key has no effect (always insert mode).
+- ESC switches to command input mode (cursor moves to the bottom line).
 
-# ５ シェル演算子 (v0.2で追加)
-## 5.1 パイプラインとリダイレクト
-|（パイプライン）をサポート (パイプは標準出力を次のコマンドの標準入力に渡す)
->、>>、<（リダイレクト）をサポート (リダイレクトはファイルを開くモードを明記（>:上書き / >>:追記, <:入力)
-## 5.2 コマンド実行ルール
-; によるコマンド順次実行が可能とする。
-&& や || などの条件付き実行はこのバージョンでは対応しない。
-バックグラウンド実行の & はこのバージョンでは対応しない。
-# 6 Windows と macOS, Linux 環境の扱い
-v0.2.x は Windows のみをサポートするが、将来のバージョンでは macOS, Linux （さらに .NET が動作する環境すべて) をサポートする。
+# 5. Shell Operators (Added in v0.2)
+## 5.1 Pipelines and Redirection
+- | pipeline operator is supported
+(stdout of the previous command becomes stdin of the next command)
+- Redirection operators are supported:
+- > overwrite
+- >> append
+- < input redirection
 
-## 6.1 パス名の違い
-Windows では大文字と小文字を区別しないため、c:\ も C:\ も同じである。これ(パス名の仕様)については、Windows の動作に従う。
-パスの区切り文字は Windows では \ であるが、cssh では / も受け入れる。
+## 5.2 Command Execution Rules
+- Sequential execution using ; is supported.
+- Conditional execution (&&, ||) is not supported in this version.
+- Background execution (&) is not supported.
 
-## 6.2 空白を含むパス名
-空白を含むパス名は “ の  ‘ どちらで囲んでも認識するものとする。また、パス全体を囲んでも、空白を含む部分だけを囲んでもよいものとする。
-当然ながら “...’ のような使い方はエラーとする。
+# 6. Windows, macOS, and Linux Behavior
+v0.2.x supports Windows only.
+Future versions will support macOS, Linux, and all .NET‑compatible environments.
 
-## 6.3 環境変数 (v0.m.nの仕様)
-Windows では環境変数は「設定」で設定する。このため、export コマンドはサポートしない。
-また、環境変数の作成や変更もできない。
+## 6.1 Path Differences
+- Windows paths are case‑insensitive (c:\ = C:\).
+- cssh accepts both \ and / as path separators.
 
+## 6.2 Paths Containing Spaces
+- Paths containing spaces may be enclosed in either " " or ' '.
+- The entire path or only the part containing spaces may be quoted.
+- Mixed quoting such as "...' is an error.
 
-# 7 C# スクリプトの詳細 (Rev.3)
-## 7.1 C# スクリプトの概要
-- 言語仕様は C# と基本的に同じ。
-- 拡張子は .csx
-- 実行は dotnet-script コマンドを使う。
-- 「スクリプト」と呼ばれるが、実際には .NET IL にコンパイルされ実行される。
-- ボイラープレート (クラスや Main) は不要で、直接、コードを書く。
-- デフォルトでインポートされる名前空間がたくさんある。
-* System
-* System.IO
-* System.Collections.Generic
-* System.Diagnostics
-* System.Dynamic
-* System.Linq
-* System.Linq.Expressions
-* System.Text
-* System.Threading.Tasks
-- 標準パッケージとして以下のものを使用可能
-* System.Runtime.dll
-* System.Core.dll
-* System.Data.dll
-* System.Xml.dll
-* System.Xml.Linq.dll
-- 標準以外のパッケージは独自の方法 (#r) でインポートする。
-（例）
-#r "nuget: System.Text.Json, 8.0.0" 
+## 6.3 Environment Variables (v0.m.n Specification)
+- Windows environment variables are configured via system settings.
+- export is not supported.
+- Creating or modifying environment variables is not supported.
+
+# 7. C# Script Details (Rev.3)
+## 7.1 Overview of C# Scripts
+- Syntax is mostly identical to C#.
+- Extension: .csx
+- Executed using the dotnet-script command.
+- Scripts are compiled to .NET IL before execution.
+- No boilerplate (no class or Main method required).
+- Many namespaces are imported by default:
+System
+System.IO
+System.Collections.Generic
+System.Diagnostics
+System.Dynamic
+System.Linq
+System.Linq.Expressions
+System.Text
+System.Threading.Tasks
+
+- Standard assemblies available:
+System.Runtime.dll
+System.Core.dll
+System.Data.dll
+System.Xml.dll
+System.Xml.Linq.dll
+
+-Importing additional packages
+Use #r:
+```
+#r "nuget: System.Text.Json, 8.0.0"
+```
 using System.Text.Json;
-#load で他のスクリプトファイルを読み込むことができる。
-（例）#load "other_script.csx"
 
+Loading other scripts
+```
+#load "other_script.csx"
+```
 
-## 7.2 Cssh 独自ライブラリ
-cssh ではよりスクリプトらしいコードを書けるように独自のライブラリを提供する。詳細は STDSCRIPT.md 参照。
-ファイル名は　cssh.Std.dll
-使用例: #r “cssh.Std.dll”
+## 7.2 cssh Standard Library
+cssh provides a custom library to make scripting more convenient.
+See STDSCRIPT.md for details.
+Library file: cssh.Std.dll
+### Contents
+Output functions
+- print, println, printf, debug
+String formatting
+- format
+Input
+- input, gets
+Date/time
+- today, now, datetime
+File operations
+- read, write, append, exists
+Process execution
+- system, run
+Control
+- exit, abort
+Regular expressions
+- match, search, replace
+Command‑line arguments
+- argc, args
 
-### ライブラリの内容
-- 出力系関数
-print, println, printf, debug
-- 文字列生成系関数
-format
-- 入力系関数
-input, gets
-- 日付時間系関数
-today, now, datetime
-- ファイル操作系関数
-read, write, append, exists
-- プロセス実行系関数
-system, run
-- 制御系関数
-exit, abort
-- 正規表現系関数
-match, search, replace
-- コマンドライン引数系関数
-argc, args
+# 8. Additional Notes (v0.2.x)
+## 8.1 External Commands
+- External commands (python, git, dotnet, etc.) can be executed.
+- Commands in PATH can be executed without specifying full paths.
+- Commands in the current directory require .\ or ./.
+- Extensions that may be omitted: .exe, .bat, .cmd, .ps1
+- Windows is case‑insensitive.
+- Argument parsing follows the command’s own rules.
+- stdout and stderr are not distinguished.
+- Exit codes are not used.
 
-# ８ 補足事項 (v0.2.x)
-## 8.1 外部コマンド
-外部コマンド（例：python, git, dotnet）も実行できる。
-環境変数 PATH に含まれる場所にあるコマンドは、フルパスを使用せずにコマンド名だけで使用できる。（拡張子の有無はどちらでもよい）
-現在のディレクトリにあるコマンドは先頭に “.\”あるいは”./”を付けて実行する。
-拡張子を省略して実行できるコマンドは、.exe, bat, cmd, ps1 のみとする。(Windows の仕様によりコマンドは大文字と小文字の区別はしない)
-引数やオプションの取り扱いは、コマンドの仕様に依存する。
-標準出力と標準エラー出力は特に区別しない。
-コマンドの終了コードは特に使用しない。
-## 8.2 通常モードおよび編集モードの run コマンドについて (Rev.2)
-(v0.2) run コマンドでスクリプトを起動する。(dotnet-script コマンドの実行)
-(v0.2) C#スクリプト完全互換のスクリプトのみサポート。
-## 8.3 シェル変数
-シェル変数はサポートしない
-VAR=value のような代入も不可
-## 8.4 環境変数
-環境変数の参照  $VAR の展開を可能とする。
-## 8.5 クリップボード
-Windowsターミナルのように文字列の選択とコピー、カーソル位置への文字列の貼り付けができる。(Windows ターミナルの機能を活用する)
+## 8.2 run Command in Normal and Edit Modes (Rev.2)
+- run executes scripts using dotnet-script.
+- Only C# script files (.csx) are supported.
 
-# ９ ロードマップ (Rev.2)
-## v0.2.0
-- シェル演算子 |, >, >>, <, ; の追加
-- 環境変数の取得　（例）echo $PATH
-## v0.2.1 (Implemented)
-- 外部コマンドの実行を実装。
-- 動的エイリアス機能を追加: `alias`（一覧/作成）。静的エイリアスと併存します（引用付き展開をサポート）。
-- コマンド履歴を実装: `history`（短縮 `h`）、および `!n` と `!prefix` による履歴再実行（セッション単位、`!prefix` は直近のマッチを再実行します）。
-- 関連ユニットテストを追加して検証済み。
-## v0.2.2
-- 編集モードの実装 (通常モード edit コマンドと編集モードの各コマンド、テキスト編集機能)
-- 編集モードのクリップボード対応（Windows Terminal 連携）
-- cssh 標準関数のサポート (STDSCRIPT.md 参照)
-- run コマンドの実装 (C#スクリプト対応)
-- .bashrc 相当のファイル .csshrc をサポートする。
-## v0.2.3
+## 8.3 Shell Variables
+- Shell variables are not supported.
+- Assignments like VAR=value are not allowed.
+
+## 8.4 Environment Variables
+- $VAR expansion is supported.
+
+## 8.5 Clipboard
+- Windows Terminal’s selection, copy, and paste features are supported.
+
+## 9. Roadmap (Rev.2)
+v0.2.0
+- Shell operators: |, >, >>, <, ;
+- Environment variable expansion (echo $PATH)
+v0.2.1 (Implemented)
+- External command execution
+- Dynamic alias system (alias)
+- Command history (history, h, !n, !prefix)
+- Unit tests added
+v0.2.2
+- Edit mode implementation
+- Clipboard support in edit mode
+- cssh standard functions (STDSCRIPT.md)
+- run command (C# script execution)
+- .csshrc configuration file (Bash’s .bashrc equivalent)
+v0.2.3
 T.B.D.
-## v0.2.4
+v0.2.4
 T.B.D.
 
-# 10 開発者向け: API ドキュメントの生成 🔧
-
-- `CLASSES.md` はソースコード中の `///` XML コメントから自動生成されます。生成スクリプトは `scripts/generate_classes_md.ps1` です。
-  - 実行例 (PowerShell):
-    - `pwsh -NoProfile -NoLogo -File scripts/generate_classes_md.ps1`
-  - 生成結果: リポジトリルートの `CLASSES.md`
-
-
-- 生成内容の簡易検証スクリプト: `scripts/validate_classes_md.ps1`
-  - 実行例: `pwsh -NoProfile -NoLogo -File scripts/validate_classes_md.ps1`
-  - チェック例: `$sig` のようなプレースホルダや不自然な要約が含まれていないかを検出します。
+# 10. For Developers: API Documentation Generation
+- CLASSES.md is auto‑generated from XML documentation comments (///).
+Script: scripts/generate_classes_md.ps1
+Example (PowerShell):
+pwsh -NoProfile -NoLogo -File scripts/generate_classes_md.ps1
 
 
-- 補助スクリプト:
-  - `scripts/add_xml_docs.ps1` — 簡易的に XML コメントを挿入するヘルパー（実行後に差分を確認してください）
-  - `scripts/reindent.ps1` — コードのインデントを整えます
+Output: CLASSES.md at the repository root.
+
+Validation Script
+scripts/validate_classes_md.ps1
+Example:
+pwsh -NoProfile -NoLogo -File scripts/validate_classes_md.ps1
 
 
-- 推奨: CI に生成と検証を組み込み、PR で `CLASSES.md` に差分が発生した場合は検出できるようにしてください。
+Checks for placeholders like $sig or unnatural summaries.
 
+Helper Scripts
+- scripts/add_xml_docs.ps1 — inserts XML docs (review diffs afterward)
+- scripts/reindent.ps1 — fixes indentation
 
-
-
+CI Recommendation
+Integrate generation and validation into CI so that PRs modifying public APIs automatically update CLASSES.md.
 
