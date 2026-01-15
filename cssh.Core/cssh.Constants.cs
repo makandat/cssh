@@ -1,4 +1,4 @@
-/* cssh.Core.Constants.CsshConstants - A cross-platform C# shell ver.0.2.1 Constants */
+/* cssh.Core.Constants.CsshConstants - A cross-platform C# shell ver.0.2.2 Constants */
 namespace cssh.Core.Constants;
 
 /// <summary>
@@ -9,7 +9,7 @@ public static class CsshConstants
   /// <summary>
   /// Shell version string.
   /// </summary>
-  public const string Version = "v0.2.1";
+  public const string Version = "v0.2.2";
   /// <summary>
   /// The Revision field.
   /// </summary>

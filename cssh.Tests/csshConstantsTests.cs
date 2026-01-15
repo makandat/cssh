@@ -11,12 +11,12 @@ namespace cssh.Tests;
 public class CsshConstantsTests
 {
   /// <summary>
-  /// Ensures that the shell version matches v0.2.1.
+  /// Ensures that the shell version matches v0.2.2.
   /// </summary>
   [Fact]
-  public void Version_ShouldBe_v021()
+  public void Version_ShouldBe_v022()
   {
-    Assert.Equal("v0.2.1", CsshConstants.Version);
+    Assert.Equal("v0.2.2", CsshConstants.Version);
   }
 
   /// <summary>

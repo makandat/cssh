@@ -86,17 +86,80 @@ Console.WriteLine();
 //
 // 🔁 メイン REPL
 //
+bool wasInEditMode = false;
 while (true)
 {
-  Console.Write($"cssh: {state.CurrentDirectory}> ");
-  var input = Console.ReadLine();
+  // 編集モードに入ったら画面をクリア
+  if (state.Mode == ShellMode.Edit && !wasInEditMode)
+  {
+    Console.Clear();
+    wasInEditMode = true;
+  }
+  else if (state.Mode == ShellMode.Normal)
+  {
+    wasInEditMode = false;
+  }
+
+  // プロンプトを表示
+  string input;
+  if (state.Mode == ShellMode.Edit)
+  {
+    // 編集モードでは画面最下行にプロンプトを表示
+    try
+    {
+      Console.SetCursorPosition(0, Console.WindowHeight - 1);
+      Console.Write("> ");
+    }
+    catch
+    {
+      // テスト環境などでカーソル位置の設定ができない場合は通常通り表示
+      Console.Write("> ");
+    }
+
+    // 編集モードでは、ESCキーを検知するためにReadKeyを使用
+    var keyInfo = Console.ReadKey(true);
+    if (keyInfo.Key == ConsoleKey.Escape)
+    {
+      // ESCキーが押されたら、テキスト編集モードに入る
+      // 現在はコマンド入力モードなので、ESCキーを押すとテキスト編集モードに入る
+      // ここでは一旦ESCキーを無視して、次の入力に進む（将来の実装用）
+      continue;
+    }
+    
+    // ESCキー以外の場合は、通常のReadLineを使用
+    // ただし、既に1文字読み込んでいるので、それを含めて読み込む
+    input = keyInfo.KeyChar.ToString();
+    if (!char.IsControl(keyInfo.KeyChar))
+    {
+      // 制御文字でない場合は、残りの入力を読み込む
+      var remaining = Console.ReadLine();
+      if (!string.IsNullOrEmpty(remaining))
+      {
+        input += remaining;
+      }
+    }
+    else
+    {
+      // 制御文字の場合は、改行を追加
+      input = Console.ReadLine() ?? string.Empty;
+    }
+  }
+  else
+  {
+    Console.Write($"cssh: {state.CurrentDirectory}> ");
+    input = Console.ReadLine() ?? string.Empty;
+  }
+
   if (string.IsNullOrWhiteSpace(input))
   continue;
 
-  // exit / quit は特別扱い
-  var trimmed = input.Trim();
-  if (trimmed == "exit" || trimmed == "quit")
-  break;
+  // exit / quit は特別扱い（通常モードのみ）
+  if (state.Mode == ShellMode.Normal)
+  {
+    var trimmed = input.Trim();
+    if (trimmed == "exit" || trimmed == "quit")
+    break;
+  }
 
   var output = runner.Run(state, input);
   if (!string.IsNullOrEmpty(output))
