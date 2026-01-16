@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\Cssh\\cssh.Std\\cssh.Std.csproj": {}
+    "C:\\Temp\\Cssh\\cssh.Std\\Cssh.Std.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\Cssh\\cssh.Std\\cssh.Std.csproj": {
+    "C:\\Temp\\Cssh\\cssh.Std\\Cssh.Std.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\Cssh\\cssh.Std\\cssh.Std.csproj",
-        "projectName": "cssh.Std",
-        "projectPath": "C:\\workspace\\Cssh\\cssh.Std\\cssh.Std.csproj",
+        "projectUniqueName": "C:\\Temp\\Cssh\\cssh.Std\\Cssh.Std.csproj",
+        "projectName": "Cssh.Std",
+        "projectPath": "C:\\Temp\\Cssh\\cssh.Std\\Cssh.Std.csproj",
         "packagesPath": "C:\\Users\\tadna\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\Cssh\\cssh.Std\\obj\\",
+        "outputPath": "C:\\Temp\\Cssh\\cssh.Std\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tadna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\tadna\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

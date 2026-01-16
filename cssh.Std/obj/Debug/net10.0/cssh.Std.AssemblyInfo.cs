@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("cssh.Std")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Cssh.Std")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("cssh.Std")]
-[assembly: System.Reflection.AssemblyTitleAttribute("cssh.Std")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49dc48500098808b14e642e8b0e9bd79eaadc182")]
+[assembly: System.Reflection.AssemblyProductAttribute("Cssh.Std")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Cssh.Std")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment クラスによって生成されました。

@@ -15,7 +15,7 @@ println("Hello World!");
 - 	The source file is .
 - 	The compiled DLL will be generated as  under the lowest-level  directory.
 
-1.3 Usage
+## 1.3 Usage
 - Use using static ScriptStd; to access the functions.
 - Add the following line inside the <ItemGroup> of your project (.csproj):
 ```
