@@ -2,8 +2,8 @@
 
 # 1. Overview
 ## 1.1 Purpose
--	cssh uses C# scripts as its standard scripting format.
--	However, because C# script syntax is very close to regular C#, it lacks simple, script‑friendly utility functions.
+- cssh uses C# scripts as its standard scripting format.
+- However, because C# script syntax is very close to regular C#, it lacks simple, script‑friendly utility functions.
 - This document defines the standard functions provided by cssh to address that issue.
 (Example)
 ```
@@ -27,15 +27,18 @@ println("Hello World!");
 - Return value: none
 - Signature: print(object)
 - Example: print("hello")
+
 *println(object value)*
 - Description: Writes the value to standard output followed by a newline.
 - Return value: none
 - Signature: println(object)
-- Example: println("hello")
+- Example: println("hello");
+
 *printf(string format, params object[] args)*
 - Description: Outputs text using a C‑style format string. Supports %d, %s, %f, and # formats only.
 - Return value: none
-- Example: printf("name=%s age=%d", name, age)
+- Example: printf("name=%s age=%d", name, age);
+
 *debug(object value)*
 - Description: Writes debug output to standard error (stderr).
 - Return value: none
@@ -137,14 +140,17 @@ println(datetime(new DateTime(2000, 1, 1), "yyyy-MM-dd"));
 - Description: Reads the entire contents of a file and returns it.
 - Return value: string
 - Example: var text = read("data.txt");
+
 *write(string path, string content)*
 - Description: Writes content to a file (overwrites existing content).
 - Return value: none
 - Example: write("log.txt", "hello");
+
 *append(string path, string content)*
 - Description: Appends content to a file.
 - Return value: none
 - Example: append("log.txt", "more");
+
 *exists(string path)*
 - Description: Returns true if the file exists.
 - Return value: bool
@@ -154,11 +160,12 @@ if (exists("config.json")) { ... }
 ```
 
 # 7. Process Execution Functions
-**ystem(string command)
+*system(string command)*
 - Description: Executes an external command and returns its standard output as a string.
 (Output is not displayed on screen.)
 - Return value: string
 - Example: var result = system("ls -l");
+
 *run(string command)*
 - Description: Executes an external command and streams its standard output directly to the console.
 - Return value: none
@@ -169,6 +176,7 @@ if (exists("config.json")) { ... }
 - Description: Terminates the process with the specified exit code.
 - Return value: none (does not return)
 - Example: exit(1);
+
 *abort(string message = "")*
 - Description: Immediately terminates the process.
 If message is provided, it is written to standard error before exiting.
@@ -190,6 +198,7 @@ Returns null if no match is found.
 - Return value: string?
 - Signature: string? search(string text, string pattern)
 - Example: var str = search(line, "[0-9]+");
+
 *replace(string text, string pattern, string replacement)*
 - Description: Replaces all matches of pattern in text with replacement.
 - Return value: string
@@ -202,6 +211,7 @@ Returns null if no match is found.
 - Return value: int
 - Signature: int argc()
 - Example: println(argc());
+
 *args(int index)*
 - Description: Returns the command-line argument at the specified index.
 Returns null if the index is out of range.
