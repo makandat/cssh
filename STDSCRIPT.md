@@ -1,126 +1,211 @@
- cssh 標準関数仕様書
+# cssh Standard Function Specification (Rev.2)
 
-# 1. 出力系関数
-## print(object value)
-説明：改行なしで値を標準出力へ書き込む
-戻り値：なし
-シグネチャ: print(object)
-例：print("hello")
-## println(object value)
-説明：値を標準出力へ書き込み、末尾に改行を付ける
-戻り値：なし
-シグネチャ: println(object)
-例：println("hello")
-## printf(string format, params object[] args)
-説明：フォーマット文字列に従って出力する。フォーマットはCスタイルだが、%d, %s, %f, #書式のみ対応する。
-戻り値：なし
-例：printf("name=%s age=%d", name, age)
-## debug(object value)
-説明：デバッグ用出力。出力先は標準エラー出力 (stderr) とする。
-戻り値：なし
-例：debug("x=" + x)
+# 1. Overview
+## 1.1 Purpose
+-	cssh uses C# scripts as its standard scripting format.
+-	However, because C# script syntax is very close to regular C#, it lacks simple, script‑friendly utility functions.
+- This document defines the standard functions provided by cssh to address that issue.
+(Example)
+```
+println("Hello World!");
+```
 
-# 2. 文字列生成系関数
-## format(string format, params object[] args)
-説明：フォーマット文字列に従って文字列を生成して返す
-戻り値：string
-例：var msg = format("Hello {0}, age {1}", name, age); println(msg);
+## 1.2 Implementation
+- 	Create a project  inside the solution .
+- 	The source file is .
+- 	The compiled DLL will be generated as  under the lowest-level  directory.
 
-# 3. 入力系関数
-## input(string prompt)
-説明：プロンプトを表示し、ユーザーから 1 行入力を受け取るプロンプトの表示は Console.Write(prompt) で行い、入力文字列には最後の改行文字を含めない。
-戻り値：string?
-例：var name = input("name > ");
-## gets()
-説明：プロンプトなしで 1 行入力を受け取る
-戻り値：string?
-例：var line = gets();
+1.3 Usage
+- Use using static ScriptStd; to access the functions.
+- Add the following line inside the <ItemGroup> of your project (.csproj):
+```
+<ProjectReference Include="..\cssh.Std\cssh.Std.csproj" />
+```
+# 2. Output Functions
+*print(object value)*
+- Description: Writes the value to standard output without a newline.
+- Return value: none
+- Signature: print(object)
+- Example: print("hello")
+*println(object value)*
+- Description: Writes the value to standard output followed by a newline.
+- Return value: none
+- Signature: println(object)
+- Example: println("hello")
+*printf(string format, params object[] args)*
+- Description: Outputs text using a C‑style format string. Supports %d, %s, %f, and # formats only.
+- Return value: none
+- Example: printf("name=%s age=%d", name, age)
+*debug(object value)*
+- Description: Writes debug output to standard error (stderr).
+- Return value: none
+- Example: debug("x=" + x);
 
-# 4. 日付・時間系関数
-# today()
-説明：今日の日付を "yyyy-MM-dd" 形式で返す
-戻り値：string
-例：println(today());
-# now()
-説明：現在日時を ISO 8601 形式で返す
-戻り値：string
-例：println(now());
+# 3. String Functions
+*format(string format, params object[] args)*
+- 	Description: Generates and returns a formatted string.
+- 	Return value: string
+- 	Example:
+```
+var msg = format("Hello {0}, age {1}", name, age);
+println(msg);
+```
 
-# datetime(DateTime? dt, string format)
-説明：指定フォーマットで日時文字列を返す
-戻り値：string
-シグネチャ: string datetime(DateTime? dt = null, string format = "yyyy-MM-ddTHH:mm:ss");
-例：println(date("yyyy/MM/dd HH:mm"));
+*merge(string[] arr, string separator = "")*
+- 	Description: Concatenates all elements of a string array into a single string.
+If  is specified, it is inserted between elements.
+- 	Return value: string
+- 	Example:
+```
+string[] arr = ["two", "dogs"];
+var merged = merge(arr);
+```
+
+*split(string str, string separator = ",")*
+- 	Description: Splits the string using the specified separator and returns a string array.
+- 	Return value: string[]
+- 	Example: var input = "A,B,C"; var arr = split(input);
+
+*index(string input, string str)*
+- Description: Returns the index of str within input.
+Returns -1 if not found.
+- Return value: int
+- Example: var p = index("C#;C++", ";");
+
+*substr(string input, int start, int length)*
+- Description: Returns a substring of input starting at start with the specified length.
+(Wrapper of String.Substring())
+- Return value: string
+- Example: var s = substr("0123456789", 3, 2);
+
+*startsWith(string input, string str)*
+- Description: Returns true if input starts with str. Case‑sensitive.
+(Wrapper of String.StartsWith())
+- Return value: bool
+- Example: var b = startsWith("C#;C++", "C");
+
+*endsWith(string input, string str)*
+- Description: Returns true if input ends with str. Case‑sensitive.
+(Wrapper of String.EndsWith())
+- Return value: bool
+- Example: var b = endsWith("C#;C++", "++");
+
+*trim(string input)*
+- Description: Returns the string with leading and trailing whitespace removed.
+(Wrapper of String.Trim())
+- Return value: string
+- Example: var str = trim("\tABC\n")
+
+# 4. Input Functions
+*input(string prompt)*
+- Description: Displays a prompt and reads one line of input from the user.
+The prompt is displayed using Console.Write(prompt).
+The returned string does not include the trailing newline.
+- Return value: string?
+- Example: var name = input("name > ");
+
+*gets()*
+- Description: Reads one line of input without displaying a prompt.
+- Return value: string?
+- Example: var line = gets();
+
+# 5. Date and Time Functions
+*today()*
+- Description: Returns today’s date in "yyyy-MM-dd" format.
+- Return value: string
+- Example: println(today());
+
+*now()*
+- Description: Returns the current date and time in ISO 8601 format.
+- Return value: string
+- Example: println(now());
+
+*datetime(DateTime? dt, string format)*
+- Description: Returns a formatted date/time string.
+- Signature:
+
+*string datetime(DateTime? dt = null, string format = "yyyy-MM-ddTHH:mm:ss")*
+- Return value: string
+- Example:
+```
+println(datetime(null, "yyyy/MM/dd HH:mm"));
 println(datetime(new DateTime(2000, 1, 1), "yyyy-MM-dd"));
+```
 
-# 5. ファイル操作系関数
-## read(string path)
-説明：ファイル内容をすべて読み込んで返す。
-戻り値：string
-例：var text = read("data.txt");
-## write(string path, string content)
-説明：ファイルに内容を書き込む（上書き）
-戻り値：なし
-例：write("log.txt", "hello");
-## append(string path, string content)
-説明：ファイルに内容を追記する
-戻り値：なし
-例：append("log.txt", "more");
-## exists(string path)
-説明：ファイルの存在を確認する
-戻り値：bool
-例：if (exists("config.json")) { ... }
+6. File Functions
+*read(string path)*
+- Description: Reads the entire contents of a file and returns it.
+- Return value: string
+- Example: var text = read("data.txt");
+*write(string path, string content)*
+- Description: Writes content to a file (overwrites existing content).
+- Return value: none
+- Example: write("log.txt", "hello");
+*append(string path, string content)*
+- Description: Appends content to a file.
+- Return value: none
+- Example: append("log.txt", "more");
+*exists(string path)*
+- Description: Returns true if the file exists.
+- Return value: bool
+- Example:
+```
+if (exists("config.json")) { ... }
+```
 
-# 6. プロセス実行系関数
-## system(string command)
-説明：外部コマンドを実行し、標準出力を文字列として返す。(画面に表示されない)
-戻り値：string
-例：var result = system("ls -l");
-## run(string command)
-説明：外部コマンドを実行し、標準出力をそのまま流す。(画面に表示される)
-戻り値：なし
-例：run("echo hello");
+# 7. Process Execution Functions
+**ystem(string command)
+- Description: Executes an external command and returns its standard output as a string.
+(Output is not displayed on screen.)
+- Return value: string
+- Example: var result = system("ls -l");
+*run(string command)*
+- Description: Executes an external command and streams its standard output directly to the console.
+- Return value: none
+- Example: run("echo hello");
 
-# 7. 制御系関数
-## exit(int code=0)
-説明：指定した終了コードでプロセスを終了する
-戻り値：なし（戻らない）
-例：exit(1);
-## abort(string message=””)
-説明：例外を発生させて即座に終了する
-戻り値：なし
-例：abort("fatal error");
+# 8. Control Functions
+*exit(int code = 0)*
+- Description: Terminates the process with the specified exit code.
+- Return value: none (does not return)
+- Example: exit(1);
+*abort(string message = "")*
+- Description: Immediately terminates the process.
+If message is provided, it is written to standard error before exiting.
+- Return value: none
+- Example: abort("fatal error");
 
-# 8. 正規表現系関数
-## match(string text, string pattern)
-説明：text が pattern にマッチするかどうかを返す
-戻り値：bool
-シグネチャ：bool match(string text, string pattern)
-  例：if (match(name, "^[A-Z].*")) { ... }
-## search(string text, string pattern)
-説明：text の中で pattern に最初にマッチした部分文字列を返す。 マッチしない場合は null。
- 戻り値：string?
- シグネチャ：string? search(string text, string pattern)
- 例：var m = search(line, "[0-9]+");
-## search(string text, string pattern)
-説明：text の中で pattern に最初にマッチした部分文字列を返す。 マッチしない場合は null。
-戻り値：string?
-シグネチャ：string? search(string text, string pattern)
- 例：var str = search(line, “[0-9]+”);
-## replace(string text, string pattern, string replacement)
-説明：正規表現に一致した部分を置換する
- 戻り値：string
- シグネチャ：string replace(string text, string pattern, string replacement)
- 例：var s = replace(line, "[0-9]+", "###");
+# 9. Regular Expression Functions
+*match(string text, string pattern)*
+- Description: Returns true if text matches the regular expression pattern.
+- Return value: bool
+- Signature: bool match(string text, string pattern)
+- Example:
+```
+if (match(name, "^[A-Z].*")) { ... }
+```
+*search(string text, string pattern)*
+- Description: Returns the first substring of text that matches pattern.
+Returns null if no match is found.
+- Return value: string?
+- Signature: string? search(string text, string pattern)
+- Example: var str = search(line, "[0-9]+");
+*replace(string text, string pattern, string replacement)*
+- Description: Replaces all matches of pattern in text with replacement.
+- Return value: string
+- Signature: string replace(string text, string pattern, string replacement)
+- Example: var s = replace(line, "[0-9]+", "###");
 
-# 9.コマンドライン引数系関数
-## argc()
-説明：コマンドライン引数の数を返す
- 戻り値：int
- シグネチャ：int argc()
- 例：println(argc());
-## args(int index)
-説明：指定したインデックスのコマンドライン引数を返す
- 戻り値：string?（範囲外なら null）
- シグネチャ：string? args(int index)
- 例：for (var i = 0; i < argc(); i++) {  println(args(i)); }
+# 10. Command-Line Argument Functions
+*argc()*
+- Description: Returns the number of command-line arguments.
+- Return value: int
+- Signature: int argc()
+- Example: println(argc());
+*args(int index)*
+- Description: Returns the command-line argument at the specified index.
+Returns null if the index is out of range.
+- Return value: string?
+- Signature: string? args(int index)
+- Example:
+
