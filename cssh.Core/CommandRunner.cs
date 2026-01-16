@@ -589,4 +589,79 @@ public class CommandRunner
       Console.WriteLine($"Redirect error: {ex.Message}");
     }
   }
+
+  /// <summary>
+  /// edit コマンドの実装
+  /// </summary>
+  private async Task ExecuteEditCommand(string[] args, ShellState state)
+  {
+    // 1. 引数がある場合はファイルを読み込む (仕様 3.16)
+    if (args.Length > 0)
+    {
+      string filePath = args[0];
+      try
+      {
+        if (File.Exists(filePath))
+        {
+          // 仕様 3.4 に準じ UTF-8 で読み込み
+          var lines = await File.ReadAllLinesAsync(filePath, System.Text.Encoding.UTF8);
+          state.MainBuffer = lines.ToList();
+          state.CurrentEditingFile = filePath;
+        }
+        else
+        {
+          // 新規ファイルとして扱う
+          state.MainBuffer = new List<string>();
+          state.CurrentEditingFile = filePath;
+          // ファイルが存在しない旨を表示して継続
+          Console.WriteLine($"New file: {filePath}");
+        }
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine($"Error: Could not read file. {ex.Message}");
+        return;
+      }
+    }
+
+    // 2. 編集モードへ遷移 (仕様 2.2 / 4.1.1)
+    state.Mode = ShellMode.Edit;
+
+    // 3. 画面の初期化（画面全体をクリアし、バッファを表示）
+    // ※ このメソッドは cssh.App 側か、共通の UI クラスに用意するのが理想的です
+    Console.Clear();
+    RenderEditMode(state); 
+  }
+
+  /// <summary>
+  /// 編集モードの画面を作る。
+  /// </summary>
+  public void RenderEditMode(ShellState state)
+  {
+    // 1. 画面をクリアして最上部から描画
+    Console.Clear();
+
+    // 2. 編集バッファの内容を表示 (仕様 4.1.1)
+    // 行番号を表示するかどうかなどは、将来的に設定で変更できるようにすると便利です
+    int lineCount = 0;
+    foreach (var line in state.MainBuffer)
+    {
+      lineCount++;
+      Console.WriteLine($"{lineCount,4}: {line}");
+    }
+
+    // 3. 空行を埋めてプロンプトを最下行へ移動 (仕様 2.2 / 4.1.1)
+    // WindowHeight を使って、入力行を一番下に固定します
+    int currentCursorY = Console.CursorTop;
+    int lastRow = Console.WindowHeight - 1;
+
+    if (currentCursorY < lastRow)
+    {
+      // プロンプトまでの間を空行で埋める、または直接カーソルを移動
+      Console.SetCursorPosition(0, lastRow);
+    }
+
+    // 4. 編集モード用プロンプトの表示
+    Console.Write("> ");
+  }
 }

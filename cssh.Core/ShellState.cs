@@ -7,6 +7,40 @@ namespace cssh.Core;
 /// </summary>
 public class ShellState
 {
+  public string LastSearchPattern { get; set; } = string.Empty;
+  public string SearchMessage { get; set; } = string.Empty;
+  public bool IsInSearchMode { get; set; } = false;
+  public int LastSearchIndex { get; set; } = -1;
+  
+// --- 編集モード用バッファ ---
+  
+  // メインの編集内容 (Main Buffer)
+  public List<string> MainBuffer { get; set; } = new();
+
+  // undo用、または外部エディタからの戻し用 (Backup Buffer)
+  public List<string> BackupBuffer { get; set; } = new();
+
+  // 現在編集中のファイルパス（rコマンドやwコマンドで使用）
+  public string? CurrentEditingFile { get; set; }
+
+// --- 状態管理メソッド ---
+
+  /// <summary>
+  /// MainBuffer と BackupBuffer の内容を交換します (undo/np用)
+  /// </summary>
+  public void SwapBuffers()
+  {
+    var temp = MainBuffer;
+    MainBuffer = BackupBuffer;
+    BackupBuffer = temp;
+  }
+
+  /// <summary>
+  /// 編集バッファが変更されているかどうかを判定（保存確認用）
+  /// ※ 簡易的には、ファイル読み込み時の内容を保持しておき比較する
+  /// </summary>
+  public bool IsDirty { get; set; } = false;
+
   /// <summary>
   /// The _currentDirectory field.
   /// </summary>

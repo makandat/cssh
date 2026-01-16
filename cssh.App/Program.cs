@@ -83,87 +83,146 @@ Console.Clear();
 Console.WriteLine($"cssh {cssh.Core.Constants.CsshConstants.Version}");
 Console.WriteLine();
 
-//
-// 🔁 メイン REPL
-//
-bool wasInEditMode = false;
+///
+/// 🔁 メイン REPL
+///
 while (true)
 {
-  // 編集モードに入ったら画面をクリア
-  if (state.Mode == ShellMode.Edit && !wasInEditMode)
-  {
-    Console.Clear();
-    wasInEditMode = true;
-  }
-  else if (state.Mode == ShellMode.Normal)
-  {
-    wasInEditMode = false;
-  }
+  // 1. 画面の描画
+  RenderScreen(state);
 
-  // プロンプトを表示
-  string input;
+  // 2. ユーザー入力の取得
+  string input = await GetInputAsync(state);
+  if (string.IsNullOrWhiteSpace(input)) continue;
+
+  // 3. 終了判定 (通常モードのみ)
+  if (state.Mode == ShellMode.Normal && (input == "exit" || input == "quit"))
+    break;
+
+  // 4. コマンドの実行
+  await ExecuteCommandAsync(input, state, runner);
+}
+
+/// <summary>
+/// 画面描画の集約
+/// </summary>
+static void RenderScreen(ShellState state)
+{
   if (state.Mode == ShellMode.Edit)
   {
-    // 編集モードでは画面最下行にプロンプトを表示
-    try
+    Console.Clear();
+    
+    // 1. 編集バッファの内容を表示 (行番号付き)
+    int lineNum = 1;
+    foreach (var line in state.MainBuffer)
     {
-      Console.SetCursorPosition(0, Console.WindowHeight - 1);
-      Console.Write("> ");
-    }
-    catch
-    {
-      // テスト環境などでカーソル位置の設定ができない場合は通常通り表示
-      Console.Write("> ");
-    }
-
-    // 編集モードでは、ESCキーを検知するためにReadKeyを使用
-    var keyInfo = Console.ReadKey(true);
-    if (keyInfo.Key == ConsoleKey.Escape)
-    {
-      // ESCキーが押されたら、テキスト編集モードに入る
-      // 現在はコマンド入力モードなので、ESCキーを押すとテキスト編集モードに入る
-      // ここでは一旦ESCキーを無視して、次の入力に進む（将来の実装用）
-      continue;
+      // 検索で見つかった行 (TargetLineIndex) があれば強調しても良いですが、
+      // まずはシンプルに全行表示します。
+      Console.WriteLine($"{lineNum,3}: {line}");
+      lineNum++;
     }
     
-    // ESCキー以外の場合は、通常のReadLineを使用
-    // ただし、既に1文字読み込んでいるので、それを含めて読み込む
-    input = keyInfo.KeyChar.ToString();
-    if (!char.IsControl(keyInfo.KeyChar))
+    // 2. 最下行にプロンプトまたは検索メッセージを表示
+    try
     {
-      // 制御文字でない場合は、残りの入力を読み込む
-      var remaining = Console.ReadLine();
-      if (!string.IsNullOrEmpty(remaining))
+      int lastRow = Console.WindowHeight - 1;
+      Console.SetCursorPosition(0, lastRow);
+
+      if (state.IsInSearchMode)
       {
-        input += remaining;
+        // 仕様 4.2.8: 検索メッセージを表示
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write(state.SearchMessage);
+        Console.ResetColor();
+      }
+      else
+      {
+        Console.Write("> ");
       }
     }
-    else
-    {
-      // 制御文字の場合は、改行を追加
-      input = Console.ReadLine() ?? string.Empty;
+    catch 
+    { 
+      // ウィンドウサイズ変更時などのエラー回避
+      Console.Write("\n> "); 
     }
   }
   else
   {
+    // 通常モードのプロンプト
     Console.Write($"cssh: {state.CurrentDirectory}> ");
-    input = Console.ReadLine() ?? string.Empty;
   }
+}
 
-  if (string.IsNullOrWhiteSpace(input))
-  continue;
-
-  // exit / quit は特別扱い（通常モードのみ）
+/// <summary>
+/// 入力ロジックの集約
+/// </summary>
+static async Task<string> GetInputAsync(ShellState state)
+{
+  // 1. 通常モード: 標準の ReadLine を使用
   if (state.Mode == ShellMode.Normal)
   {
-    var trimmed = input.Trim();
-    if (trimmed == "exit" || trimmed == "quit")
-    break;
+    return Console.ReadLine() ?? string.Empty;
   }
 
-  var output = runner.Run(state, input);
-  if (!string.IsNullOrEmpty(output))
+  // 2. 編集モード: 1文字ずつ入力を判定
+  var keyInfo = Console.ReadKey(true);
+
+  // --- ESC キーの処理 ---
+  if (keyInfo.Key == ConsoleKey.Escape)
   {
-    Console.WriteLine(output);
+    if (state.IsInSearchMode)
+    {
+      state.IsInSearchMode = false;
+      state.SearchMessage = string.Empty;
+    }
+    // 空文字を返すことでメインループを回し、RenderScreen を実行させる
+    return string.Empty;
+  }
+
+  // --- 検索モード中の / キーの処理 ---
+  if (keyInfo.KeyChar == '/' && state.IsInSearchMode)
+  {
+    return "/"; // EditModeHandler 側で「次を検索」として処理する
+  }
+
+  // --- 通常の文字入力の開始 ---
+  string input = "";
+  if (!char.IsControl(keyInfo.KeyChar))
+  {
+    // 最初の1文字を表示し、残りを ReadLine で受け取る
+    Console.Write(keyInfo.KeyChar);
+    input = keyInfo.KeyChar + (Console.ReadLine() ?? "");
+  }
+  else if (keyInfo.Key == ConsoleKey.Enter)
+  {
+    // Enter 単体の場合
+    return "";
+  }
+  else
+  {
+    // その他の制御文字（BackSpace等）は一旦 ReadLine に任せる
+    input = Console.ReadLine() ?? string.Empty;
+  }
+  
+  return input.Trim();
+}
+
+/// <summary>
+/// 実行ロジックの分岐
+/// </summary>
+static async Task ExecuteCommandAsync(string input, ShellState state, CommandRunner runner)
+{
+  if (state.Mode == ShellMode.Edit)
+  {
+    // 今後 EditModeHandler クラスを Core に作り、そこで np/q/undo 等を処理
+    await EditModeHandler.ExecuteAsync(input, state);
+  }
+  else
+  {
+    var output = runner.Run(state, input);
+    if (!string.IsNullOrEmpty(output))
+    {
+      Console.WriteLine(output);
+    }
   }
 }
