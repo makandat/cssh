@@ -1,6 +1,6 @@
 /* DateTimeTests.cs */
 using Xunit;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 
 public class DateTimeTests
 {

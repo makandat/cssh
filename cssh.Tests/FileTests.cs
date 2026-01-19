@@ -1,7 +1,7 @@
 /* FileTests.cs */
 using Xunit;
 using System.IO;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 
 public class FileTests
 {

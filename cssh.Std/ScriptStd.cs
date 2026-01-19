@@ -1,6 +1,10 @@
-﻿using System.Diagnostics;
+﻿namespace cssh.Std;
+
+using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Text.Json;
+using System.Linq;
 
 public static class ScriptStd
 {
@@ -16,19 +20,17 @@ public static class ScriptStd
       return;
     }
 
-    // %d, %s, %f を {0}, {1}... に順番に置換する
     string translated = format;
     for (int i = 0; i < args.Length; i++)
     {
-      // 最初にマッチした %d, %s, %f のいずれか1つを置換
       var regex = new Regex("%[dsf]");
       translated = regex.Replace(translated, "{" + i + "}", 1);
     }
-
     Console.Write(string.Format(translated, args));
   }
-  
+
   public static void debug(object value) => Console.Error.WriteLine(value);
+  public static void error(object value) => Console.Error.WriteLine(value);
 
   // --- 3. 文字列系関数 ---
   public static string format(string format, params object[] args) => string.Format(format, args);
@@ -51,8 +53,9 @@ public static class ScriptStd
   // --- 5. 日付・時間系関数 ---
   public static string today() => DateTime.Now.ToString("yyyy-MM-dd");
   public static string now() => DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
-  public static string datetime(DateTime? dt = null, string format = "yyyy-MM-ddTHH:mm:ss") 
+  public static string datetime(DateTime? dt = null, string format = "yyyy-MM-ddTHH:mm:ss")
     => (dt ?? DateTime.Now).ToString(format);
+  public static string datetime(string format) => DateTime.Now.ToString(format);
 
   // --- 6. ファイル操作系関数 ---
   public static string read(string path) => File.ReadAllText(path);
@@ -93,9 +96,76 @@ public static class ScriptStd
   public static string replace(string text, string pattern, string replacement) => Regex.Replace(text, pattern, replacement);
 
   // --- 10. コマンドライン引数系関数 ---
-  // スクリプト実行時にこれらをセットする仕組みが cssh.App 側に必要
   private static string[] _args = Array.Empty<string>();
   public static void SetArgs(string[] args) => _args = args;
   public static int argc() => _args.Length;
   public static string? args(int index) => (index >= 0 && index < _args.Length) ? _args[index] : null;
+
+  // --- 11. JSON 関数 (Rev.3) ---
+  public static object? from_json(string json) => string.IsNullOrWhiteSpace(json) ? null : JsonSerializer.Deserialize<object>(json);
+  public static string to_json(object obj) => JsonSerializer.Serialize(obj);
+
+  // --- 12. Python 組み込み関数 (Rev.3) ---
+  public static dynamic abs(dynamic x) => Math.Abs(x);
+  public static dynamic ascii(dynamic x) => x?.ToString() ?? "None";
+  public static dynamic boolean(dynamic x) => x is bool b ? b : (x != null);
+  public static dynamic chr(dynamic x) => (char)x;
+  public static dynamic hex(dynamic x) => "0x" + Convert.ToString((long)x, 16);
+  public static dynamic len(dynamic x)
+  {
+    if (x == null) return 0;
+    if (x is string s) return s.Length;
+    if (x is System.Collections.ICollection c) return c.Count;
+    return x.Length;
+  }
+  public static dynamic max(dynamic a, dynamic b) => Math.Max(a, b);
+  public static dynamic min(dynamic a, dynamic b) => Math.Min(a, b);
+  public static dynamic oct(dynamic x) => "0o" + Convert.ToString((long)x, 8);
+  public static dynamic ord(dynamic x) => (int)(char)x;
+  public static dynamic pow(dynamic x, dynamic y) => Math.Pow(x, y);
+
+  public static dynamic range(dynamic start, dynamic stop, dynamic step)
+  {
+    double s = Convert.ToDouble(start);
+    double e = Convert.ToDouble(stop);
+    double st = Convert.ToDouble(step);
+    var list = new List<double>();
+    if (st > 0) { for (double i = s; i < e; i += st) list.Add(i); }
+    else if (st < 0) { for (double i = s; i > e; i += st) list.Add(i); }
+    return list;
+  }
+  public static dynamic range(dynamic start, dynamic stop) => range(start, stop, 1.0);
+  public static dynamic range(dynamic stop) => range(0.0, stop, 1.0);
+
+  public static dynamic round(dynamic x) => Math.Round((double)x);
+  public static dynamic sorted(dynamic x) => ((IEnumerable<dynamic>)x).OrderBy(i => i).ToList();
+  public static dynamic sum(dynamic x)
+  {
+    double s = 0;
+    foreach (var item in (System.Collections.IEnumerable)x) { s += Convert.ToDouble(item); }
+    return s;
+  }
+  public static dynamic tuple(dynamic x) => ((IEnumerable<dynamic>)x).ToArray();
+  public static dynamic type(dynamic x) => x?.GetType() ?? typeof(object); // nullの場合はobject型を返すか、お好みで調整
+
+  // --- 13. Python 数学関数 (Rev.3) ---
+  public static readonly double PI = Math.PI;
+  public static readonly double E = Math.E;
+
+  public static dynamic ceil(dynamic x) => Math.Ceiling((double)x);
+  public static dynamic floor(dynamic x) => Math.Floor((double)x);
+  public static dynamic fmod(dynamic x, dynamic y) => Math.IEEERemainder((double)x, (double)y);
+  public static dynamic isnan(dynamic x) => double.IsNaN((double)x);
+  public static dynamic sqrt(dynamic x) => Math.Sqrt((double)x);
+  public static dynamic exp(dynamic x) => Math.Exp((double)x);
+  public static dynamic log(dynamic x) => Math.Log((double)x);
+  public static dynamic log10(dynamic x) => Math.Log10((double)x);
+  public static dynamic degrees(dynamic x) => (double)x * (180.0 / Math.PI);
+  public static dynamic radians(dynamic x) => (double)x * (Math.PI / 180.0);
+  public static dynamic acos(dynamic x) => Math.Acos((double)x);
+  public static dynamic asin(dynamic x) => Math.Asin((double)x);
+  public static dynamic atan(dynamic x) => Math.Atan((double)x);
+  public static dynamic cos(dynamic x) => Math.Cos((double)x);
+  public static dynamic sin(dynamic x) => Math.Sin((double)x);
+  public static dynamic tan(dynamic x) => Math.Tan((double)x);
 }

@@ -1,7 +1,7 @@
 /* ControlTests.cs */
 using Xunit;
 using System;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 
 public class ControlTests
 {

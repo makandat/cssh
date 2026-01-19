@@ -1,8 +1,9 @@
 /* cssh - A cross-platform C# shell ver.0.2.0 Program.cs */
 using cssh.Core;
 using cssh.Core.Commands;
+using cssh.Std;
 using System.Globalization;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 
 /// <summary>
 /// Entry point of the cssh shell application (v0.2.0).

@@ -1,7 +1,7 @@
 /* cssh/Std  PrintTests.cs */
 using Xunit;
 using System.IO;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 using System;
 
 public class PrintTests

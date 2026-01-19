@@ -1,6 +1,7 @@
 /* ArgsTests.cs */
+using cssh.Std;
 using Xunit;
-using static ScriptStd;
+using static cssh.Std.ScriptStd;
 
 public class ArgsTests
 {

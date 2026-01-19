@@ -1,4 +1,4 @@
-# cssh 標準関数仕様書 (Rev.2)
+# cssh 標準関数仕様書 (Rev.3)
 
 # １．概要
 ## 1.1 目的
@@ -41,7 +41,7 @@ println(“Hello World!”);
 - 戻り値：なし
 - 例：printf("name=%s age=%d", name, age)
 
-## debug(object value)
+## debug(object value) または error(object value)
 - 説明：デバッグ用出力。出力先は標準エラー出力 (stderr) とする。
 - 戻り値：なし
 - 例：debug("x=" + x)
@@ -87,7 +87,6 @@ println(“Hello World!”);
 - 説明: 文字列 input の前後の空白文字列を削除した文字列を返す。(String.Trim()のラッパー)
 - 戻り値: string
 - 例: var str = trim("\tABC\n")
-
 
 # 4. 入力系関数
 
@@ -197,3 +196,61 @@ println(datetime(new DateTime(2000, 1, 1), "yyyy-MM-dd"));
 - 戻り値：string?（範囲外なら null）
 - シグネチャ：string? args(int index)
 - 例：for (var i = 0; i < argc(); i++) {  println(args(i)); }
+
+# 11.JSON 関数 (Rev.3)
+## from_json(json)
+- 説明： JSON 文字列からオブジェクトを作成する。
+- 戻り値：オブジェクト
+- シグネチャ： object from_json(string)
+- 例： var obj = from_json("{\"name\":\"Tom\", \"age\":8}");
+
+## to_json(obj)
+- 説明：オブジェクトを JSON 文字列に変換する。
+- 戻り値：文字列
+- シグネチャ：string to_json(object)
+- 例： var json = to_json(obj);
+
+# 12. Python 組み込み関数 (Rev.3)
+Python 組み込み関数のうち、よく使われるものと思われる以下の関数を実装する。
+- dynamic abs(dynamic)
+- dynamic ascii(dynamic)
+- dynamic boolean(dynamic) (注意) Python では bool(x) であるが、C# は bool は予約されているため。
+- dynamic chr(dynamic)
+- dynamic hex(dynamic)
+- dynamic len(dynamic)
+- dynamic max(dynamic, dynamic)
+- dynamic min(dynamic, dynamic)
+- dynamic oct(dynamic)
+- dynamic ord(dynamic)
+- dynamic pow(dynamic, dynamic)
+- dynamic range(dynamic, dynamic, dynamic)
+- dynamic round(dynamic)
+- dynamic sorted(dynamic)
+- dynamic sum(dynamic)
+- dynamic tuple(dynamic)
+- dynamic type(dynamic)
+
+# 13. Python 数学関数 (Rev.3)
+Python math モジュールの関数のうち、よく使われるものと思われる以下の関数を実装する。
+使う場合は、math. を付ける必要はない。
+- dynamic ceil(dynamic)
+- dynamic floor(dynamic)
+- dynamic round(dynamic)
+- dynamic fmod(dynamic, dynamic)
+- dynamic sqrt(dynamic)
+- dynamic isnan(dynamic)
+- dynamic exp(dynamic)
+- dynamic log(dynamic)
+- dynamic log10(dynamic)
+- dynamic degrees(dynamic)
+- dynamic radians(dynamic)
+- dynamic acos(dynamic)
+- dynamic asin(dynamic)
+- dynamic atan(dynamic)
+- dynamic cos(dynamic)
+- dynamic sin(dynamic)
+- dynamic tan(dynamic)
+- dynamic PI (定数)
+- dynamic E (定数)
+
+
