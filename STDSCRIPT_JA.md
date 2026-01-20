@@ -136,7 +136,7 @@ println(datetime(new DateTime(2000, 1, 1), "yyyy-MM-dd"));
 - 例：append("log.txt", "more");
 
 ## exists(string path)
-- 説明：ファイルの存在を確認する
+- 説明：ファイルやディレクトリの存在を確認する
 - 戻り値：bool
 - 例：if (exists("config.json")) { ... }
 
@@ -227,7 +227,6 @@ Python 組み込み関数のうち、よく使われるものと思われる以�
 - dynamic round(dynamic)
 - dynamic sorted(dynamic)
 - dynamic sum(dynamic)
-- dynamic tuple(dynamic)
 - dynamic type(dynamic)
 
 # 13. Python 数学関数 (Rev.3)
@@ -253,4 +252,10 @@ Python math モジュールの関数のうち、よく使われるものと思�
 - dynamic PI (定数)
 - dynamic E (定数)
 
-
+# 14. Assert 関数
+System.Dialognosis.Debug.Assert() の挙動は他のスクリプト言語と異なる。
+そのため、独自に Assert 系関数を実装する。
+- void assert(bool condition, message="assertion failed")
+- void assertArray<T>(T[] actual, T[] expected, string message = "array assertion failed")
+- void assertList<T>(List<T> actual, List<T> expected, string message = "list assertion failed")
+- void assertObject(Dictionary<string, object> actual, Dictionary<string, object> expected, string message = "object assertion failed")

@@ -1,4 +1,5 @@
-﻿namespace cssh.Std;
+﻿// Rev.4 cssh.Std.dll
+namespace cssh.Std;
 
 using System.Diagnostics;
 using System.Text;
@@ -95,12 +96,6 @@ public static class ScriptStd
   }
   public static string replace(string text, string pattern, string replacement) => Regex.Replace(text, pattern, replacement);
 
-  // --- 10. コマンドライン引数系関数 ---
-  private static string[] _args = Array.Empty<string>();
-  public static void SetArgs(string[] args) => _args = args;
-  public static int argc() => _args.Length;
-  public static string? args(int index) => (index >= 0 && index < _args.Length) ? _args[index] : null;
-
   // --- 11. JSON 関数 (Rev.3) ---
   public static object? from_json(string json) => string.IsNullOrWhiteSpace(json) ? null : JsonSerializer.Deserialize<object>(json);
   public static string to_json(object obj) => JsonSerializer.Serialize(obj);
@@ -108,7 +103,7 @@ public static class ScriptStd
   // --- 12. Python 組み込み関数 (Rev.3) ---
   public static dynamic abs(dynamic x) => Math.Abs(x);
   public static dynamic ascii(dynamic x) => x?.ToString() ?? "None";
-  public static dynamic boolean(dynamic x) => x is bool b ? b : (x != null);
+  public static dynamic boolean(dynamic x) => x is bool b ? b : (x != null); // bool は予約後のため、boolean に改名
   public static dynamic chr(dynamic x) => (char)x;
   public static dynamic hex(dynamic x) => "0x" + Convert.ToString((long)x, 16);
   public static dynamic len(dynamic x)
@@ -138,14 +133,16 @@ public static class ScriptStd
   public static dynamic range(dynamic stop) => range(0.0, stop, 1.0);
 
   public static dynamic round(dynamic x) => Math.Round((double)x);
-  public static dynamic sorted(dynamic x) => ((IEnumerable<dynamic>)x).OrderBy(i => i).ToList();
+  public static IEnumerable<T> sorted<T>(IEnumerable<T> xs)
+  {
+    return xs.OrderBy(x => x);
+  }
   public static dynamic sum(dynamic x)
   {
     double s = 0;
     foreach (var item in (System.Collections.IEnumerable)x) { s += Convert.ToDouble(item); }
     return s;
   }
-  public static dynamic tuple(dynamic x) => ((IEnumerable<dynamic>)x).ToArray();
   public static dynamic type(dynamic x) => x?.GetType() ?? typeof(object); // nullの場合はobject型を返すか、お好みで調整
 
   // --- 13. Python 数学関数 (Rev.3) ---
@@ -168,4 +165,41 @@ public static class ScriptStd
   public static dynamic cos(dynamic x) => Math.Cos((double)x);
   public static dynamic sin(dynamic x) => Math.Sin((double)x);
   public static dynamic tan(dynamic x) => Math.Tan((double)x);
+
+  // --- 14. Assert 関数 (Rev.4)  ---
+  public static void assert(bool condition, string message = "assertion failed")
+  {
+    if (!condition)
+      throw new Exception(message);
+  }
+  public static void assertArray<T>(T[] actual, T[] expected, string message = "array assertion failed")
+  {
+    if (!actual.SequenceEqual(expected))
+      throw new Exception(message + $": {string.Join(",", actual)} != {string.Join(",", expected)}");
+  }
+  public static void assertList<T>(List<T> actual, List<T> expected, string message = "list assertion failed")
+  {
+    if (!actual.SequenceEqual(expected))
+      throw new Exception(message + $": [{string.Join(",", actual)}] != [{string.Join(",", expected)}]");
+  }
+  public static void assertObject(
+    Dictionary<string, object> actual,
+    Dictionary<string, object> expected,
+    string message = "object assertion failed")
+  {
+    if (actual.Count != expected.Count)
+      throw new Exception(message + ": key count mismatch");
+
+      foreach (var kv in expected)
+      {
+        if (!actual.ContainsKey(kv.Key))
+          throw new Exception(message + $": missing key '{kv.Key}'");
+
+        var a = actual[kv.Key];
+        var e = kv.Value;
+
+        if (!Equals(a, e))
+          throw new Exception(message + $": key '{kv.Key}' mismatch: {a} != {e}");
+      }
+  }
 }

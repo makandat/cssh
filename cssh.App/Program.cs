@@ -14,8 +14,6 @@ var registry = new CommandRegistry();
 var state = new ShellState(registry);
 var runner = new CommandRunner(parser, registry);
 
-ScriptStd.SetArgs(args);
-
 /// <summary>
 /// Registers built-in commands for v0.2.0
 /// </summary>
