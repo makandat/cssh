@@ -38,6 +38,15 @@ public static class CSPlus
         continue;
 
       // -------------------------------------------------------
+      // ★ C# の構文はそのまま通す
+      // -------------------------------------------------------
+      if (IsCSharpStatement(line))
+      {
+        sb.AppendLine(raw);
+        continue;
+      }
+
+      // -------------------------------------------------------
       // def 関数定義: def name(x, y) {
       // -------------------------------------------------------
       var funcMatch = Regex.Match(line, @"^def\s+([A-Za-z_]\w*)\s*\((.*?)\)\s*\{$");
@@ -100,7 +109,48 @@ public static class CSPlus
   }
 
   // ==========================================================
-  // 関数出力
+  // ★ C# 文判定（v0.3 追加）
+  // ==========================================================
+  private static bool IsCSharpStatement(string line)
+  {
+    if (line == "" || line.StartsWith("//"))
+      return true;
+
+    if (line == "{" || line == "}")
+      return true;
+
+    if (Regex.IsMatch(line, @"^(for|foreach|if|else|while|do|switch|case|default)\b"))
+      return true;
+
+    if (Regex.IsMatch(line, @"^(try|catch|finally|throw)\b"))
+      return true;
+
+    if (Regex.IsMatch(line, @"^(using|lock|checked|unchecked|fixed)\b"))
+      return true;
+
+    if (Regex.IsMatch(line, @"^(const|var|int|double|float|long|string|bool|decimal|char|byte|short|uint|ulong|ushort)\b"))
+      return true;
+
+    if (Regex.IsMatch(line, @"^(return|break|continue|goto|yield)\b"))
+      return true;
+
+    // 関数呼び出し（ScriptStd.dll の関数も含む）
+    if (Regex.IsMatch(line, @"^[A-Za-z_]\w*\s*\("))
+      return true;
+
+    // C# のラムダ式 (x) => ...
+    if (Regex.IsMatch(line, @"^\(.*\)\s*=>"))
+      return true;
+
+    // ; で終わる C# の式文
+    if (line.EndsWith(";"))
+      return true;
+
+    return false;
+  }
+
+  // ==========================================================
+  // 関数出力（v0.2 のまま）
   // ==========================================================
   private static void EmitFunction(StringBuilder sb, string name, string[] args, List<string> body)
   {
@@ -115,12 +165,10 @@ public static class CSPlus
     sb.AppendLine($"dynamic {name}({string.Join(", ", argList)})");
     sb.AppendLine("{");
 
-    // 本文（最後以外）
     for (int i = 0; i < body.Count - 1; i++)
     {
       var line = body[i].Trim();
 
-      // def 変数宣言
       var defMatch = Regex.Match(line, @"^def\s+([A-Za-z_]\w*)\s*=\s*(.+)$");
       if (defMatch.Success)
       {
@@ -133,7 +181,6 @@ public static class CSPlus
       sb.AppendLine("  " + TransformExpr(line) + ";");
     }
 
-    // 最後の行
     var last = body[^1].Trim();
 
     var defLast = Regex.Match(last, @"^def\s+([A-Za-z_]\w*)\s*=\s*(.+)$");
@@ -156,19 +203,15 @@ public static class CSPlus
   }
 
   // ==========================================================
-  // 式変換
+  // 式変換（v0.3: Math.* 変換削除）
   // ==========================================================
   private static string TransformExpr(string expr)
   {
-    // special variables
     expr = expr.Replace("$stdout", "Console.Out")
-              .Replace("$stderr", "Console.Error")
-              .Replace("$stdin", "Console.In");
+               .Replace("$stderr", "Console.Error")
+               .Replace("$stdin", "Console.In");
 
-    // math functions
-    expr = Regex.Replace(expr, @"\bsqrt\s*\(", "Math.Sqrt(");
-    expr = Regex.Replace(expr, @"\bcos\s*\(", "Math.Cos(");
-    expr = Regex.Replace(expr, @"\bPI\b", "Math.PI");
+    // ★ Math.* 変換は削除（ScriptStd.dll の関数として扱う）
 
     // (x, y) => expr
     expr = Regex.Replace(expr, @"^\((.*?)\)\s*=>", m =>
@@ -179,7 +222,7 @@ public static class CSPlus
       return "(" + string.Join(", ", args) + ") =>";
     });
 
-    // x => expr （ただし "(x)" ではない場合のみ）
+    // x => expr
     expr = Regex.Replace(expr, @"^(?!\()([A-Za-z_]\w*)\s*=>", "(dynamic $1) =>");
 
     return expr;
